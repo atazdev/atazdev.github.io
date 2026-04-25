@@ -15,6 +15,72 @@
   --border: #30363D;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* --- WOW Factor Tokens --- */
+  --glass-bg: rgba(22, 27, 34, 0.7);
+  --glass-border: rgba(0, 255, 136, 0.2);
+  --glass-blur: blur(12px);
+  --neon-glow: 0 0 15px rgba(0, 255, 136, 0.15);
+  --terminal-green-glow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
+/* --- CRT Scanline Overlay --- */
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  z-index: 9999;
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+body::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 9998;
+  pointer-events: none;
+  animation: crt-flicker 0.15s infinite;
+}
+
+@keyframes crt-flicker {
+  0% { opacity: 0.1032; }
+  5% { opacity: 0.1056; }
+  10% { opacity: 0.1143; }
+  15% { opacity: 0.1256; }
+  20% { opacity: 0.1345; }
+  25% { opacity: 0.1245; }
+  30% { opacity: 0.1534; }
+  35% { opacity: 0.1245; }
+  40% { opacity: 0.1032; }
+  45% { opacity: 0.1143; }
+  50% { opacity: 0.1256; }
+  55% { opacity: 0.1032; }
+  60% { opacity: 0.1245; }
+  65% { opacity: 0.1143; }
+  70% { opacity: 0.1032; }
+  75% { opacity: 0.1143; }
+  80% { opacity: 0.1256; }
+  85% { opacity: 0.1032; }
+  90% { opacity: 0.1245; }
+  95% { opacity: 0.1143; }
+  100% { opacity: 0.1032; }
+}
+
+/* --- Glassmorphism Utility --- */
+.glass-panel {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--neon-glow) !important;
 }
 
 /* --- Base typography --- */
@@ -56,11 +122,25 @@ body {
   content: '_';
   animation: blink 1s step-end infinite;
   color: var(--accent-green);
+  text-shadow: var(--terminal-green-glow);
 }
 
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+.navbar-brand:hover {
+  animation: glitch 0.3s cubic-bezier(.25,.46,.45,.94) both infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
 }
 
 .navbar-custom .nav-link {
@@ -174,21 +254,25 @@ body {
 }
 
 .post-preview {
-  background-color: var(--bg-surface) !important;
-  border: 1px solid var(--border) !important;
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
   border-left: 3px solid var(--accent-green) !important;
-  border-radius: 6px !important;
+  border-radius: 8px !important;
   padding: 1.5rem !important;
-  margin: 0 0 1rem 0 !important;
-  transition: border-left-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease !important;
+  margin: 0 0 1.5rem 0 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .post-preview:hover {
-  background-color: var(--bg-elevated) !important;
+  background: rgba(28, 33, 40, 0.8) !important;
   border-left-color: var(--accent-blue) !important;
-  transform: translateX(4px);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.1);
 }
 
 /* Scan-line overlay on hover */
@@ -196,17 +280,15 @@ body {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 255, 136, 0.018) 2px,
-    rgba(0, 255, 136, 0.018) 4px
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 255, 136, 0.05) 50%
   );
+  background-size: 100% 4px;
+  z-index: 2;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.2s ease;
-  border-radius: 6px;
 }
 
 .post-preview:hover::before {
