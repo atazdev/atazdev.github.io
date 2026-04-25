@@ -5,9 +5,14 @@ subtitle: "Why your ZT architecture must now account for AI systems, model workf
 date: 2026-03-27
 category: cybersecurity
 series: "AI Governance"
-summary: "Why zero trust architectures need to account for AI systems, model workflows, and policy enforcement."
+share-img: /assets/img/hero/hero-zero-trust-ai.png
 tags: [zero-trust, cybersecurity, ai, devsecops, defense, policy, federal, compliance]
 ---
+
+<figure class="post-figure">
+  <img src="/assets/img/hero/hero-zero-trust-ai.png" alt="Neural security shield HUD with cryptographic patterns">
+  <figcaption>PERIMETER_STATUS: ZERO_TRUST_ENFORCEMENT_ACTIVE</figcaption>
+</figure>
 
 ## The Era of AI as a Perimeter
 

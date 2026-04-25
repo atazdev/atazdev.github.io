@@ -145,34 +145,20 @@ layout: base
       </div>
       {% endif %}
 
-      <aside class="follow-block" aria-labelledby="follow-block-title">
-        <div>
-          <span class="profile-kicker">Follow Along</span>
-          <h2 id="follow-block-title">More notes on secure systems and software delivery.</h2>
-          <p>Use RSS for updates, GitHub for source, or email for direct contact.</p>
-        </div>
-        <div class="follow-actions">
-          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-          <a href="https://github.com/{{ site.social-network-links.github | default: 'atazdev' }}" target="_blank" rel="noopener">GitHub</a>
-          {% if site.social-network-links.email %}
-          <a href="mailto:{{ site.social-network-links.email }}">Email</a>
-          {% endif %}
-        </div>
-      </aside>
+      {% include newsletter.html %}
 
-      <aside class="discussion-block" aria-labelledby="discussion-block-title">
-        <span class="profile-kicker">Discuss</span>
-        <h2 id="discussion-block-title">Have a correction, question, or related idea?</h2>
-        <p>
-          I keep comments lightweight here. The best way to continue the thread is
-          email or a GitHub edit suggestion.
+      <aside class="discussion-block" style="margin-top: 4rem;">
+        <span class="profile-kicker">Connect</span>
+        <h2 id="discussion-block-title" style="font-size: 1.5rem;">Have a correction, question, or related idea?</h2>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          The best way to continue the thread is direct email or a GitHub edit suggestion.
         </p>
-        <div class="follow-actions">
+        <div class="follow-actions" style="margin-top: 1.5rem;">
           {% if site.social-network-links.email %}
-          <a href="mailto:{{ site.social-network-links.email }}?subject={{ page.title | uri_escape }}">Email a note</a>
+          <a href="mailto:{{ site.social-network-links.email }}?subject={{ page.title | uri_escape }}">Email</a>
           {% endif %}
           {% if site.repository %}
-          <a href="https://github.com/{{ site.repository }}/edit/main/{{ page.path }}" target="_blank" rel="noopener">Suggest an edit</a>
+          <a href="https://github.com/{{ site.repository }}/edit/main/{{ page.path }}" target="_blank" rel="noopener">GitHub</a>
           {% endif %}
         </div>
       </aside>

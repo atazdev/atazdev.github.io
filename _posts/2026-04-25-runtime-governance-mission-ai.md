@@ -8,9 +8,14 @@ series: "AI Governance"
 summary: "A runtime governance model for autonomous systems operating beyond traditional approval gates."
 featured: true
 last-updated: 2026-04-25
-share-img: /assets/img/social-ai-governance.svg
+share-img: /assets/img/hero/hero-runtime-governance.png
 tags: [ai, defense, zero-trust, policy-as-code, devsecops, edge-computing, governance, autonomy]
 ---
+
+<figure class="post-figure">
+  <img src="/assets/img/hero/hero-runtime-governance.png" alt="Futuristic AI runtime governance dashboard with neon green HUD elements">
+  <figcaption>MISSION_CONTROL: RUNTIME_GOVERNANCE_SYSTEM_ACTIVE</figcaption>
+</figure>
 
 ## The Runtime Governance Challenge
 

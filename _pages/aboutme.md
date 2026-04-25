@@ -53,27 +53,107 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
 
 <section class="profile-timeline">
   <h3>Experience</h3>
-  <div class="timeline-list">
-    <div>
-      <span>Defense Sector</span>
-      <p>
-        Earned a Master of Science in Cybersecurity from <strong>National Defense University</strong>
-        and progressed through IT leadership roles across defense agencies.
-      </p>
+  
+  {% assign timeline_entries = "" | split: "," %}
+  
+  {% capture e1 %}
+  date: "Present"
+  title: "Defense Sector Leadership"
+  content: "Progressing through IT leadership roles across defense agencies, focusing on secure systems, cloud modernization, and technical strategy."
+  tags: ["Leadership", "Strategy", "Cloud"]
+  {% endcapture %}
+  
+  {% capture e2 %}
+  date: "Education"
+  title: "National Defense University"
+  content: "Earned a **Master of Science in Cybersecurity**, specializing in enterprise risk and infrastructure security."
+  tags: ["MS Cybersecurity", "Risk Management"]
+  {% endcapture %}
+  
+  {% capture e3 %}
+  date: "20+ Years"
+  title: "Enterprise Technology"
+  content: "Managed enterprise IT systems and led technical teams through complex modernization, operations, and security challenges."
+  tags: ["Operations", "Modernization"]
+  {% endcapture %}
+
+  {% capture e4 %}
+  date: "Early Career"
+  title: "CNET"
+  content: "Associate Technical Producer, deploying updates across major platforms using web technologies and early version control systems."
+  tags: ["Web", "DevOps"]
+  {% endcapture %}
+
+  {% assign entries = "e1,e2,e3,e4" | split: "," %}
+  
+  <div class="mission-timeline">
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content glass-panel">
+        <div class="timeline-header">
+          <span class="timeline-date">Present</span>
+          <h3 class="timeline-title">Defense Sector Leadership</h3>
+        </div>
+        <div class="timeline-body">
+          Progressing through IT leadership roles across defense agencies, focusing on secure systems, cloud modernization, and technical strategy.
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Leadership</span>
+          <span class="timeline-tag">Strategy</span>
+          <span class="timeline-tag">Cloud</span>
+        </div>
+      </div>
     </div>
-    <div>
-      <span>Enterprise Technology</span>
-      <p>
-        Managed enterprise IT systems and led technical teams through modernization,
-        operations, and security challenges.
-      </p>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content glass-panel">
+        <div class="timeline-header">
+          <span class="timeline-date">Education</span>
+          <h3 class="timeline-title">National Defense University</h3>
+        </div>
+        <div class="timeline-body">
+          Earned a **Master of Science in Cybersecurity**, specializing in enterprise risk and infrastructure security.
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">MS Cybersecurity</span>
+          <span class="timeline-tag">Risk Management</span>
+        </div>
+      </div>
     </div>
-    <div>
-      <span>CNET</span>
-      <p>
-        Started as an Associate Technical Producer, deploying updates across major
-        platforms using web technologies and version control.
-      </p>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content glass-panel">
+        <div class="timeline-header">
+          <span class="timeline-date">20+ Years</span>
+          <h3 class="timeline-title">Enterprise Technology</h3>
+        </div>
+        <div class="timeline-body">
+          Managed enterprise IT systems and led technical teams through complex modernization, operations, and security challenges.
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Operations</span>
+          <span class="timeline-tag">Modernization</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content glass-panel">
+        <div class="timeline-header">
+          <span class="timeline-date">Early Career</span>
+          <h3 class="timeline-title">CNET</h3>
+        </div>
+        <div class="timeline-body">
+          Associate Technical Producer, deploying updates across major platforms using web technologies and early version control systems.
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">Web</span>
+          <span class="timeline-tag">DevOps</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -17,6 +17,7 @@ common-ext-js:
 common-js:
   - "/assets/js/beautifuljekyll.js"
   - "/assets/js/site-interactions.js"
+  - "/assets/js/search.js"
 ---
 
 <!DOCTYPE html>
@@ -40,7 +41,10 @@ common-js:
 
   {% include footer.html %}
 
+  {% include search-modal.html %}
+
   {% include footer-scripts.html %}
+  <script src="/assets/js/search.js"></script>
 
 </body>
 </html>

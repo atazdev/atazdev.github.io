@@ -1,0 +1,125 @@
+<section class="newsletter-block glass-panel">
+  <div class="newsletter-header">
+    <div class="profile-kicker">Frequency Sync</div>
+    <h2>Join the Transmission</h2>
+    <p>High-fidelity technical briefs on AI governance, DevSecOps, and tactical infrastructure delivered directly to your inbox.</p>
+  </div>
+  
+  <form class="newsletter-form">
+    <div class="input-group">
+      <div class="terminal-prefix">></div>
+      <input type="email" placeholder="ENTER_EMAIL_ADDRESS..." required aria-label="Email Address">
+      <button type="submit" class="deploy-btn">
+        <span class="btn-text">DEPLOY</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </div>
+    <div class="newsletter-hint">NO_SPAM // NO_TRACKING // SYSTEM_AUTH_ONLY</div>
+  </form>
+</section>
+
+<style>
+.newsletter-block {
+  margin: 6rem 0;
+  padding: 3rem;
+  text-align: center;
+  border-left: 4px solid var(--accent-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter-block::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0,255,136,0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.newsletter-header h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.newsletter-header p {
+  color: var(--text-muted);
+  max-width: 500px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.6;
+}
+
+.newsletter-form {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.input-group {
+  display: flex;
+  background: rgba(0,0,0,0.3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.input-group:focus-within {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 15px rgba(0,255,136,0.1);
+}
+
+.terminal-prefix {
+  color: var(--accent-green);
+  font-family: var(--font-mono);
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  opacity: 0.8;
+}
+
+.newsletter-form input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.deploy-btn {
+  background: var(--accent-green);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.deploy-btn:hover {
+  background: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 170, 255, 0.3);
+}
+
+.newsletter-hint {
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+:root.light-mode .input-group { background: rgba(0,0,0,0.03); }
+:root.light-mode .deploy-btn { color: #fff; }
+</style>

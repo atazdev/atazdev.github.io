@@ -1,0 +1,13 @@
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+    {
+      "title": "{{ post.title | escape }}",
+      "url": "{{ post.url | absolute_url }}",
+      "summary": "{{ post.summary | strip_newlines | escape }}",
+      "date": "{{ post.date | date: "%B %-d, %Y" }}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

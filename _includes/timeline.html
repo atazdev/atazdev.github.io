@@ -1,0 +1,115 @@
+<div class="mission-timeline">
+  {% for entry in include.entries %}
+  <div class="timeline-item" data-aos="fade-up">
+    <div class="timeline-marker"></div>
+    <div class="timeline-content glass-panel">
+      <div class="timeline-header">
+        <span class="timeline-date">{{ entry.date }}</span>
+        <h3 class="timeline-title">{{ entry.title }}</h3>
+      </div>
+      <div class="timeline-body">
+        {{ entry.content | markdownify }}
+      </div>
+      {% if entry.tags %}
+      <div class="timeline-tags">
+        {% for tag in entry.tags %}
+        <span class="timeline-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+.mission-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 2rem 0;
+}
+
+.mission-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--accent-green), transparent);
+  opacity: 0.3;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 60px;
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+  z-index: 1;
+}
+
+.timeline-content {
+  padding: 1.5rem;
+  border-left: 2px solid var(--accent-green);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-blue);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  color: var(--text-primary);
+}
+
+.timeline-body {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.timeline-tags {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.timeline-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .mission-timeline::before { left: 10px; }
+  .timeline-marker { left: 2px; }
+  .timeline-item { padding-left: 40px; }
+}
+</style>

@@ -7,10 +7,14 @@ category: ai
 series: "AI Governance"
 summary: "How AI agents change the assumptions behind CI/CD pipelines, review gates, and accountability."
 featured: true
-last-updated: 2026-04-25
-share-img: /assets/img/social-ai-governance.svg
+share-img: /assets/img/hero/hero-ai-agents-cicd.png
 tags: [ai, cicd, devops, automation, gitops, devsecops, agents, security]
 ---
+
+<figure class="post-figure">
+  <img src="/assets/img/hero/hero-ai-agents-cicd.png" alt="Futuristic software delivery pipeline with AI agent flows">
+  <figcaption>PIPELINE_STATUS: AGENTIC_GOVERNANCE_LAYER_SYNCHRONIZED</figcaption>
+</figure>
 
 ## The End of Human-Only Assumptions
 

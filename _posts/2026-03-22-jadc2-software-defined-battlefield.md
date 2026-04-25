@@ -5,9 +5,14 @@ subtitle: "Joint All-Domain Command & Control isn't a weapons program — it's a
 date: 2026-03-22
 category: architecture
 series: "Software-Defined Operations"
-summary: "A systems view of JADC2 as a distributed software, data, and architecture challenge."
+share-img: /assets/img/hero/hero-jadc2.png
 tags: [jadc2, defense, software-defined-warfare, devops, architecture, ai, military]
 ---
+
+<figure class="post-figure">
+  <img src="/assets/img/hero/hero-jadc2.png" alt="Global multi-domain tactical map connected by a data fabric">
+  <figcaption>THEATER_STATUS: ALL_DOMAIN_DATA_FABRIC_SYNCHRONIZED</figcaption>
+</figure>
 
 ## The Shift to a Software-Defined Battlefield
 

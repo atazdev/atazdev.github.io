@@ -5,9 +5,14 @@ subtitle: "Why traditional Agile falls short in defense organizations and how to
 date: 2026-01-31
 category: delivery
 series: "Secure Delivery"
-summary: "How enterprise security environments can adapt Agile practices without losing governance."
+share-img: /assets/img/hero/hero-agile-defense.png
 tags: [agile, defense, enterprise, software-development, project-management, security]
 ---
+
+<figure class="post-figure">
+  <img src="/assets/img/hero/hero-agile-defense.png" alt="Dynamic technical iteration cycle with glowing nodes">
+  <figcaption>DEVELOPMENT_STATUS: AGILE_ENTERPRISE_PILLARS_STABILIZED</figcaption>
+</figure>
 
 ## The Necessity of Defense Agility
 
