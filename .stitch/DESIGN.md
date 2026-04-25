@@ -1,81 +1,82 @@
 ---
-name: Ataz Labs Tactical Terminal
-version: 1.0.0
-description: A high-fidelity, mission-ready visual identity system blending terminal-core aesthetics with modern UI/UX principles.
-author: Antigravity (via Stitch Skills)
+name: Ataz Labs Quiet Technical Journal
+version: 1.1.0
+description: A restrained, high-trust visual identity for technical writing, product notes, and engineering essays.
+author: Codex via Stitch Skills
 ---
 
-# 🛡️ Design System: Tactical Terminal
+# Design System: Quiet Technical Journal
 
-## 🌌 Atmosphere & Vibe
-The "Tactical Terminal" system is designed to feel like a mission-critical command interface. It prioritizes information density, legibility under low-light conditions, and a sense of "active system" engagement.
+## Atmosphere & Vibe
+The site should feel like a thoughtful engineering notebook: precise, calm, readable, and quietly modern. It keeps a dark technical foundation, but avoids militarized language, neon excess, glitch effects, and command-center metaphors.
 
-- **Vibe:** Minimalist, Brutalist, Tech-Noir, Precise.
-- **Surface Strategy:** Deep obsidian backgrounds with layered elevation using subtle borders rather than heavy shadows.
-- **Interaction Model:** "Active" feedback (scan-lines, blinking cursors, neon glows) that makes the interface feel alive.
+- **Vibe:** Editorial, technical, focused, low-noise.
+- **Surface Strategy:** Deep neutral backgrounds with subtle translucent surfaces, restrained borders, and soft depth.
+- **Interaction Model:** Calm feedback through color, border contrast, and small movement. Avoid flicker, scanlines, aggressive glow, and animated distortion.
 
 ---
 
-## 🎨 Color Palette
+## Color Palette
 
 ### Base Surfaces
 | Token | Hex | Role |
 | :--- | :--- | :--- |
-| `bg-primary` | `#0D1117` | Main page background (Deep Obsidian) |
-| `bg-surface` | `#161B22` | Card backgrounds, navbars |
-| `bg-elevated` | `#1C2128` | Hover states, active modal layers |
+| `bg-primary` | `#0D1117` | Main page background |
+| `bg-surface` | `#161B22` | Cards, navbars, content panels |
+| `bg-elevated` | `#1C2128` | Hover states and raised surfaces |
 | `border-subtle` | `#30363D` | Default structural borders |
 
-### Tactical Accents
+### Accents
 | Token | Hex | Role |
 | :--- | :--- | :--- |
-| `accent-green` | `#00FF88` | "System Go" status, primary actions, branding |
-| `accent-blue` | `#0EA5E9` | "Processing" status, info links, secondary highlights |
-| `accent-red` | `#FF4444` | "Alert" status, critical errors, destructive actions |
+| `accent-blue` | `#38BDF8` | Primary links, selected states, quiet emphasis |
+| `accent-green` | `#6EE7B7` | Positive states and rare secondary highlights |
+| `accent-red` | `#F87171` | Error and destructive states |
 
 ### Typography
 | Token | Hex | Role |
 | :--- | :--- | :--- |
-| `text-primary` | `#E6EDF3` | High-contrast body and header text |
-| `text-muted` | `#8B949E` | Secondary metadata, captions, inactive labels |
+| `text-primary` | `#E6EDF3` | High-contrast body and heading text |
+| `text-muted` | `#8B949E` | Dates, captions, metadata, inactive labels |
 
 ---
 
-## 🔡 Typography
+## Typography
 
 ### Font Families
-- **System/Data:** `'JetBrains Mono'`, monospace — Used for headers, nav, labels, and code.
-- **Narrative/Body:** `'Inter'`, sans-serif — Used for long-form reading to reduce cognitive load.
+- **Technical Labels:** `'JetBrains Mono'`, monospace — navigation, metadata, code, and compact labels.
+- **Narrative Body:** `'Inter'`, sans-serif — long-form reading and excerpts.
 
 ### Scale
-- **H1 (Hero):** 2.5rem | Mono | Bold | -0.02em tracking
-- **H2 (Section):** 1.25rem | Mono | Semi-Bold | Green left-border (3px)
-- **Body:** 1rem | Sans | Regular | 1.85 line-height
-- **Metadata:** 0.75rem | Mono | All-Caps | 0.1em tracking
+- **H1:** 2.25rem to 2.5rem | Mono | Bold | tight but readable tracking
+- **H2:** 1.25rem | Mono | Semi-bold | subtle blue or neutral emphasis
+- **Body:** 1rem | Sans | Regular | 1.75 to 1.85 line-height
+- **Metadata:** 0.72rem to 0.78rem | Mono | All-caps optional | modest tracking
 
 ---
 
-## 🧩 Signature Components
+## Signature Components
 
-### 1. The Tactical Header
-- **Background:** Solid `#0D1117` with a `1px` bottom-border of `accent-green`.
-- **Brand:** Uppercase Mono text with a trailing blinking underscore (`_`).
-- **Status:** A small, low-opacity "SYSTEM STATUS: ACTIVE" label in the nav.
+### 1. Quiet Header
+- **Background:** Solid `#0D1117` with a subtle neutral bottom border.
+- **Brand:** Compact mono wordmark, white by default, blue on hover.
+- **Navigation:** Muted labels with blue hover states. Avoid blinking cursors or glitch animation.
 
-### 2. Post Preview Cards
-- **Style:** `bg-surface` with a `1px` border and a `3px` accent-green left-tab.
-- **Interaction:** On hover, transform `translateX(4px)` and activate a subtle scan-line overlay.
-- **Glow:** Add a `0 0 20px rgba(0, 255, 136, 0.05)` glow on hover.
+### 2. Journal Preview Cards
+- **Style:** Translucent `bg-surface`, `1px` neutral border, 8px radius.
+- **Interaction:** On hover, lift by 2px, increase border contrast, and reveal a thin blue left rule.
+- **Content:** Date, title, subtitle, excerpt, and small topic chips. Keep hierarchy editorial rather than operational.
 
-### 3. Intel Callouts (Blockquotes)
-- **Prefix:** Every blockquote starts with a `// INTEL` mono-label in `accent-blue`.
-- **Styling:** Italicized text with a blue left-border and light surface tint.
+### 3. Tags And Metadata
+- **Tags:** Small outlined chips using muted text and blue emphasis.
+- **Dates:** Human-readable dates are preferred on public-facing pages.
+- **Labels:** Use plain terms like "Journal," "Notes," and "Essays" instead of tactical/status language.
 
 ---
 
-## ⚡ WOW-Factor Enhancements (Future)
+## Future Enhancements
 
-1.  **Glassmorphism Layers:** Use `backdrop-filter: blur(8px)` on navigation and modals to add depth to the dark theme.
-2.  **CRT Scanlines:** Implement a global (or component-level) CSS overlay that simulates a high-end terminal monitor.
-3.  **Terminal Transitions:** Use "typing" animations for hero headlines and "staggered fade-in" for grid items to mimic a system boot sequence.
-4.  **Neon Depth:** Use very subtle outer glows (`box-shadow`) on primary buttons to make them pop against the obsidian background.
+1. **Editorial Feed Filters:** Add unobtrusive topic filters above the post list.
+2. **Reading Density Modes:** Offer comfortable and compact layouts for the post index.
+3. **Featured Essay Treatment:** Let the newest or pinned essay have a wider layout with stronger typography.
+4. **Better Thumbnail System:** Use consistent aspect ratios and soft image treatments instead of floated thumbnails.
