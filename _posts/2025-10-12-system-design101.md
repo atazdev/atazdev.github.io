@@ -12,29 +12,13 @@ share-img: /assets/img/social-architecture.svg
 tags: [system-design, architecture, engineering, interview-prep]
 ---
 
-<p>Credit to <a href="https://bytebytego.com/guides/">ByteByteGo</a></p>
+Credit to [ByteByteGo](https://bytebytego.com/guides/) — 【[YouTube](https://www.youtube.com/channel/UCZgt6AzoyjslHTC9dz0UoTw) | [Newsletter](https://blog.bytebytego.com/?utm_source=site)】
 
-<p align="center">
-  【
-  <a href="https://www.youtube.com/channel/UCZgt6AzoyjslHTC9dz0UoTw">
-    👨🏻‍💻 YouTube
-  </a> | 
-  <a href="https://blog.bytebytego.com/?utm_source=site">
-    📮 Newsletter
-  </a> 】
-</p>
+[![ByteByteGoHq/system-design-101 | Trendshift](https://trendshift.io/api/badge/repositories/3709)](https://trendshift.io/repositories/3709)
 
-<a href="https://trendshift.io/repositories/3709" target="_blank"><img src="https://trendshift.io/api/badge/repositories/3709" alt="ByteByteGoHq%2Fsystem-design-101 | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
+Explain complex systems using visuals and simple terms. Whether you're preparing for a System Design Interview or you simply want to understand how systems work beneath the surface, we hope this repository will help you achieve that.
 
-# System Design 101
-
-Explain complex systems using visuals and simple terms. 
-
-Whether you're preparing for a System Design Interview or you simply want to understand how systems work beneath the surface, we hope this repository will help you achieve that.
-
-# Table of Contents
-
-<!-- TOC -->
+## Table of Contents
 
 * [API and Web Development](https://bytebytego.com/guides/api-web-development)
   * [Short/long polling, SSE, WebSocket](https://bytebytego.com/guides/shortlong-polling-sse-websocket)
@@ -457,8 +441,6 @@ Whether you're preparing for a System Design Interview or you simply want to und
   * [What is the Best Way to Learn SQL?](https://bytebytego.com/guides/what-is-the-best-way-to-learn-sql)
 
 
-<!-- /TOC -->
-
 ## License
 
-<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-ND 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1"></a></p>
+This work is licensed under [CC BY-NC-ND 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1).
