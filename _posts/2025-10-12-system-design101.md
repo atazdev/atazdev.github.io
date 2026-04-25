@@ -21,6 +21,64 @@ Credit to [ByteByteGo](https://bytebytego.com/guides/) - [YouTube](https://www.y
 
 Explain complex systems using visuals and simple terms. Whether you're preparing for a System Design Interview or you simply want to understand how systems work beneath the surface, we hope this repository will help you achieve that.
 
+<section class="resource-start" aria-labelledby="system-design-start">
+  <div class="section-label">
+    <span id="system-design-start">Start here</span>
+    <span>Curated paths</span>
+  </div>
+  <div class="resource-path-grid">
+    <a href="https://bytebytego.com/guides/system-design-blueprint-the-ultimate-guide">
+      <span>Beginner path</span>
+      <strong>System Design Blueprint</strong>
+      <em>Use this first if you want the overall map before jumping into individual topics.</em>
+    </a>
+    <a href="https://bytebytego.com/guides/how-to-ace-system-design-interviews-like-a-boss">
+      <span>Interview path</span>
+      <strong>How to Ace System Design Interviews</strong>
+      <em>Start here when the goal is structured practice and crisp tradeoff language.</em>
+    </a>
+    <a href="https://bytebytego.com/guides/must-know-system-design-building-blocks">
+      <span>Production path</span>
+      <strong>System Design Building Blocks</strong>
+      <em>Review the core primitives that appear in most real production architectures.</em>
+    </a>
+    <a href="https://bytebytego.com/guides/top-7-most-used-distributed-system-patterns">
+      <span>Distributed path</span>
+      <strong>Distributed System Patterns</strong>
+      <em>Use this when reliability, scale, and coordination are the hard parts.</em>
+    </a>
+  </div>
+</section>
+
+<section class="resource-featured" aria-labelledby="system-design-featured">
+  <div class="section-label">
+    <span id="system-design-featured">Featured resources</span>
+    <span>High-signal reads</span>
+  </div>
+  <div class="resource-featured-grid">
+    <a href="https://bytebytego.com/guides/system-design-cheat-sheet"><span>Cheat sheet</span><strong>System Design Cheat Sheet</strong></a>
+    <a href="https://bytebytego.com/guides/a-cheat-sheet-for-system-designs"><span>Reference</span><strong>A cheat sheet for system designs</strong></a>
+    <a href="https://bytebytego.com/guides/8-must-know-scalability-strategies"><span>Scale</span><strong>8 Must-Know Scalability Strategies</strong></a>
+    <a href="https://bytebytego.com/guides/a-cheat-sheet-for-designing-fault-tolerant-systems"><span>Resilience</span><strong>Fault-Tolerant Systems</strong></a>
+    <a href="https://bytebytego.com/guides/cloud-database-cheat-sheet"><span>Data</span><strong>Cloud Database Cheat Sheet</strong></a>
+    <a href="https://bytebytego.com/guides/top-5-caching-strategies"><span>Performance</span><strong>Top 5 Caching Strategies</strong></a>
+  </div>
+</section>
+
+<section class="resource-filter" aria-label="Filter system design resources">
+  <span>Filter the index</span>
+  <div class="resource-filter-controls">
+    <button class="resource-filter-button active" type="button" data-resource-filter="all">All</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="api">API</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="database">Database</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="performance">Performance</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="cloud">Cloud</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="security">Security</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="devops">DevOps</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="interviews">Interviews</button>
+  </div>
+</section>
+
 ## Table of Contents
 
 * [API and Web Development](https://bytebytego.com/guides/api-web-development)

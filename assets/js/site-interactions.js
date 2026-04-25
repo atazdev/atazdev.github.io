@@ -59,8 +59,113 @@
     });
   }
 
+  function classifyResourceSection(text) {
+    var value = text.toLowerCase();
+    var topics = [];
+
+    if (/(api|web|grpc|graphql|rest|http)/.test(value)) {
+      topics.push('api');
+    }
+    if (/(database|storage|data|postgres|redis|kafka|queue)/.test(value)) {
+      topics.push('database');
+    }
+    if (/(cache|caching|performance|latency|cdn|redis)/.test(value)) {
+      topics.push('performance');
+    }
+    if (/(cloud|distributed|aws|azure|lambda|scalability|resiliency)/.test(value)) {
+      topics.push('cloud');
+    }
+    if (/(security|auth|password|token|oauth|vpn|firewall)/.test(value)) {
+      topics.push('security');
+    }
+    if (/(devops|ci\/cd|cicd|kubernetes|docker|terraform|sre)/.test(value)) {
+      topics.push('devops');
+    }
+    if (/(interview|technical)/.test(value)) {
+      topics.push('interviews');
+    }
+
+    return topics.length ? topics.join(' ') : 'general';
+  }
+
+  function setupResourceIndex() {
+    var index = document.querySelector('.resource-index-post');
+    var buttons = document.querySelectorAll('.resource-filter-button');
+
+    if (!index) {
+      return;
+    }
+
+    var list = index.querySelector('h2 + ul');
+    if (!list) {
+      return;
+    }
+
+    list.classList.add('resource-index-list');
+
+    Array.prototype.forEach.call(list.children, function (item, itemIndex) {
+      if (item.tagName.toLowerCase() !== 'li') {
+        return;
+      }
+
+      var title = item.querySelector(':scope > a');
+      var nestedList = item.querySelector(':scope > ul');
+      if (!title || !nestedList || item.querySelector(':scope > details')) {
+        return;
+      }
+
+      var topics = classifyResourceSection(title.textContent);
+      var details = document.createElement('details');
+      details.className = 'resource-index-section';
+      details.open = itemIndex < 4;
+      details.setAttribute('data-resource-topics', topics);
+
+      var summary = document.createElement('summary');
+      var label = document.createElement('span');
+      var count = document.createElement('em');
+      label.textContent = title.textContent;
+      count.textContent = nestedList.querySelectorAll('a').length + ' links';
+      summary.appendChild(label);
+      summary.appendChild(count);
+
+      var sectionLink = title.cloneNode(true);
+      sectionLink.className = 'resource-section-link';
+      sectionLink.textContent = 'Open category overview';
+
+      title.remove();
+      details.appendChild(summary);
+      details.appendChild(sectionLink);
+      details.appendChild(nestedList);
+      item.appendChild(details);
+    });
+
+    if (!buttons.length) {
+      return;
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var filter = button.getAttribute('data-resource-filter');
+        var sections = index.querySelectorAll('.resource-index-section');
+
+        buttons.forEach(function (item) {
+          item.classList.toggle('active', item === button);
+        });
+
+        sections.forEach(function (section) {
+          var topics = section.getAttribute('data-resource-topics') || '';
+          var visible = filter === 'all' || topics.split(/\s+/).indexOf(filter) !== -1;
+          section.parentElement.classList.toggle('is-hidden', !visible);
+          if (visible && filter !== 'all') {
+            section.open = true;
+          }
+        });
+      });
+    });
+  }
+
   function setupRevealMotion() {
-    var items = document.querySelectorAll('.home-intro, .start-here, .recommended-strip, .topic-filter, .featured-post, .post-preview, .profile-panel, .profile-timeline, .resource-card, .project-card, .concept-grid section, .topic-section, .related-posts, .follow-block, .discussion-block, .not-found-panel, .blog-post > *');
+    var items = document.querySelectorAll('.home-intro, .start-here, .recommended-strip, .topic-filter, .resource-start, .resource-featured, .resource-filter, .featured-post, .post-preview, .profile-panel, .profile-timeline, .resource-card, .project-card, .concept-grid section, .topic-section, .related-posts, .follow-block, .discussion-block, .not-found-panel, .blog-post > *');
 
     if (!items.length || !('IntersectionObserver' in window)) {
       items.forEach(function (item) {
@@ -161,6 +266,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     setupBackToTop();
     setupTopicFilters();
+    setupResourceIndex();
     setupArticleEnhancements();
     setupRevealMotion();
     updateScrollProgress();

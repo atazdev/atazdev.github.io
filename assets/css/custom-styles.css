@@ -1256,6 +1256,112 @@ pre {
   max-width: 52rem;
 }
 
+.resource-start,
+.resource-featured,
+.resource-filter {
+  margin: 1.5rem 0;
+}
+
+.resource-path-grid,
+.resource-featured-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.resource-path-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.resource-featured-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resource-path-grid a,
+.resource-featured-grid a {
+  display: grid;
+  gap: 0.4rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: rgba(22, 27, 34, 0.72);
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+
+.resource-path-grid a:hover,
+.resource-featured-grid a:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  background-color: rgba(28, 33, 40, 0.9);
+  transform: translateY(-2px);
+}
+
+.resource-path-grid span,
+.resource-featured-grid span {
+  color: var(--accent-blue);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.resource-path-grid strong,
+.resource-featured-grid strong {
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.resource-path-grid em {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.resource-filter {
+  display: grid;
+  gap: 0.75rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: rgba(22, 27, 34, 0.52);
+}
+
+.resource-filter > span {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resource-filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resource-filter-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  background-color: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.resource-filter-button:hover,
+.resource-filter-button.active {
+  border-color: rgba(56, 189, 248, 0.48);
+  background-color: rgba(56, 189, 248, 0.08);
+  color: var(--accent-blue);
+}
+
 .resource-index-post > ul {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1274,12 +1380,72 @@ pre {
   line-height: 1.6 !important;
 }
 
+.resource-index-post > ul > li.is-hidden {
+  display: none;
+}
+
 .resource-index-post > ul > li > a {
   color: var(--text-primary) !important;
   border-bottom: none;
   font-family: var(--font-mono);
   font-size: 0.95rem;
   font-weight: 600;
+}
+
+.resource-index-section {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.resource-index-section summary {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  cursor: pointer;
+  list-style: none;
+}
+
+.resource-index-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.resource-index-section summary span {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.resource-index-section summary em {
+  flex: 0 0 auto;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-style: normal;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.resource-index-section summary::before {
+  content: '+';
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.resource-index-section[open] summary::before {
+  content: '-';
+}
+
+.resource-section-link {
+  display: inline-block;
+  width: fit-content;
+  color: var(--accent-blue) !important;
+  border-bottom: none !important;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-decoration: none !important;
 }
 
 .resource-index-post ul ul {
@@ -1831,7 +1997,9 @@ footer a:hover {
   .resource-grid,
   .concept-grid,
   .related-post-grid,
-  .project-grid {
+  .project-grid,
+  .resource-path-grid,
+  .resource-featured-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
