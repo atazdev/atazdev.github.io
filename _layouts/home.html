@@ -26,18 +26,56 @@ layout: page
     <h2 id="start-here-title">Choose a path through the journal.</h2>
   </div>
   <div class="start-here-grid">
-    <a href="{{ '/tags' | relative_url }}#devsecops">
+    <a href="{{ '/devsecops' | relative_url }}">
       <span>DevSecOps</span>
       <strong>Secure delivery, policy-as-code, and platform practices.</strong>
     </a>
-    <a href="{{ '/tags' | relative_url }}#ai">
+    <a href="{{ '/ai-governance' | relative_url }}">
       <span>Applied AI</span>
       <strong>Governance, agents, automation, and AI-enabled workflows.</strong>
     </a>
-    <a href="{{ '/tags' | relative_url }}#system-design">
+    <a href="{{ '/architecture' | relative_url }}">
       <span>Architecture</span>
       <strong>System design, cloud patterns, and resilient operating models.</strong>
     </a>
+  </div>
+</section>
+
+<section class="recommended-strip" aria-labelledby="recommended-title">
+  <div class="section-label">
+    <span id="recommended-title">Recommended Reading</span>
+    <a href="{{ '/recommended' | relative_url }}">View all</a>
+  </div>
+  <div class="mini-card-grid">
+    {% assign featured_count = 0 %}
+    {% for post in site.posts %}
+      {% if post.featured and featured_count < 3 %}
+      {% assign featured_count = featured_count | plus: 1 %}
+      <a class="mini-card{% if post.category %} category-{{ post.category | slugify }}{% endif %}" href="{{ post.url | relative_url }}">
+        <span>{{ post.category | default: "note" }}</span>
+        <strong>{{ post.title }}</strong>
+      </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="recommended-strip" aria-labelledby="updated-title">
+  <div class="section-label">
+    <span id="updated-title">Recently Updated</span>
+    <span>Evergreen notes</span>
+  </div>
+  <div class="mini-card-grid">
+    {% assign updated_count = 0 %}
+    {% for post in site.posts %}
+      {% if post.last-updated and updated_count < 3 %}
+      {% assign updated_count = updated_count | plus: 1 %}
+      <a class="mini-card{% if post.category %} category-{{ post.category | slugify }}{% endif %}" href="{{ post.url | relative_url }}">
+        <span>{{ post.last-updated | date: "%B %-d, %Y" }}</span>
+        <strong>{{ post.title }}</strong>
+      </a>
+      {% endif %}
+    {% endfor %}
   </div>
 </section>
 

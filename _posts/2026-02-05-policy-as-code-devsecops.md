@@ -6,6 +6,9 @@ date: 2026-02-05
 category: devsecops
 series: "Secure Delivery"
 summary: "Why policy-as-code turns security rules into enforceable, testable delivery controls."
+featured: true
+last-updated: 2026-04-25
+share-img: /assets/img/social-secure-delivery.svg
 tags: [devsecops, security, policy-as-code, automation, compliance, infrastructure]
 ---
 

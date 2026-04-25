@@ -60,7 +60,7 @@
   }
 
   function setupRevealMotion() {
-    var items = document.querySelectorAll('.home-intro, .start-here, .topic-filter, .featured-post, .post-preview, .profile-panel, .profile-timeline, .resource-card, .project-card, .topic-section, .related-posts, .follow-block, .blog-post > *');
+    var items = document.querySelectorAll('.home-intro, .start-here, .recommended-strip, .topic-filter, .featured-post, .post-preview, .profile-panel, .profile-timeline, .resource-card, .project-card, .topic-section, .related-posts, .follow-block, .blog-post > *');
 
     if (!items.length || !('IntersectionObserver' in window)) {
       items.forEach(function (item) {

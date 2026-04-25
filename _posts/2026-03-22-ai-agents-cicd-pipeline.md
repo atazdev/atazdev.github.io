@@ -6,6 +6,9 @@ date: 2026-03-22
 category: ai
 series: "AI Governance"
 summary: "How AI agents change the assumptions behind CI/CD pipelines, review gates, and accountability."
+featured: true
+last-updated: 2026-04-25
+share-img: /assets/img/social-ai-governance.svg
 tags: [ai, cicd, devops, automation, gitops, devsecops, agents, security]
 ---
 

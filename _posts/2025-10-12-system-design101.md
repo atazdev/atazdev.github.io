@@ -6,6 +6,9 @@ date: 2025-10-12
 category: architecture
 series: "System Design"
 summary: "A practical index of system design concepts, patterns, and real-world architecture references."
+featured: true
+last-updated: 2026-04-25
+share-img: /assets/img/social-architecture.svg
 tags: [system-design, architecture, engineering, interview-prep]
 ---
 

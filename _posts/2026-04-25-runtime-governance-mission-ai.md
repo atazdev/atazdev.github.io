@@ -6,6 +6,9 @@ date: 2026-04-25
 category: ai
 series: "AI Governance"
 summary: "A runtime governance model for autonomous systems operating beyond traditional approval gates."
+featured: true
+last-updated: 2026-04-25
+share-img: /assets/img/social-ai-governance.svg
 tags: [ai, defense, zero-trust, policy-as-code, devsecops, edge-computing, governance, autonomy]
 ---
 

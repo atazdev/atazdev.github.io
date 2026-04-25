@@ -19,13 +19,23 @@ default-share-img: "/assets/img/social-card.svg"
 
 navbar-links:
   Journal: "/"
-  Topics: "tags"
-  Series: "series"
-  Categories: "categories"
-  Resources: "resources"
-  Projects: "projects"
+  Explore:
+    - Topics: "tags"
+    - Series: "series"
+    - Categories: "categories"
+    - Recommended: "recommended"
+  Focus:
+    - AI Governance: "ai-governance"
+    - DevSecOps: "devsecops"
+    - GitOps: "gitops"
+    - Architecture: "architecture"
+  Work:
+    - Projects: "projects"
+    - Resources: "resources"
+    - Uses: "uses"
+    - Style Guide: "style-guide"
+    - Changelog: "site-changelog"
   Now: "now"
-  Uses: "uses"
   About: "aboutme"
 
 

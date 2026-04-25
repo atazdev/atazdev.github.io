@@ -15,9 +15,20 @@
       {%- assign current_url = page.url | replace:'index.html','' -%}
       {%- for link in site.navbar-links -%}
         {%- if link[1].first %}
+          {%- assign dropdown_active = false -%}
+          {%- for childlink in link[1] -%}
+            {%- for linkparts in childlink -%}
+              {%- assign child_check_url = linkparts[1] | relative_url -%}
+              {%- assign child_check_url_slash = child_check_url | append:'/' -%}
+              {%- assign current_url_slash = current_url | append:'/' -%}
+              {%- if current_url == child_check_url or current_url == child_check_url_slash or current_url_slash == child_check_url -%}
+                {%- assign dropdown_active = true -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="nav-link dropdown-toggle{% if dropdown_active %} active{% endif %}" href="#" id="navbarDropdown-{{ link[0] | slugify }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown-{{ link[0] | slugify }}">
               {%- for childlink in link[1] -%}
                 {%- for linkparts in childlink %}
                   {%- assign child_url = linkparts[1] -%}

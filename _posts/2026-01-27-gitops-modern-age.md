@@ -6,6 +6,9 @@ date: 2026-01-27
 category: gitops
 series: "Secure Delivery"
 summary: "Why GitOps matters for reproducible infrastructure, automation, and accountable software delivery."
+featured: true
+last-updated: 2026-04-25
+share-img: /assets/img/social-secure-delivery.svg
 tags: [gitops, devops, ai, infrastructure, defense, automation]
 ---
 

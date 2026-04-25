@@ -78,4 +78,17 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
   </div>
 </section>
 
+<section class="follow-block" aria-labelledby="about-cta-title">
+  <div>
+    <span class="profile-kicker">Next Steps</span>
+    <h2 id="about-cta-title">Explore the writing system.</h2>
+    <p>Start with the recommended reading path, browse projects, or reach out directly.</p>
+  </div>
+  <div class="follow-actions">
+    <a href="{{ '/recommended' | relative_url }}">Read</a>
+    <a href="{{ '/projects' | relative_url }}">Projects</a>
+    <a href="mailto:{{ site.social-network-links.email }}">Contact</a>
+  </div>
+</section>
+
 </div>
