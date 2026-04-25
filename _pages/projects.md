@@ -19,9 +19,9 @@ subtitle: "Experiments, prototypes, and working notes"
       <span class="profile-kicker">Source Prototype</span>
       <h3>Dashboard Experiment</h3>
       <p>
-        A Vite-based dashboard prototype designed for exploring operational interface 
-        ideas separately from the main journal. This prototype serves as a sandbox for 
-        high-fidelity UI experiments.
+        A Vite-based <a href="{{ '/dashboard/' | relative_url }}">operational dashboard</a> 
+        prototype designed for exploring interface ideas separately from the main journal. 
+        This prototype serves as a sandbox for high-fidelity UI experiments.
       </p>
       <div class="brief-actions">
         <a href="{{ '/dashboard/' | relative_url }}">Launch Dashboard</a>
