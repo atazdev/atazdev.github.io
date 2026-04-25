@@ -93,35 +93,7 @@ layout: base
       {% endif %}
 
       {% if page.series %}
-      {% capture series_markup %}
-        {% assign series_count = 0 %}
-        {% for series_post in site.posts reversed %}
-          {% if series_post.series == page.series and series_post.url != page.url %}
-            {% assign series_count = series_count | plus: 1 %}
-            <a href="{{ series_post.url | relative_url }}">
-              <time datetime="{{ series_post.date | date_to_xmlschema }}">{{ series_post.date | date: "%B %-d, %Y" }}</time>
-              <strong>{{ series_post.title }}</strong>
-              {% if series_post.summary %}
-              <span>{{ series_post.summary }}</span>
-              {% elsif series_post.subtitle %}
-              <span>{{ series_post.subtitle }}</span>
-              {% endif %}
-            </a>
-          {% endif %}
-        {% endfor %}
-      {% endcapture %}
-      {% assign series_markup = series_markup | strip %}
-      {% if series_markup != "" %}
-      <aside class="related-posts" aria-labelledby="series-posts-title">
-        <div class="section-label">
-          <span id="series-posts-title">More In {{ page.series }}</span>
-          <span>Series</span>
-        </div>
-        <div class="related-post-grid">
-          {{ series_markup }}
-        </div>
-      </aside>
-      {% endif %}
+        {% include series-navigator.html %}
       {% endif %}
 
       {% capture related_markup %}

@@ -1,0 +1,24 @@
+{% if page.series %}
+<div class="series-navigator">
+  <div class="series-header">
+    <span class="series-label">// SERIES: {{ page.series }}</span>
+  </div>
+  
+  <ul class="series-list">
+    {% assign series_posts = site.posts | where: "series", page.series | reverse %}
+    {% for post in series_posts %}
+      <li class="series-item {% if post.url == page.url %}active{% endif %}">
+        <div class="series-marker"></div>
+        <div class="series-link-wrapper">
+          {% if post.url == page.url %}
+            <span class="series-current">{{ post.title }}</span>
+            <span class="series-status">(CURRENT STEP)</span>
+          {% else %}
+            <a href="{{ post.url | relative_url }}" class="series-link">{{ post.title }}</a>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
