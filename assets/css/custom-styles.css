@@ -90,16 +90,31 @@ body {
 }
 
 .navbar-custom .nav-link {
+  position: relative;
   font-family: var(--font-mono) !important;
   font-size: 0.82rem !important;
   letter-spacing: 0.06em !important;
   text-transform: uppercase !important;
   color: var(--text-muted) !important;
-  transition: color 0.15s ease !important;
+  padding-inline: 0.85rem !important;
+  transition: color 0.15s ease, background-color 0.15s ease !important;
 }
 
-.navbar-custom .nav-link:hover {
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active,
+.navbar-custom .dropdown.show > .nav-link {
   color: var(--accent-blue) !important;
+}
+
+.navbar-custom .nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0.85rem;
+  right: 0.85rem;
+  bottom: 0.25rem;
+  height: 1px;
+  background-color: var(--accent-blue);
+  opacity: 0.85;
 }
 
 .footer-note {
@@ -113,13 +128,17 @@ body {
 .dropdown-menu {
   background-color: var(--bg-surface) !important;
   border: 1px solid var(--border) !important;
-  border-radius: 4px !important;
+  border-radius: 6px !important;
+  padding: 0.35rem !important;
+  box-shadow: 0 16px 36px rgba(2, 6, 23, 0.38);
 }
 
 .dropdown-item {
   color: var(--text-muted) !important;
   font-family: var(--font-mono) !important;
-  font-size: 0.82rem !important;
+  font-size: 0.78rem !important;
+  border-radius: 4px;
+  padding: 0.5rem 0.65rem !important;
 }
 
 .dropdown-item:hover {
@@ -134,6 +153,31 @@ body {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%2338BDF8' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+@media (max-width: 1199px) {
+  .navbar-custom .navbar-collapse {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: rgba(13, 17, 23, 0.96);
+  }
+
+  .navbar-custom .nav-link {
+    padding: 0.6rem 0.75rem !important;
+  }
+
+  .navbar-custom .nav-link.active::after {
+    left: 0.75rem;
+    right: auto;
+    bottom: 0.35rem;
+    width: 2rem;
+  }
+
+  .dropdown-menu {
+    margin: 0.25rem 0 0.5rem !important;
+  }
 }
 
 /* --- Intro header / page banner --- */

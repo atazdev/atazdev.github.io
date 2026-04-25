@@ -12,6 +12,7 @@
 
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
+      {%- assign current_url = page.url | replace:'index.html','' -%}
       {%- for link in site.navbar-links -%}
         {%- if link[1].first %}
           <li class="nav-item dropdown">
@@ -19,14 +20,20 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               {%- for childlink in link[1] -%}
                 {%- for linkparts in childlink %}
-                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+                  {%- assign child_url = linkparts[1] -%}
+                  {%- if child_url contains '://' -%}
+                    <a class="dropdown-item" href="{{ child_url }}" target="_blank" rel="noopener">{{ linkparts[0] }}</a>
+                  {%- else -%}
+                    <a class="dropdown-item" href="{{ child_url | relative_url }}">{{ linkparts[0] }}</a>
+                  {%- endif -%}
                 {%- endfor -%}
               {%- endfor %}
             </div>
           </li>
         {% else %}
+          {%- assign item_url = link[1] | relative_url -%}
           <li class="nav-item">
-            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
+            <a class="nav-link{% if current_url == item_url %} active{% endif %}" href="{{ item_url }}">{{ link[0] }}</a>
           </li>
         {%- endif -%}
       {%- endfor -%}
