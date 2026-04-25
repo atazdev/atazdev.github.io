@@ -1,18 +1,18 @@
 ---
-name: Ataz Labs Tactical Terminal
-version: 1.0.0
-description: A high-fidelity, mission-ready visual identity system blending terminal-core aesthetics with modern UI/UX principles.
-author: Antigravity (via Stitch Skills)
+name: Ataz Labs Modern Editorial
+version: 2.0.0
+description: A high-authority, technical journal design system prioritizing readability, trust, and professional engagement.
+author: AtazDev (via Antigravity)
 ---
 
-# 🛡️ Design System: Tactical Terminal
+# 🛡️ Design System: Modern Editorial
 
 ## 🌌 Atmosphere & Vibe
-The "Tactical Terminal" system is designed to feel like a mission-critical command interface. It prioritizes information density, legibility under low-light conditions, and a sense of "active system" engagement.
+The "Modern Editorial" system is designed for high-end technical communication. It blends the precision of engineering with the readability of premium tech publications.
 
-- **Vibe:** Minimalist, Brutalist, Tech-Noir, Precise.
-- **Surface Strategy:** Deep obsidian backgrounds with layered elevation using subtle borders rather than heavy shadows.
-- **Interaction Model:** "Active" feedback (scan-lines, blinking cursors, neon glows) that makes the interface feel alive.
+- **Vibe:** Authoritative, Clean, Minimalist, High-Trust.
+- **Surface Strategy:** Deep obsidian backgrounds (`#0D1117`) with refined glassmorphism for navigation and interactive components.
+- **Design Philosophy:** Content-first. Use white space (and "obsidian space") to drive focus. Tactical accents are used as subtle status indicators rather than heavy structural elements.
 
 ---
 
@@ -22,60 +22,51 @@ The "Tactical Terminal" system is designed to feel like a mission-critical comma
 | Token | Hex | Role |
 | :--- | :--- | :--- |
 | `bg-primary` | `#0D1117` | Main page background (Deep Obsidian) |
-| `bg-surface` | `#161B22` | Card backgrounds, navbars |
-| `bg-elevated` | `#1C2128` | Hover states, active modal layers |
+| `bg-surface` | `#161B22` | Panel backgrounds, CTAs, navbars |
 | `border-subtle` | `#30363D` | Default structural borders |
 
-### Tactical Accents
+### Functional Accents
 | Token | Hex | Role |
 | :--- | :--- | :--- |
-| `accent-green` | `#00FF88` | "System Go" status, primary actions, branding |
-| `accent-blue` | `#0EA5E9` | "Processing" status, info links, secondary highlights |
-| `accent-red` | `#FF4444` | "Alert" status, critical errors, destructive actions |
-
-### Typography
-| Token | Hex | Role |
-| :--- | :--- | :--- |
-| `text-primary` | `#E6EDF3` | High-contrast body and header text |
-| `text-muted` | `#8B949E` | Secondary metadata, captions, inactive labels |
+| `accent-green` | `#00FF88` | Active status, primary CTA borders, success states |
+| `accent-blue` | `#0EA5E9` | Technical metadata, secondary links, informational markers |
 
 ---
 
 ## 🔡 Typography
 
 ### Font Families
-- **System/Data:** `'JetBrains Mono'`, monospace — Used for headers, nav, labels, and code.
-- **Narrative/Body:** `'Inter'`, sans-serif — Used for long-form reading to reduce cognitive load.
+- **Editorial/Narrative:** `'Inter'`, sans-serif — Primary font for all headers and body copy.
+- **Technical/Data:** `'JetBrains Mono'`, monospace — Reserved for metadata, code, and functional labels.
 
-### Scale
-- **H1 (Hero):** 2.5rem | Mono | Bold | -0.02em tracking
-- **H2 (Section):** 1.25rem | Mono | Semi-Bold | Green left-border (3px)
-- **Body:** 1rem | Sans | Regular | 1.85 line-height
-- **Metadata:** 0.75rem | Mono | All-Caps | 0.1em tracking
+### Scale & Hierarchy
+- **H1 (Primary Heading):** 2.5rem | Inter | Extra-Bold | 1.1 line-height
+- **H2 (Section Heading):** 1.75rem | Inter | Bold | 1.2 line-height
+- **H3 (Subheading):** 1.1rem | Inter | Semi-Bold | Border-bottom or subtle accent
+- **Body Copy:** 1rem | Inter | Regular | 1.6 line-height
+- **Technical Labels:** 0.75rem | Mono | Uppercase | 0.15em tracking
 
 ---
 
 ## 🧩 Signature Components
 
-### 1. The Tactical Header
-- **Background:** Solid `#0D1117` with a `1px` bottom-border of `accent-green`.
-- **Brand:** Uppercase Mono text with a trailing blinking underscore (`_`).
-- **Status:** A small, low-opacity "SYSTEM STATUS: ACTIVE" label in the nav.
+### 1. The Editorial Header
+- **Navigation:** Compact, glassmorphic (`backdrop-filter: blur(12px)`) with a subtle `accent-blue` active state indicator.
+- **Brand:** Bold Inter typography. Branding is clean and static (no blinking cursors in this version).
 
-### 2. Post Preview Cards
-- **Style:** `bg-surface` with a `1px` border and a `3px` accent-green left-tab.
-- **Interaction:** On hover, transform `translateX(4px)` and activate a subtle scan-line overlay.
-- **Glow:** Add a `0 0 20px rgba(0, 255, 136, 0.05)` glow on hover.
+### 2. High-Impact CTA (Follow Block)
+- **Style:** `bg-surface` with a `1px` border and `12px` corner radius.
+- **Layout:** Flexbox-based split between narrative text and primary action buttons.
+- **Button Aesthetic:** Outline-based buttons with `accent-green` borders that fill on hover.
 
-### 3. Intel Callouts (Blockquotes)
-- **Prefix:** Every blockquote starts with a `// INTEL` mono-label in `accent-blue`.
-- **Styling:** Italicized text with a blue left-border and light surface tint.
+### 3. Service Timeline
+- **Style:** Vertical timeline with glowing `accent-green` nodes (`box-shadow` depth).
+- **Typography:** Mono labels for "Phases" or "Dates" paired with Inter body text for descriptions.
 
 ---
 
-## ⚡ WOW-Factor Enhancements (Future)
+## ⚡ Visual Language Guidelines
 
-1.  **Glassmorphism Layers:** Use `backdrop-filter: blur(8px)` on navigation and modals to add depth to the dark theme.
-2.  **CRT Scanlines:** Implement a global (or component-level) CSS overlay that simulates a high-end terminal monitor.
-3.  **Terminal Transitions:** Use "typing" animations for hero headlines and "staggered fade-in" for grid items to mimic a system boot sequence.
-4.  **Neon Depth:** Use very subtle outer glows (`box-shadow`) on primary buttons to make them pop against the obsidian background.
+1.  **Consistency:** Never mix Mono and Inter within the same paragraph. Use Mono only for distinct data points.
+2.  **Elevation:** Use `bg-surface` for cards. Avoid heavy drop-shadows; use subtle border highlights to define depth.
+3.  **Interaction:** Use "soft-lift" transitions (`transform: translateY(-4px)`) for interactive cards to provide tactile feedback.

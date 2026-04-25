@@ -97,48 +97,28 @@ layout: page
     <span>{{ featured.date | date: "%B %-d, %Y" }}</span>
   </div>
 
-  <article class="post-preview post-featured{% if featured_thumbnail != "" %} post-has-image{% endif %}{% if featured.category %} category-{{ featured.category | slugify }}{% endif %}" data-tags="{% for tag in featured.tags %}{{ tag | slugify }} {% endfor %}">
+  <a href="{{ featured.url | absolute_url }}" class="post-preview featured-preview">
     <div class="post-content">
-      {% if featured.category %}
-      <span class="post-category">{{ featured.category }}</span>
-      {% elsif featured.tags.size > 0 %}
-      <span class="post-category">{{ featured.tags[0] }}</span>
-      {% endif %}
-      <p class="post-meta">{{ featured.date | date: "%B %-d, %Y" }}</p>
-      <a class="post-link" href="{{ featured.url | absolute_url }}">
-        <h2 id="featured-post-title" class="post-title">{{ featured.title }}</h2>
-        {% if featured.subtitle %}
-        <p class="post-subtitle">{{ featured.subtitle }}</p>
-        {% endif %}
-      </a>
-
-      {% unless site.feed_show_excerpt == false %}
-      <div class="post-entry">
-        {% if featured.summary %}
-        {{ featured.summary | strip_html | xml_escape }}
-        {% else %}
-        {% assign excerpt_length = site.excerpt_length | default: 50 %}
-        {{ featured.excerpt | strip_html | xml_escape | truncatewords: excerpt_length }}
-        {% endif %}
-        <a href="{{ featured.url | absolute_url }}" class="post-read-more">Read essay</a>
-      </div>
-      {% endunless %}
-
-      {% if site.feed_show_tags != false and featured.tags.size > 0 %}
-      <div class="blog-tags" aria-label="Topics">
-        {% for tag in featured.tags limit: 5 %}
-        <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
+      <span class="post-category">
+        {% if featured.category %}{{ featured.category }}{% elsif featured.tags.size > 0 %}{{ featured.tags[0] }}{% else %}Journal{% endif %}
+      </span>
+      <p class="post-meta">{{ featured.date | date: "%B %-d, %Y" }} • {{ featured.content | strip_html | number_of_words | divided_by: 180 | plus: 1 }} min read</p>
+      <h2 id="featured-post-title" class="post-title">{{ featured.title }}</h2>
+      <p class="post-subtitle">{{ featured.summary | default: featured.subtitle | strip_html | truncatewords: 30 }}</p>
+      
+      <div class="post-tags-mini">
+        {% for tag in featured.tags limit: 3 %}
+          <span class="tag-badge">#{{ tag }}</span>
         {% endfor %}
       </div>
-      {% endif %}
     </div>
 
     {% if featured_thumbnail != "" %}
-    <a class="post-image" href="{{ featured.url | absolute_url }}" aria-label="{{ featured.title }}">
+    <div class="post-image">
       <img src="{{ featured_thumbnail | absolute_url }}" alt="">
-    </a>
+    </div>
     {% endif %}
-  </article>
+  </a>
 </section>
 {% endif %}
 
@@ -164,54 +144,23 @@ layout: page
     {% endcapture %}
     {% assign thumbnail = thumbnail | strip %}
 
-  <article class="post-preview{% if thumbnail != "" %} post-has-image{% endif %}{% if post.category %} category-{{ post.category | slugify }}{% endif %}" data-tags="{% for tag in post.tags %}{{ tag | slugify }} {% endfor %}">
-
+  <a href="{{ post.url | absolute_url }}" class="post-preview">
     <div class="post-content">
-      {% if post.category %}
-      <span class="post-category">{{ post.category }}</span>
-      {% elsif post.tags.size > 0 %}
-      <span class="post-category">{{ post.tags[0] }}</span>
-      {% endif %}
+      <span class="post-category">
+        {% if post.category %}{{ post.category }}{% elsif post.tags.size > 0 %}{{ post.tags[0] }}{% else %}Note{% endif %}
+      </span>
       <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
 
-      <a class="post-link" href="{{ post.url | absolute_url }}">
-        <h2 class="post-title">{{ post.title }}</h2>
-        {% if post.subtitle %}
-        <p class="post-subtitle">{{ post.subtitle }}</p>
-        {% endif %}
-      </a>
-
-      {% unless site.feed_show_excerpt == false %}
-      <div class="post-entry">
-        {% if post.summary %}
-        {{ post.summary | strip_html | xml_escape }}
-        {% else %}
-        {% assign excerpt_length = site.excerpt_length | default: 50 %}
-        {{ post.excerpt | strip_html | xml_escape | truncatewords: excerpt_length }}
-        {% endif %}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-        <a href="{{ post.url | absolute_url }}" class="post-read-more">Read note</a>
-        {% endif %}
-      </div>
-      {% endunless %}
-
-      {% if site.feed_show_tags != false and post.tags.size > 0 %}
-      <div class="blog-tags" aria-label="Topics">
-        {% for tag in post.tags limit: 5 %}
-        <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
-        {% endfor %}
-      </div>
-      {% endif %}
+      <h2 class="post-title">{{ post.title }}</h2>
+      <p class="post-subtitle">{{ post.summary | default: post.subtitle | strip_html | truncatewords: 25 }}</p>
     </div>
 
     {% if thumbnail != "" %}
-    <a class="post-image" href="{{ post.url | absolute_url }}" aria-label="{{ post.title }}">
+    <div class="post-image">
       <img src="{{ thumbnail | absolute_url }}" alt="">
-    </a>
+    </div>
     {% endif %}
-
-  </article>
+  </a>
   {% endfor %}
 </div>
 
