@@ -33,19 +33,19 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
   </div>
 
   <div class="profile-panel">
-    <h3>Focus Areas</h3>
+    <h3>Technical Payload</h3>
     <div class="focus-list">
-      <div>
-        <strong>Technical Leadership</strong>
-        <span>Strategic planning, team development, and delivery across complex environments.</span>
-      </div>
-      <div>
-        <strong>Security Operations</strong>
-        <span>CISSP certified, with experience in cyber operations and enterprise risk.</span>
-      </div>
-      <div>
-        <strong>Cloud Architecture</strong>
-        <span>Modern infrastructure, automation, and cloud-native operations.</span>
+      <div class="status-value" style="margin-bottom: 1rem;">CISSP_CERTIFIED</div>
+      <div class="status-value" style="margin-bottom: 1rem;">MS_CYBERSECURITY</div>
+      <div style="margin-top: 2rem;">
+        <span class="sidebar-label">Core Domains</span>
+        <ul class="tech-list" style="margin-top: 1rem;">
+          <li>Secure Delivery</li>
+          <li>Cloud Operations</li>
+          <li>Enterprise Risk</li>
+          <li>Identity (IAM)</li>
+          <li>Infrastructure (IaC)</li>
+        </ul>
       </div>
     </div>
   </div>

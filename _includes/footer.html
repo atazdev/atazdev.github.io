@@ -46,3 +46,35 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const codeBlocks = document.querySelectorAll('pre');
+    
+    codeBlocks.forEach(block => {
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'code-copy-btn';
+      copyBtn.type = 'button';
+      copyBtn.innerText = 'COPY';
+      
+      block.appendChild(copyBtn);
+      
+      copyBtn.addEventListener('click', () => {
+        const code = block.querySelector('code');
+        const text = code ? code.innerText : block.innerText;
+        
+        navigator.clipboard.writeText(text).then(() => {
+          copyBtn.innerText = 'COPIED';
+          copyBtn.style.background = 'var(--accent-green)';
+          copyBtn.style.color = 'var(--bg-primary)';
+          
+          setTimeout(() => {
+            copyBtn.innerText = 'COPY';
+            copyBtn.style.background = '';
+            copyBtn.style.color = '';
+          }, 2000);
+        });
+      });
+    });
+  });
+</script>

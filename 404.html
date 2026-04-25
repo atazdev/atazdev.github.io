@@ -1,19 +1,26 @@
 ---
-layout: default
-title: Page Not Found
+layout: page
+title: "404 // INTERRUPTION"
 permalink: /404.html
 ---
 
-<section class="not-found-panel">
-  <p class="profile-kicker">404</p>
-  <h1>This page is not in the journal.</h1>
-  <p>
-    The link may have moved, or the note may not exist anymore. Try the journal,
-    topic index, or search.
-  </p>
-  <div class="home-actions">
-    <a href="{{ '/' | relative_url }}">Journal</a>
-    <a href="{{ '/tags' | relative_url }}">Topics</a>
-    <a href="{{ '/recommended' | relative_url }}">Recommended</a>
+<section class="profile-page" style="text-align: center; padding: 6rem 1rem;">
+  <div class="profile-hero">
+    <p class="profile-kicker" style="color: var(--accent-red) !important;">ERROR_CODE: 404</p>
+    <h2 style="font-size: 3rem; margin-bottom: 2rem;">Resource not found in tactical grid.</h2>
+    <p style="max-width: 32rem; margin: 0 auto 3rem;">
+      The path you requested is either missing from the manifest or has been 
+      deprecated. Re-establishing link to primary infrastructure...
+    </p>
+  </div>
+
+  <div class="follow-actions" style="justify-content: center; gap: 1.5rem;">
+    <a href="{{ '/' | relative_url }}">Return to Home</a>
+    <a href="{{ '/projects' | relative_url }}">View Projects</a>
+    <a href="{{ '/site-changelog' | relative_url }}">Site Audit</a>
+  </div>
+
+  <div style="margin-top: 6rem; opacity: 0.3; font-family: var(--font-mono); font-size: 0.7rem;">
+    SYSTEM_STATUS: ANOMALY_DETECTED // AUTO_REDIRECT_FAIL
   </div>
 </section>
