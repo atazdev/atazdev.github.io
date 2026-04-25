@@ -6,15 +6,85 @@ layout: page
 
 {% assign posts = paginator.posts | default: site.posts %}
 
+<section class="home-intro" aria-labelledby="home-intro-title">
+  <p class="home-kicker">Technical Journal</p>
+  <h1 id="home-intro-title">Notes on secure systems, software delivery, and applied AI.</h1>
+  <p>
+    Field-informed writing on cybersecurity, DevSecOps, architecture, automation,
+    and the engineering practices that make complex systems more trustworthy.
+  </p>
+  <div class="home-actions" aria-label="Primary links">
+    <a href="{{ '/aboutme' | relative_url }}">About</a>
+    <a href="{{ '/tags' | relative_url }}">Topics</a>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </div>
+</section>
+
+{% if posts.size > 0 %}
+<section class="featured-post" aria-labelledby="featured-post-title">
+  {% assign featured = posts.first %}
+
+  {%- capture featured_thumbnail -%}
+    {% if featured.thumbnail-img %}
+      {{ featured.thumbnail-img }}
+    {% elsif featured.cover-img %}
+      {% if featured.cover-img.first %}
+        {{ featured.cover-img[0].first.first }}
+      {% else %}
+        {{ featured.cover-img }}
+      {% endif %}
+    {% endif %}
+  {% endcapture %}
+  {% assign featured_thumbnail = featured_thumbnail | strip %}
+
+  <div class="section-label">
+    <span>Featured Essay</span>
+    <span>{{ featured.date | date: "%B %-d, %Y" }}</span>
+  </div>
+
+  <article class="post-preview post-featured{% if featured_thumbnail != "" %} post-has-image{% endif %}">
+    <div class="post-content">
+      <p class="post-meta">{{ featured.date | date: "%B %-d, %Y" }}</p>
+      <a class="post-link" href="{{ featured.url | absolute_url }}">
+        <h2 id="featured-post-title" class="post-title">{{ featured.title }}</h2>
+        {% if featured.subtitle %}
+        <p class="post-subtitle">{{ featured.subtitle }}</p>
+        {% endif %}
+      </a>
+
+      {% unless site.feed_show_excerpt == false %}
+      <div class="post-entry">
+        {% assign excerpt_length = site.excerpt_length | default: 50 %}
+        {{ featured.excerpt | strip_html | xml_escape | truncatewords: excerpt_length }}
+        <a href="{{ featured.url | absolute_url }}" class="post-read-more">Read essay</a>
+      </div>
+      {% endunless %}
+
+      {% if site.feed_show_tags != false and featured.tags.size > 0 %}
+      <div class="blog-tags" aria-label="Topics">
+        {% for tag in featured.tags limit: 5 %}
+        <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    {% if featured_thumbnail != "" %}
+    <a class="post-image" href="{{ featured.url | absolute_url }}" aria-label="{{ featured.title }}">
+      <img src="{{ featured_thumbnail | absolute_url }}" alt="">
+    </a>
+    {% endif %}
+  </article>
+</section>
+{% endif %}
+
 <div class="feed-summary">
-  <span>Journal</span>
-  <span>{{ posts.size }} notes</span>
+  <span>Latest Notes</span>
+  <span>{{ posts.size }} total</span>
 </div>
 
 <div class="posts-list">
-  {% for post in posts %}
-  <article class="post-preview">
-
+  {% for post in posts offset: 1 %}
     {%- capture thumbnail -%}
       {% if post.thumbnail-img %}
         {{ post.thumbnail-img }}
@@ -24,71 +94,49 @@ layout: page
         {% else %}
           {{ post.cover-img }}
         {% endif %}
-      {% else %}
       {% endif %}
     {% endcapture %}
-    {% assign thumbnail=thumbnail | strip %}
+    {% assign thumbnail = thumbnail | strip %}
 
-    {% if site.feed_show_excerpt == false %}
-    {% if thumbnail != "" %}
-    <div class="post-image post-image-normal">
-      <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-        <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
+  <article class="post-preview{% if thumbnail != "" %} post-has-image{% endif %}">
+
+    <div class="post-content">
+      <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+
+      <a class="post-link" href="{{ post.url | absolute_url }}">
+        <h2 class="post-title">{{ post.title }}</h2>
+        {% if post.subtitle %}
+        <p class="post-subtitle">{{ post.subtitle }}</p>
+        {% endif %}
       </a>
-    </div>
-    {% endif %}
-    {% endif %}
 
-    <a href="{{ post.url | absolute_url }}">
-      <h2 class="post-title">{{ post.title }}</h2>
+      {% unless site.feed_show_excerpt == false %}
+      <div class="post-entry">
+        {% assign excerpt_length = site.excerpt_length | default: 50 %}
+        {{ post.excerpt | strip_html | xml_escape | truncatewords: excerpt_length }}
+        {% assign excerpt_word_count = post.excerpt | number_of_words %}
+        {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
+        <a href="{{ post.url | absolute_url }}" class="post-read-more">Read note</a>
+        {% endif %}
+      </div>
+      {% endunless %}
 
-      {% if post.subtitle %}
-        <h3 class="post-subtitle">
-        {{ post.subtitle }}
-        </h3>
+      {% if site.feed_show_tags != false and post.tags.size > 0 %}
+      <div class="blog-tags" aria-label="Topics">
+        {% for tag in post.tags limit: 5 %}
+        <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
+        {% endfor %}
+      </div>
       {% endif %}
+    </div>
+
+    {% if thumbnail != "" %}
+    <a class="post-image" href="{{ post.url | absolute_url }}" aria-label="{{ post.title }}">
+      <img src="{{ thumbnail | absolute_url }}" alt="">
     </a>
-
-    <p class="post-meta">
-      {{ post.date | date: "%B %-d, %Y" }}
-    </p>
-
-    {% if thumbnail != "" %}
-    <div class="post-image post-image-small">
-      <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-        <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
-      </a>
-    </div>
     {% endif %}
 
-    {% unless site.feed_show_excerpt == false %}
-    {% if thumbnail != "" %}
-    <div class="post-image post-image-short">
-      <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-        <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
-      </a>
-    </div>
-    {% endif %}
-
-    <div class="post-entry">
-      {% assign excerpt_length = site.excerpt_length | default: 50 %}
-      {{ post.excerpt | strip_html | xml_escape | truncatewords: excerpt_length }}
-      {% assign excerpt_word_count = post.excerpt | number_of_words %}
-      {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-        <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
-      {% endif %}
-    </div>
-    {% endunless %}
-
-    {% if site.feed_show_tags != false and post.tags.size > 0 %}
-    <div class="blog-tags">
-      {% for tag in post.tags %}
-      <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
-      {% endfor %}
-    </div>
-    {% endif %}
-
-   </article>
+  </article>
   {% endfor %}
 </div>
 

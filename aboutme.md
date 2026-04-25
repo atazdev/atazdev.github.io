@@ -1,72 +1,81 @@
 ---
 layout: page
 title: About Me
-subtitle: "OPERATIONAL PROFILE: ATAC-01"
+subtitle: "Cybersecurity, cloud operations, and technical leadership"
 ---
 
-<div class="tactical-container">
+<div class="profile-page">
 
-<div class="glass-panel profile-header" style="padding: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent-green);">
-  <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-green); margin-bottom: 0.5rem;">// IDENTITY VERIFIED</div>
-  <h2 style="margin: 0; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.1em;">Cybersecurity & Cloud Operations Leader</h2>
-  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">STATUS: <span style="color: var(--accent-green)">ACTIVE</span></div>
-</div>
+<section class="profile-hero">
+  <p class="profile-kicker">Professional Background</p>
+  <h2>Cybersecurity and cloud operations leader</h2>
+  <p>
+    I work at the intersection of secure systems, cloud modernization, and technical
+    leadership, with more than 20 years of experience across defense and commercial
+    technology environments.
+  </p>
+</section>
 
-<div class="grid-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-
-<div class="operational-record">
-  <h3 style="font-family: var(--font-mono); color: var(--accent-green); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">// OPERATIONAL RECORD</h3>
-  <p>Cybersecurity and cloud operations leader with over <strong>20 years of experience</strong> spanning tactical operations, strategic planning, and IT management across defense and commercial sectors.</p>
-  <p>Expertise in cyberspace operations, electromagnetic warfare, and cloud platforms.</p>
-  
-  <blockquote style="margin-top: 2rem;">
-    I am wired for action, enthusiastic about emerging technologies, and committed to leading high-performing teams in defending our digital infrastructure.
-  </blockquote>
-</div>
-
-<div class="capabilities-matrix">
-  <h3 style="font-family: var(--font-mono); color: var(--accent-blue); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">// MISSION CAPABILITIES</h3>
-  
-  <div class="capability-item" style="margin-bottom: 1rem; padding: 1rem; background: rgba(0, 255, 136, 0.03); border: 1px solid var(--border); border-radius: 4px;">
-    <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-green);">STRATEGIC LEADERSHIP</div>
-    <div style="font-size: 0.8rem; color: var(--text-muted);">Tactical, Operational, and Strategic management of complex environments.</div>
+<section class="profile-grid">
+  <div class="profile-panel">
+    <h3>Background</h3>
+    <p>
+      My work spans cyberspace operations, enterprise IT, cloud platforms, and
+      software delivery practices for complex organizations.
+    </p>
+    <p>
+      I am drawn to practical systems: the kind that teams can understand, operate,
+      secure, and improve under real-world constraints.
+    </p>
+    <blockquote>
+      I care about building high-trust teams and dependable technical foundations.
+    </blockquote>
   </div>
 
-  <div class="capability-item" style="margin-bottom: 1rem; padding: 1rem; background: rgba(14, 165, 233, 0.03); border: 1px solid var(--border); border-radius: 4px;">
-    <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-blue);">SECURITY OPERATIONS</div>
-    <div style="font-size: 0.8rem; color: var(--text-muted);">CISSP® Certified. Expert-level cyberspace and electromagnetic operations.</div>
-  </div>
-
-  <div class="capability-item" style="margin-bottom: 1rem; padding: 1rem; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); border-radius: 4px;">
-    <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-primary);">CLOUD ARCHITECTURE</div>
-    <div style="font-size: 0.8rem; color: var(--text-muted);">Modernizing infrastructure through cloud-native orchestration.</div>
-  </div>
-</div>
-
-</div>
-
-<div class="timeline" style="margin-top: 3rem;">
-  <h3 style="font-family: var(--font-mono); color: var(--text-primary); text-transform: uppercase; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1.5rem;">// SERVICE HISTORY</h3>
-  
-  <div style="padding-left: 1rem; border-left: 1px solid var(--border);">
-    <div style="margin-bottom: 1.5rem; position: relative;">
-      <div style="position: absolute; left: -1.35rem; top: 0.4rem; width: 0.7rem; height: 0.7rem; background: var(--accent-green); border-radius: 50%;"></div>
-      <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-green);">PHASE 03: DEFENSE SECTOR PIVOT</div>
-      <p style="font-size: 0.9rem; margin-top: 0.25rem;">Earned Master of Science in Cybersecurity from <strong>National Defense University</strong>. Progressed through IT leadership roles at various defense agencies, managing enterprise IT projects and systems operations.</p>
-    </div>
-
-    <div style="margin-bottom: 1.5rem; position: relative;">
-      <div style="position: absolute; left: -1.35rem; top: 0.4rem; width: 0.7rem; height: 0.7rem; background: var(--accent-blue); border-radius: 50%;"></div>
-      <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-blue);">PHASE 02: ENTERPRISE TRANSITION</div>
-      <p style="font-size: 0.9rem; margin-top: 0.25rem;">Transitioned to the defense sector, managing enterprise IT systems and leading technical teams through complex operational challenges.</p>
-    </div>
-
-    <div style="position: relative;">
-      <div style="position: absolute; left: -1.35rem; top: 0.4rem; width: 0.7rem; height: 0.7rem; background: var(--text-muted); border-radius: 50%;"></div>
-      <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted);">PHASE 01: ORIGIN / CNET</div>
-      <p style="font-size: 0.9rem; margin-top: 0.25rem;">Started career as Associate Technical Producer at <strong>CNET</strong>, deploying updates across major platforms using web technologies and version control.</p>
+  <div class="profile-panel">
+    <h3>Focus Areas</h3>
+    <div class="focus-list">
+      <div>
+        <strong>Technical Leadership</strong>
+        <span>Strategic planning, team development, and delivery across complex environments.</span>
+      </div>
+      <div>
+        <strong>Security Operations</strong>
+        <span>CISSP certified, with experience in cyber operations and enterprise risk.</span>
+      </div>
+      <div>
+        <strong>Cloud Architecture</strong>
+        <span>Modern infrastructure, automation, and cloud-native operations.</span>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="profile-timeline">
+  <h3>Experience</h3>
+  <div class="timeline-list">
+    <div>
+      <span>Defense Sector</span>
+      <p>
+        Earned a Master of Science in Cybersecurity from <strong>National Defense University</strong>
+        and progressed through IT leadership roles across defense agencies.
+      </p>
+    </div>
+    <div>
+      <span>Enterprise Technology</span>
+      <p>
+        Managed enterprise IT systems and led technical teams through modernization,
+        operations, and security challenges.
+      </p>
+    </div>
+    <div>
+      <span>CNET</span>
+      <p>
+        Started as an Associate Technical Producer, deploying updates across major
+        platforms using web technologies and version control.
+      </p>
+    </div>
+  </div>
+</section>
 
 </div>
