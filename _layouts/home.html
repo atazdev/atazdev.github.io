@@ -20,6 +20,19 @@ layout: page
   </div>
 </section>
 
+{% if site.tags.size > 0 %}
+<section class="topic-filter" aria-label="Filter journal by topic">
+  <span>Browse by topic</span>
+  <div class="topic-filter-controls">
+    <button class="topic-filter-button active" type="button" data-filter="all">All</button>
+    {% assign sorted_tags = site.tags | sort %}
+    {% for tag in sorted_tags limit: 8 %}
+    <button class="topic-filter-button" type="button" data-filter="{{ tag[0] | slugify }}">{{ tag[0] }}</button>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 {% if posts.size > 0 %}
 <section class="featured-post" aria-labelledby="featured-post-title">
   {% assign featured = posts.first %}
@@ -42,7 +55,7 @@ layout: page
     <span>{{ featured.date | date: "%B %-d, %Y" }}</span>
   </div>
 
-  <article class="post-preview post-featured{% if featured_thumbnail != "" %} post-has-image{% endif %}">
+  <article class="post-preview post-featured{% if featured_thumbnail != "" %} post-has-image{% endif %}" data-tags="{% for tag in featured.tags %}{{ tag | slugify }} {% endfor %}">
     <div class="post-content">
       <p class="post-meta">{{ featured.date | date: "%B %-d, %Y" }}</p>
       <a class="post-link" href="{{ featured.url | absolute_url }}">
@@ -98,7 +111,7 @@ layout: page
     {% endcapture %}
     {% assign thumbnail = thumbnail | strip %}
 
-  <article class="post-preview{% if thumbnail != "" %} post-has-image{% endif %}">
+  <article class="post-preview{% if thumbnail != "" %} post-has-image{% endif %}" data-tags="{% for tag in post.tags %}{{ tag | slugify }} {% endfor %}">
 
     <div class="post-content">
       <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>

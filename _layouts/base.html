@@ -16,6 +16,7 @@ common-ext-js:
     sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 common-js:
   - "/assets/js/beautifuljekyll.js"
+  - "/assets/js/site-interactions.js"
 ---
 
 <!DOCTYPE html>
@@ -27,9 +28,13 @@ common-js:
 
   {% include gtm_body.html %}
 
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   {% include nav.html %}
 
   {{ content }}
+
+  <button class="back-to-top" type="button" aria-label="Back to top">Top</button>
 
   {% include footer.html %}
 
