@@ -79,7 +79,7 @@ Explain complex systems using visuals and simple terms. Whether you're preparing
   </div>
 </section>
 
-## Table of Contents
+## Resource Index
 
 * [API and Web Development](https://bytebytego.com/guides/api-web-development)
   * [Short/long polling, SSE, WebSocket](https://bytebytego.com/guides/shortlong-polling-sse-websocket)

@@ -1246,6 +1246,17 @@ pre {
   margin: 0 auto;
 }
 
+.resource-index-post > h2 {
+  margin-top: 2rem !important;
+  padding: 0 0 0.65rem !important;
+  border-left: 0 !important;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary) !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase;
+}
+
 .resource-index-post > p:first-of-type {
   max-width: 52rem;
   margin-bottom: 1.25rem;
@@ -1269,7 +1280,7 @@ pre {
 }
 
 .resource-path-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .resource-featured-grid {
@@ -1281,6 +1292,7 @@ pre {
   display: grid;
   gap: 0.4rem;
   border: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border) !important;
   border-radius: 8px;
   padding: 1rem;
   background-color: rgba(22, 27, 34, 0.72);
@@ -1292,6 +1304,7 @@ pre {
 .resource-path-grid a:hover,
 .resource-featured-grid a:hover {
   border-color: rgba(56, 189, 248, 0.45);
+  border-bottom-color: rgba(56, 189, 248, 0.45) !important;
   background-color: rgba(28, 33, 40, 0.9);
   transform: translateY(-2px);
 }
@@ -1374,10 +1387,11 @@ pre {
 .resource-index-post > ul > li {
   border: 1px solid var(--glass-border);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0;
   background-color: rgba(22, 27, 34, 0.62);
   color: var(--text-muted) !important;
   line-height: 1.6 !important;
+  overflow: hidden;
 }
 
 .resource-index-post > ul > li.is-hidden {
@@ -1394,7 +1408,7 @@ pre {
 
 .resource-index-section {
   display: grid;
-  gap: 0.75rem;
+  gap: 0;
 }
 
 .resource-index-section summary {
@@ -1402,10 +1416,17 @@ pre {
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
+  min-height: 4.1rem;
+  padding: 1rem;
   color: var(--text-primary);
   font-family: var(--font-mono);
   cursor: pointer;
   list-style: none;
+  transition: background-color 0.15s ease;
+}
+
+.resource-index-section summary:hover {
+  background-color: rgba(56, 189, 248, 0.055);
 }
 
 .resource-index-section summary::-webkit-details-marker {
@@ -1441,6 +1462,7 @@ pre {
 .resource-section-link {
   display: inline-block;
   width: fit-content;
+  margin: 0 1rem 0.75rem;
   color: var(--accent-blue) !important;
   border-bottom: none !important;
   font-family: var(--font-mono);
@@ -1450,8 +1472,8 @@ pre {
 
 .resource-index-post ul ul {
   display: block;
-  margin: 0.7rem 0 0;
-  padding-left: 1.1rem;
+  margin: 0;
+  padding: 0 1rem 1rem 2rem;
   list-style: disc;
 }
 

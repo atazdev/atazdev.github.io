@@ -88,6 +88,19 @@
     return topics.length ? topics.join(' ') : 'general';
   }
 
+  function getDirectChild(element, tagName) {
+    var tag = tagName.toLowerCase();
+    var children = element.children;
+
+    for (var i = 0; i < children.length; i += 1) {
+      if (children[i].tagName.toLowerCase() === tag) {
+        return children[i];
+      }
+    }
+
+    return null;
+  }
+
   function setupResourceIndex() {
     var index = document.querySelector('.resource-index-post');
     var buttons = document.querySelectorAll('.resource-filter-button');
@@ -108,16 +121,16 @@
         return;
       }
 
-      var title = item.querySelector(':scope > a');
-      var nestedList = item.querySelector(':scope > ul');
-      if (!title || !nestedList || item.querySelector(':scope > details')) {
+      var title = getDirectChild(item, 'a');
+      var nestedList = getDirectChild(item, 'ul');
+      var existingDetails = getDirectChild(item, 'details');
+      if (!title || !nestedList || existingDetails) {
         return;
       }
 
       var topics = classifyResourceSection(title.textContent);
       var details = document.createElement('details');
       details.className = 'resource-index-section';
-      details.open = itemIndex < 4;
       details.setAttribute('data-resource-topics', topics);
 
       var summary = document.createElement('summary');
