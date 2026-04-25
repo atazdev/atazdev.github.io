@@ -1,5 +1,5 @@
 import React from 'react'
-import { Activity, Shield, Terminal, MapPin, Cpu, Clock, Layers } from 'lucide-react'
+import { Activity, Shield, Terminal, Layers } from 'lucide-react'
 
 function App() {
   return (
