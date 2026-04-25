@@ -13,6 +13,21 @@ subtitle: "Systems, platforms, and operating models"
   </p>
 </section>
 
+<div class="concept-grid">
+  <section>
+    <h3>Why It Matters</h3>
+    <p>Architecture gives teams a shared way to reason about tradeoffs, constraints, and failure modes.</p>
+  </section>
+  <section>
+    <h3>Key Concepts</h3>
+    <p>Distributed systems, platform boundaries, data flow, resilience, and operating models.</p>
+  </section>
+  <section>
+    <h3>Start With</h3>
+    <p>Begin with system design fundamentals, then explore software-defined operations.</p>
+  </section>
+</div>
+
 <div class="resource-grid">
   {% for post in site.posts %}
     {% if post.category == "architecture" or post.tags contains "architecture" or post.tags contains "system-design" %}

@@ -41,25 +41,6 @@ layout: page
   </div>
 </section>
 
-<section class="recommended-strip" aria-labelledby="recommended-title">
-  <div class="section-label">
-    <span id="recommended-title">Recommended Reading</span>
-    <a href="{{ '/recommended' | relative_url }}">View all</a>
-  </div>
-  <div class="mini-card-grid">
-    {% assign featured_count = 0 %}
-    {% for post in site.posts %}
-      {% if post.featured and featured_count < 3 %}
-      {% assign featured_count = featured_count | plus: 1 %}
-      <a class="mini-card{% if post.category %} category-{{ post.category | slugify }}{% endif %}" href="{{ post.url | relative_url }}">
-        <span>{{ post.category | default: "note" }}</span>
-        <strong>{{ post.title }}</strong>
-      </a>
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
-
 <section class="recommended-strip" aria-labelledby="updated-title">
   <div class="section-label">
     <span id="updated-title">Recently Updated</span>
@@ -105,6 +86,8 @@ layout: page
       {% else %}
         {{ featured.cover-img }}
       {% endif %}
+    {% elsif featured.share-img %}
+      {{ featured.share-img }}
     {% endif %}
   {% endcapture %}
   {% assign featured_thumbnail = featured_thumbnail | strip %}
@@ -175,6 +158,8 @@ layout: page
         {% else %}
           {{ post.cover-img }}
         {% endif %}
+      {% elsif post.share-img %}
+        {{ post.share-img }}
       {% endif %}
     {% endcapture %}
     {% assign thumbnail = thumbnail | strip %}

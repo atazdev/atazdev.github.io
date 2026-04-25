@@ -13,6 +13,21 @@ subtitle: "Declarative operations and reproducible infrastructure"
   </p>
 </section>
 
+<div class="concept-grid">
+  <section>
+    <h3>Why It Matters</h3>
+    <p>Operational systems become safer when desired state is explicit, reviewable, and reversible.</p>
+  </section>
+  <section>
+    <h3>Key Concepts</h3>
+    <p>Declarative state, reconciliation, pull-request workflows, drift detection, and rollback.</p>
+  </section>
+  <section>
+    <h3>Start With</h3>
+    <p>Start with GitOps in the age of AI, then connect it to pipeline governance and policy-as-code.</p>
+  </section>
+</div>
+
 <div class="resource-grid">
   {% for post in site.posts %}
     {% if post.category == "gitops" or post.tags contains "gitops" %}

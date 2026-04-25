@@ -182,6 +182,23 @@ layout: base
         </div>
       </aside>
 
+      <aside class="discussion-block" aria-labelledby="discussion-block-title">
+        <span class="profile-kicker">Discuss</span>
+        <h2 id="discussion-block-title">Have a correction, question, or related idea?</h2>
+        <p>
+          I keep comments lightweight here. The best way to continue the thread is
+          email or a GitHub edit suggestion.
+        </p>
+        <div class="follow-actions">
+          {% if site.social-network-links.email %}
+          <a href="mailto:{{ site.social-network-links.email }}?subject={{ page.title | uri_escape }}">Email a note</a>
+          {% endif %}
+          {% if site.repository %}
+          <a href="https://github.com/{{ site.repository }}/edit/main/{{ page.path }}" target="_blank" rel="noopener">Suggest an edit</a>
+          {% endif %}
+        </div>
+      </aside>
+
       <ul class="pagination blog-pager">
         {% if page.previous.url %}
         <li class="page-item previous">

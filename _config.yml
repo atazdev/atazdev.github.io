@@ -172,7 +172,7 @@ site-css:
 # --- Comments --- #
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
-disqus: "atakuzi"
+# disqus: "atakuzi"
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
@@ -229,7 +229,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: true  # add comments to all blog posts
+      comments: false  # comments are replaced by a lightweight contact/discussion CTA
       social-share: true # add social media sharing buttons to all blog posts
   -
     scope:

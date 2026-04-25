@@ -13,6 +13,21 @@ subtitle: "Secure delivery, automation, and policy-as-code"
   </p>
 </section>
 
+<div class="concept-grid">
+  <section>
+    <h3>Why It Matters</h3>
+    <p>Security that depends on manual review alone does not scale. DevSecOps turns security expectations into repeatable delivery behavior.</p>
+  </section>
+  <section>
+    <h3>Key Concepts</h3>
+    <p>Policy-as-code, automated gates, secure pipelines, continuous validation, and shared responsibility.</p>
+  </section>
+  <section>
+    <h3>Start With</h3>
+    <p>Read the policy-as-code note first, then follow the Secure Delivery series.</p>
+  </section>
+</div>
+
 <div class="resource-grid">
   {% for post in site.posts %}
     {% if post.category == "devsecops" or post.tags contains "devsecops" or post.series == "Secure Delivery" %}

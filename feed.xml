@@ -17,9 +17,14 @@ layout: null
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>
-          {% if post.subtitle %}{{ post.subtitle | xml_escape }} - {% endif %}
+          {% if post.summary %}{{ post.summary | xml_escape }}{% elsif post.subtitle %}{{ post.subtitle | xml_escape }} - {% endif %}
+          {% unless post.summary %}
           {{ post.content | strip_html | xml_escape | truncatewords: excerpt_length }}
+          {% endunless %}
         </description>
+        {% if post.category %}
+        <category>{{ post.category | xml_escape }}</category>
+        {% endif %}
         <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <link>{{ post.url | absolute_url }}</link>
         <guid isPermaLink="true">{{ post.url | absolute_url }}</guid>
