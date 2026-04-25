@@ -24,6 +24,7 @@ subtitle: "Experiments, prototypes, and working notes"
         high-fidelity UI experiments.
       </p>
       <div class="brief-actions">
+        <a href="{{ '/dashboard/' | relative_url }}">Launch Dashboard</a>
         <a href="https://github.com/{{ site.repository }}/tree/main/dashboard" target="_blank" rel="noopener">View source</a>
       </div>
     </div>
