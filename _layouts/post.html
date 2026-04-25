@@ -4,6 +4,10 @@ layout: base
 
 {% include header.html type="post" %}
 
+<div class="reading-progress-container">
+  <div id="reading-progress-bar" class="reading-progress-bar"></div>
+</div>
+
 <div id="main-content" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
@@ -192,3 +196,12 @@ layout: base
     </div>
   </div>
 </div>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const progressBar = document.getElementById('reading-progress-bar');
+    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = (window.scrollY / totalHeight) * 100;
+    progressBar.style.width = progress + '%';
+  });
+</script>

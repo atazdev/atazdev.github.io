@@ -1,0 +1,39 @@
+---
+layout: null
+---
+{
+  "site_stats": {
+    "total_posts": {{ site.posts | size }},
+    "total_tags": {{ site.tags | size }},
+    "total_categories": {{ site.categories | size }},
+    "last_build": "{{ site.time | date: "%Y-%m-%d %H:%M:%S" }}"
+  },
+  "latest_posts": [
+    {% for post in site.posts limit: 5 %}
+    {
+      "title": {{ post.title | jsonify }},
+      "url": {{ post.url | absolute_url | jsonify }},
+      "date": "{{ post.date | date: "%H:%M:%S" }}",
+      "category": {{ post.category | default: "General" | jsonify }},
+      "summary": {{ post.summary | default: post.subtitle | strip_html | truncatewords: 10 | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "featured_projects": [
+    {
+      "name": "Dashboard Experiment",
+      "status": "IN_PROTOTYPE",
+      "load": 42
+    },
+    {
+      "name": "Knowledge Graph",
+      "status": "ACTIVE",
+      "load": 89
+    },
+    {
+      "name": "Modern Editorial",
+      "status": "PRODUCTION",
+      "load": 100
+    }
+  ]
+}
