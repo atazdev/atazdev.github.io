@@ -9,7 +9,7 @@ subtitle: "OPERATIONAL PROFILE: ATAC-01"
 <div class="glass-panel profile-header" style="padding: 2rem; margin-bottom: 2rem; border-left: 4px solid var(--accent-green);">
   <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-green); margin-bottom: 0.5rem;">// IDENTITY VERIFIED</div>
   <h2 style="margin: 0; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.1em;">Cybersecurity & Cloud Operations Leader</h2>
-  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">STATUS: <span style="color: var(--accent-green)">ACTIVE</span> | CLEARANCE: <span style="color: var(--accent-blue)">TOP_SECRET</span></div>
+  <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">STATUS: <span style="color: var(--accent-green)">ACTIVE</span></div>
 </div>
 
 <div class="grid-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">

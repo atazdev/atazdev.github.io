@@ -34,10 +34,6 @@ function App() {
                 <span style={{ fontFamily: 'var(--font-mono)' }}>ATAC-01</span>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>CLEARANCE:</span>
-                <span style={{ color: 'var(--accent-blue)' }}>LEVEL_5</span>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <span style={{ color: 'var(--text-muted)', fontSize: '0.8rem' }}>ROLE:</span>
                 <span>SEC_OPS_LEAD</span>
               </div>
