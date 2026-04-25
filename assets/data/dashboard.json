@@ -6,7 +6,16 @@ layout: null
     "total_posts": {{ site.posts | size }},
     "total_tags": {{ site.tags | size }},
     "total_categories": {{ site.categories | size }},
-    "last_build": "{{ site.time | date: "%Y-%m-%d %H:%M:%S" }}"
+    "last_build": "{{ site.time | date: "%Y-%m-%d %H:%M:%S" }}",
+    "top_tags": [
+      {% assign sorted_tags = site.tags | sort %}
+      {% for tag in sorted_tags limit:5 %}
+      {
+        "name": "{{ tag[0] }}",
+        "count": {{ tag[1] | size }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
   },
   "latest_posts": [
     {% for post in site.posts limit: 5 %}
