@@ -1470,6 +1470,39 @@ pre {
   text-decoration: none !important;
 }
 
+.resource-index-body {
+  padding: 0 1rem 1rem;
+}
+
+.resource-index-body > :first-child {
+  margin-top: 0;
+}
+
+.resource-index-body p,
+.resource-index-body li {
+  color: var(--text-muted) !important;
+  font-size: 0.86rem !important;
+  line-height: 1.6 !important;
+}
+
+.resource-index-body h6 {
+  display: none;
+}
+
+.resource-index-body hr {
+  margin: 0.85rem 0;
+  border-color: var(--border) !important;
+  opacity: 0.6;
+}
+
+.market-toolkit-resource > p:nth-of-type(2),
+.market-toolkit-resource > p:nth-of-type(3) {
+  max-width: 58rem;
+  border-left: 3px solid var(--accent-red);
+  padding-left: 0.9rem;
+  color: var(--text-muted) !important;
+}
+
 .resource-index-post ul ul {
   display: block;
   margin: 0;

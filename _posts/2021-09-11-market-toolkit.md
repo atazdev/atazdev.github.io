@@ -6,65 +6,80 @@ date: 2021-09-11
 category: finance
 series: "Resource Guides"
 summary: "A curated set of market research, trading, investing, and education resources."
+full-width: true
+toc: false
+resource-index: true
+resource-theme: market-toolkit-resource
 tags: [stocks, trading, investing, finance, tools]
 ---
 
-# THE ULTIMATE STOCK MARKET TOOLKIT
 Content from and Credit to: [Market Toolkit](https://github.com/ckz8780/market-toolkit "Market Toolkit")
 
 Over the years I've amassed a large collection of links, resources, tools and so on that I find useful in my trading/investing activities. I'm compiling those here, along with any that were shared with me via Twitter/Reddit/email/etc and seemed useful after a cursory look. While I've done my best to link to tools that are not only legitimate but also likely to stay active, alive and useful for the foreseeable future, obviously I have no control over these companies/websites and over time some of the links may break or situations may emerge that turn them into poor recommendations. Also, this list is not exhaustive by any means and may be updated in the future as new tools/resources emerge.
 
----
+<section class="resource-start" aria-labelledby="market-toolkit-start">
+  <div class="section-label">
+    <span id="market-toolkit-start">Start here</span>
+    <span>Curated paths</span>
+  </div>
+  <div class="resource-path-grid">
+    <a href="#getting-started">
+      <span>Beginner path</span>
+      <strong>Getting Started</strong>
+      <em>Start with basic investing concepts, passive versus active approaches, and core education.</em>
+    </a>
+    <a href="#research">
+      <span>Research path</span>
+      <strong>Market Research</strong>
+      <em>Use these references for market data, news, dashboards, and company-level research.</em>
+    </a>
+    <a href="#ta-tools">
+      <span>Trading path</span>
+      <strong>Technical Tools</strong>
+      <em>Jump here for charting, screeners, active-trading tools, and technical analysis resources.</em>
+    </a>
+    <a href="#developers">
+      <span>Builder path</span>
+      <strong>Developer Resources</strong>
+      <em>Start here for market APIs, algorithmic trading engines, and data infrastructure.</em>
+    </a>
+  </div>
+</section>
+
+<section class="resource-featured" aria-labelledby="market-toolkit-featured">
+  <div class="section-label">
+    <span id="market-toolkit-featured">Featured resources</span>
+    <span>High-signal tools</span>
+  </div>
+  <div class="resource-featured-grid">
+    <a href="https://www.investopedia.com/investing-essentials-4689754"><span>Education</span><strong>Investopedia Investing Essentials</strong></a>
+    <a href="https://www.finviz.com"><span>Research</span><strong>Finviz</strong></a>
+    <a href="https://www.tradingview.com"><span>Charts</span><strong>TradingView</strong></a>
+    <a href="https://www.sec.gov/edgar/searchedgar/companysearch"><span>Filings</span><strong>SEC EDGAR</strong></a>
+    <a href="https://www.earningswhispers.com/"><span>Calendar</span><strong>Earnings Whispers</strong></a>
+    <a href="https://api.tiingo.com/"><span>API</span><strong>Tiingo Market Data API</strong></a>
+  </div>
+</section>
+
+<section class="resource-filter" aria-label="Filter market toolkit resources">
+  <span>Filter the index</span>
+  <div class="resource-filter-controls">
+    <button class="resource-filter-button active" type="button" data-resource-filter="all">All</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="education">Education</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="brokers">Brokers</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="research">Research</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="calendars">Calendars</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="analysis">Analysis</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="filings">Filings</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="media">Media</button>
+    <button class="resource-filter-button" type="button" data-resource-filter="developers">Developers</button>
+  </div>
+</section>
 
 **DISCLAIMER:** *In general, there is **no preference** given to any of these resources and this is not a recommendation to use them. Besides categorizing them and deciding to include some based on personal experience, I am not officially suggesting any opinion on any of these, but I do have experience with many of them and have tried to include things I've had good experiences with or that I personally use in my trading/investing activities.*
 
 *Any links that are **bold** are things I either currently use or have used enough in the past to get a good feel for their quality/functionality, but that does not mean I am recommending them, only that I have personal experience with them. If it is not bold, it doesn't mean I've never used it, only that it's something I just use now and then or that it seemed handy at a cursory glance. In short regarding this entire list, I am not a financial advisor. **Do your own due diligence and speak to a professional before making any financial decisions.***
-# <a id="toc"></a>Table of Contents:
-- [GETTING STARTED](#getting-started)
-- [BROKERS & TRADING SOFTWARE](#brokers)
-    - [Investing/Long-term](#brokers-investing)
-    - [Active Trading/Professional](#brokers-active)
-    - [Canadian](#brokers-canadian)
-    - [European](#brokers-european)
-    - [Reviews](#brokers-reviews)
-- [GENERAL STOCK MARKET RESEARCH](#research)
-- [CALENDARS](#calendars)
-    - [Earnings Calendars](#earnings-calendars)
-    - [Dividend/Ex-Dividend Calendars](#dividend-calendars)
-    - [Economic Calendars](#economic-calendars)
-    - [Misc Calendars](#misc-calendars)
-- [TECHNICAL ANALYSIS](#ta-education)
-    - [Education](#ta-education)
-    - [Tools](#ta-tools)
-- [FUNDAMENTAL ANALYSIS](#fa-education)
-    - [Education](#fa-education)
-    - [Tools](#fa-tools)
-- [SCANNERS, SCREENERS & IDEA GENERATION](#scanners)
-- [TRADE ANALYSIS & REVIEW](#trade-analysis)
-- [SEC FILINGS](#filings)
-    - [Research & Education](#filings-education)
-    - [Daily Filings by Type](#filings-daily)
-- [HALTS, SHORT SELLING AND EXCHANGE RESOURCES](#halts-shorting-exchanges)
-- [PAID TRADING SERVICES/EDUCATION/CHAT ROOMS](#paid)
-- [BOOKS](#books)
-    - [General Stock Market/Uncategorized](#books-general)
-    - [Active Trading and Speculation](#books-active-trading-and-speculation)
-    - [Valuation and Accounting Tricks](#books-valuation-and-accounting-tricks)
-    - [Financial History/Psychology](#books-financial-history-and-psychology)
-    - [Options](#books-options)
-- [CRYPTOCURRENCIES](#crypto)
-- [YOUTUBE CHANNELS](#youtube)
-- [TALKS/SPEECHES](#talks)
-- [STOCK MARKET MOVIES/DOCUMENTARIES](#movies-docs)
-- [TWITTER ACCOUNTS](#twitter)
-    - [Individual Accounts](#twitter-individual)
-    - [Research Focus](#twitter-research)
-- [DEVELOPER RESOURCES/ALGO STUFF/APIs](#developers)
-    - [General Resources](#developers-general)
-    - [Algo Trading Engines](#developers-engines)
-    - [Data APIs](#developers-data)
-- [BLOGS/DISCUSSION FORUMS/LIVE CHATS/MISC RESOURCES](#blogs)
----
+## Resource Index
 **<a id="getting-started"></a>GETTING STARTED:**
 
 There are two general approaches to investing: active and passive. Active investing implies you are actively buying and selling stocks, bonds, options and so on, conducting research and making active decisions about the investments you make. Passive investing implies you are more disconnected from the market, passively investing money into mutual funds, ETFs, IRAs, 401Ks and allowing the managers of those funds to manage those investments, not focusing on individual stocks, or you may have hired a financial advisor or wealth manager. Neither approach will make you rich quickly. Using active approaches you are very likely to lose money as a beginner. Active investing takes a large amount of work and research and most people will not beat the market's returns over the long term. If you are brand new, it's best to start with passive approaches while you get your feet wet and learn about more active strategies, and gradually work towards becoming more and more active. 

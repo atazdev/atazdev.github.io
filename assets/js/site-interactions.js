@@ -84,6 +84,30 @@
     if (/(interview|technical)/.test(value)) {
       topics.push('interviews');
     }
+    if (/(getting started|book|education|youtube|talk|movie|documentary)/.test(value)) {
+      topics.push('education');
+    }
+    if (/(broker|trading software)/.test(value)) {
+      topics.push('brokers');
+    }
+    if (/(research|scanner|screener|idea generation|blog|forum|chat|twitter)/.test(value)) {
+      topics.push('research');
+    }
+    if (/(calendar|earnings|dividend|economic)/.test(value)) {
+      topics.push('calendars');
+    }
+    if (/(technical analysis|fundamental analysis|trade analysis)/.test(value)) {
+      topics.push('analysis');
+    }
+    if (/(sec filing|halt|short selling|exchange)/.test(value)) {
+      topics.push('filings');
+    }
+    if (/(youtube|talk|speech|movie|documentary|twitter)/.test(value)) {
+      topics.push('media');
+    }
+    if (/(developer|algo|api)/.test(value)) {
+      topics.push('developers');
+    }
 
     return topics.length ? topics.join(' ') : 'general';
   }
@@ -101,6 +125,88 @@
     return null;
   }
 
+  function isLegacyResourceHeading(element) {
+    var text;
+
+    if (!element || element.tagName.toLowerCase() !== 'p') {
+      return false;
+    }
+
+    text = element.textContent.trim();
+    return !!element.querySelector('a[id]') && /:$/.test(text) && text === text.toUpperCase();
+  }
+
+  function cleanResourceHeading(text) {
+    return text.replace(/:$/, '').replace(/\s+/g, ' ').trim();
+  }
+
+  function enhanceLegacyResourceIndex(index, heading) {
+    var nodes = [];
+    var node = heading.nextElementSibling;
+    var list = document.createElement('ul');
+    var currentItem = null;
+    var currentDetails = null;
+    var currentBody = null;
+
+    while (node) {
+      nodes.push(node);
+      node = node.nextElementSibling;
+    }
+
+    list.className = 'resource-index-list legacy-resource-index';
+    heading.parentNode.insertBefore(list, heading.nextElementSibling);
+
+    nodes.forEach(function (item) {
+      var labelText;
+      var details;
+      var summary;
+      var label;
+      var count;
+      var body;
+      var topics;
+
+      if (isLegacyResourceHeading(item)) {
+        labelText = cleanResourceHeading(item.textContent);
+        topics = classifyResourceSection(labelText);
+
+        currentItem = document.createElement('li');
+        details = document.createElement('details');
+        summary = document.createElement('summary');
+        label = document.createElement('span');
+        count = document.createElement('em');
+        body = document.createElement('div');
+
+        details.className = 'resource-index-section';
+        details.setAttribute('data-resource-topics', topics);
+        label.textContent = labelText;
+        count.textContent = '0 links';
+        body.className = 'resource-index-body';
+
+        summary.appendChild(label);
+        summary.appendChild(count);
+        details.appendChild(summary);
+        details.appendChild(body);
+        currentItem.appendChild(details);
+        list.appendChild(currentItem);
+
+        currentDetails = details;
+        currentBody = body;
+        item.remove();
+        return;
+      }
+
+      if (!currentBody) {
+        item.remove();
+        return;
+      }
+
+      currentBody.appendChild(item);
+      if (currentDetails) {
+        currentDetails.querySelector('summary em').textContent = currentDetails.querySelectorAll('a[href]').length + ' links';
+      }
+    });
+  }
+
   function setupResourceIndex() {
     var index = document.querySelector('.resource-index-post');
     var buttons = document.querySelectorAll('.resource-filter-button');
@@ -109,8 +215,17 @@
       return;
     }
 
-    var list = index.querySelector('h2 + ul');
-    if (!list) {
+    var resourceHeading = Array.prototype.filter.call(index.querySelectorAll('h2'), function (heading) {
+      return /resource index/i.test(heading.textContent);
+    })[0];
+    var list = resourceHeading ? resourceHeading.nextElementSibling : index.querySelector('h2 + ul');
+
+    if (resourceHeading && (!list || list.tagName.toLowerCase() !== 'ul')) {
+      enhanceLegacyResourceIndex(index, resourceHeading);
+      list = resourceHeading.nextElementSibling;
+    }
+
+    if (!list || list.tagName.toLowerCase() !== 'ul') {
       return;
     }
 
