@@ -9,10 +9,13 @@ summary: "A practical index of system design concepts, patterns, and real-world 
 featured: true
 last-updated: 2026-04-25
 share-img: /assets/img/social-architecture.svg
+full-width: true
+toc: false
+resource-index: true
 tags: [system-design, architecture, engineering, interview-prep]
 ---
 
-Credit to [ByteByteGo](https://bytebytego.com/guides/) — 【[YouTube](https://www.youtube.com/channel/UCZgt6AzoyjslHTC9dz0UoTw) | [Newsletter](https://blog.bytebytego.com/?utm_source=site)】
+Credit to [ByteByteGo](https://bytebytego.com/guides/) - [YouTube](https://www.youtube.com/channel/UCZgt6AzoyjslHTC9dz0UoTw) | [Newsletter](https://blog.bytebytego.com/?utm_source=site)
 
 [![ByteByteGoHq/system-design-101 | Trendshift](https://trendshift.io/api/badge/repositories/3709)](https://trendshift.io/repositories/3709)
 
@@ -78,11 +81,11 @@ Explain complex systems using visuals and simple terms. Whether you're preparing
   * [Is Telegram Secure?](https://bytebytego.com/guides/is-telegram-secure)
   * [Fixing Bugs Automatically at Meta Scale](https://bytebytego.com/guides/fixing-bugs-automatically-at-meta-scale)
   * [How Levelsfyi Scaled to Millions of Users with Google Sheets](https://bytebytego.com/guides/how-levelsfyi-scaled-to-millions-of-users-with-google-sheets)
-  * [McDonald’s Event-Driven Architecture](https://bytebytego.com/guides/mcdonald's-event-driven-architecture)
+  * [McDonald's Event-Driven Architecture](https://bytebytego.com/guides/mcdonald's-event-driven-architecture)
   * [Uber Tech Stack - CI/CD](https://bytebytego.com/guides/uber-tech-stack-cicd)
   * [How to Design Stack Overflow](https://bytebytego.com/guides/how-will-you-design-the-stack-overflow-website)
   * [Twitter 1.0 Tech Stack](https://bytebytego.com/guides/twitter-10-tech-stack)
-  * [How does Twitter recommend “For You” Timeline in 1.5 seconds?](https://bytebytego.com/guides/how-does-twitter-recommend-tweets)
+  * [How does Twitter recommend "For You" Timeline in 1.5 seconds?](https://bytebytego.com/guides/how-does-twitter-recommend-tweets)
   * [How YouTube Handles Massive Video Uploads](https://bytebytego.com/guides/how-does-youtube-handle-massive-video-content-upload)
   * [How Does a Typical Push Notification System Work?](https://bytebytego.com/guides/how-does-a-typical-push-notification-system-work)
   * [4 Ways Netflix Uses Caching](https://bytebytego.com/guides/4-ways-netflix-uses-caching-to-hold-user-attention)
@@ -93,7 +96,7 @@ Explain complex systems using visuals and simple terms. Whether you're preparing
   * [Netflix Tech Stack - CI/CD Pipeline](https://bytebytego.com/guides/netflix-tech-stack-cicd-pipeline)
   * [How TikTok Manages a 200K File Frontend MonoRepo](https://bytebytego.com/guides/how-tiktok-manages-a-200k-file-frontend-monorepo)
   * [How Netflix Really Uses Java](https://bytebytego.com/guides/how-netflix-really-uses-java)
-  * [Evolution of Airbnb’s Microservice Architecture](https://bytebytego.com/guides/evolution-of-airbnb's-microservice)
+  * [Evolution of Airbnb's Microservice Architecture](https://bytebytego.com/guides/evolution-of-airbnb's-microservice)
   * [Reddit's Core Architecture](https://bytebytego.com/guides/reddit's-core-architecture)
   * [10 Principles for Building Resilient Payment Systems](https://bytebytego.com/guides/10-principles-for-building-resilient-payment-systems-by-shopify)
   * [What is the Journey of a Slack Message?](https://bytebytego.com/guides/what-is-the-journey-of-a-slack-message)

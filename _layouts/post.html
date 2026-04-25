@@ -59,7 +59,8 @@ layout: base
       </div>
       {% endif %}
 
-      <article role="main" class="blog-post">
+      <article role="main" class="blog-post{% if page.resource-index %} resource-index-post{% endif %}">
+        {% unless page.toc == false %}
         <nav class="article-toc" aria-label="Article contents">
           <div class="section-label">
             <span>Contents</span>
@@ -67,6 +68,7 @@ layout: base
           </div>
           <ol class="article-toc-list"></ol>
         </nav>
+        {% endunless %}
         {{ content }}
       </article>
 
