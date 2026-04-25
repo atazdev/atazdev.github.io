@@ -78,6 +78,11 @@ layout: page
 
   <article class="post-preview post-featured{% if featured_thumbnail != "" %} post-has-image{% endif %}" data-tags="{% for tag in featured.tags %}{{ tag | slugify }} {% endfor %}">
     <div class="post-content">
+      {% if featured.category %}
+      <span class="post-category">{{ featured.category }}</span>
+      {% elsif featured.tags.size > 0 %}
+      <span class="post-category">{{ featured.tags[0] }}</span>
+      {% endif %}
       <p class="post-meta">{{ featured.date | date: "%B %-d, %Y" }}</p>
       <a class="post-link" href="{{ featured.url | absolute_url }}">
         <h2 id="featured-post-title" class="post-title">{{ featured.title }}</h2>
@@ -88,8 +93,12 @@ layout: page
 
       {% unless site.feed_show_excerpt == false %}
       <div class="post-entry">
+        {% if featured.summary %}
+        {{ featured.summary | strip_html | xml_escape }}
+        {% else %}
         {% assign excerpt_length = site.excerpt_length | default: 50 %}
         {{ featured.excerpt | strip_html | xml_escape | truncatewords: excerpt_length }}
+        {% endif %}
         <a href="{{ featured.url | absolute_url }}" class="post-read-more">Read essay</a>
       </div>
       {% endunless %}
@@ -135,6 +144,11 @@ layout: page
   <article class="post-preview{% if thumbnail != "" %} post-has-image{% endif %}" data-tags="{% for tag in post.tags %}{{ tag | slugify }} {% endfor %}">
 
     <div class="post-content">
+      {% if post.category %}
+      <span class="post-category">{{ post.category }}</span>
+      {% elsif post.tags.size > 0 %}
+      <span class="post-category">{{ post.tags[0] }}</span>
+      {% endif %}
       <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
 
       <a class="post-link" href="{{ post.url | absolute_url }}">
@@ -146,8 +160,12 @@ layout: page
 
       {% unless site.feed_show_excerpt == false %}
       <div class="post-entry">
+        {% if post.summary %}
+        {{ post.summary | strip_html | xml_escape }}
+        {% else %}
         {% assign excerpt_length = site.excerpt_length | default: 50 %}
         {{ post.excerpt | strip_html | xml_escape | truncatewords: excerpt_length }}
+        {% endif %}
         {% assign excerpt_word_count = post.excerpt | number_of_words %}
         {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
         <a href="{{ post.url | absolute_url }}" class="post-read-more">Read note</a>

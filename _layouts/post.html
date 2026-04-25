@@ -51,6 +51,13 @@ layout: base
       {% endif %}
 
       <article role="main" class="blog-post">
+        <nav class="article-toc" aria-label="Article contents">
+          <div class="section-label">
+            <span>Contents</span>
+            <span>On this page</span>
+          </div>
+          <ol class="article-toc-list"></ol>
+        </nav>
         {{ content }}
       </article>
 
@@ -89,7 +96,9 @@ layout: base
             <a href="{{ related.url | relative_url }}">
               <time datetime="{{ related.date | date_to_xmlschema }}">{{ related.date | date: "%B %-d, %Y" }}</time>
               <strong>{{ related.title }}</strong>
-              {% if related.subtitle %}
+              {% if related.summary %}
+              <span>{{ related.summary }}</span>
+              {% elsif related.subtitle %}
               <span>{{ related.subtitle }}</span>
               {% endif %}
             </a>

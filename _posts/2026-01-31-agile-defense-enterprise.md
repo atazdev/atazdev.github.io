@@ -3,6 +3,9 @@ layout: post
 title: "Agile in Defense: Adapting Modern Software Practices for Enterprise Security"
 subtitle: "Why traditional Agile falls short in defense organizations and how to fix it"
 date: 2026-01-31
+category: delivery
+series: "Secure Delivery"
+summary: "How enterprise security environments can adapt Agile practices without losing governance."
 tags: [agile, defense, enterprise, software-development, project-management, security]
 ---
 

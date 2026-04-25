@@ -3,6 +3,9 @@ layout: post
 title: "Zero Trust Meets the AI Stack"
 subtitle: "What the new White House cyber strategy means for defense contractors — and why your ZT architecture probably doesn't cover your AI systems yet"
 date: 2026-03-27
+category: cybersecurity
+series: "AI Governance"
+summary: "Why zero trust architectures need to account for AI systems, model workflows, and policy enforcement."
 tags: [zero-trust, cybersecurity, ai, devsecops, defense, policy, federal, compliance]
 ---
 

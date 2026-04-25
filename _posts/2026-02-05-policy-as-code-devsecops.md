@@ -3,6 +3,9 @@ layout: post
 title: "Policy as Code: The DevSecOps Principle That Changes Everything"
 subtitle: "Why codifying security policies is the single most impactful shift your organization can make"
 date: 2026-02-05
+category: devsecops
+series: "Secure Delivery"
+summary: "Why policy-as-code turns security rules into enforceable, testable delivery controls."
 tags: [devsecops, security, policy-as-code, automation, compliance, infrastructure]
 ---
 

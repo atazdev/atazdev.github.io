@@ -3,6 +3,9 @@ layout: post
 title: "AI Agents in the CI/CD Pipeline"
 subtitle: "When the developer committing code is an AI, your pipeline stops being a convenience and becomes a governance layer"
 date: 2026-03-22
+category: ai
+series: "AI Governance"
+summary: "How AI agents change the assumptions behind CI/CD pipelines, review gates, and accountability."
 tags: [ai, cicd, devops, automation, gitops, devsecops, agents, security]
 ---
 

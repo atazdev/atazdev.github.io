@@ -87,9 +87,81 @@
     });
   }
 
+  function slugify(text) {
+    return text.toString().toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  }
+
+  function setupArticleEnhancements() {
+    var article = document.querySelector('.blog-post');
+    var toc = document.querySelector('.article-toc');
+    var tocList = document.querySelector('.article-toc-list');
+
+    if (!article) {
+      return;
+    }
+
+    var headings = article.querySelectorAll('h2, h3');
+    var usedIds = {};
+
+    if (!headings.length) {
+      if (toc) {
+        toc.remove();
+      }
+      return;
+    }
+
+    headings.forEach(function (heading) {
+      if (heading.closest('.article-toc')) {
+        return;
+      }
+
+      if (!heading.id) {
+        heading.id = slugify(heading.textContent);
+      }
+
+      if (usedIds[heading.id]) {
+        usedIds[heading.id] += 1;
+        heading.id = heading.id + '-' + usedIds[heading.id];
+      } else {
+        usedIds[heading.id] = 1;
+      }
+
+      var anchor = document.createElement('a');
+      anchor.className = 'heading-anchor';
+      anchor.href = '#' + heading.id;
+      anchor.setAttribute('aria-label', 'Copy link to ' + heading.textContent);
+      anchor.textContent = '#';
+      anchor.addEventListener('click', function () {
+        var url = window.location.origin + window.location.pathname + '#' + heading.id;
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(url);
+        }
+      });
+      heading.appendChild(anchor);
+
+      if (tocList && heading.tagName.toLowerCase() === 'h2') {
+        var item = document.createElement('li');
+        var link = document.createElement('a');
+        link.href = '#' + heading.id;
+        link.textContent = heading.childNodes[0].textContent || heading.textContent;
+        item.appendChild(link);
+        tocList.appendChild(item);
+      }
+    });
+
+    if (toc && tocList && !tocList.children.length) {
+      toc.remove();
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     setupBackToTop();
     setupTopicFilters();
+    setupArticleEnhancements();
     setupRevealMotion();
     updateScrollProgress();
   });

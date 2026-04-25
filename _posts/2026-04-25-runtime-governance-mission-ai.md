@@ -3,6 +3,9 @@ layout: post
 title: "Runtime Governance for Mission AI"
 subtitle: "When autonomous systems move to the tactical edge, policy has to follow them in real time"
 date: 2026-04-25
+category: ai
+series: "AI Governance"
+summary: "A runtime governance model for autonomous systems operating beyond traditional approval gates."
 tags: [ai, defense, zero-trust, policy-as-code, devsecops, edge-computing, governance, autonomy]
 ---
 

@@ -3,6 +3,9 @@ layout: post
 title: "Essential AI Tools for Vibe Coding in 2026"
 subtitle: "Top tools and platforms to enhance your intuitive development workflow"
 date: 2026-01-18
+category: ai
+series: "AI Development"
+summary: "A practical guide to AI-assisted development tools for faster, more fluid software work."
 tags: [ai, tools, development, productivity, coding]
 ---
 

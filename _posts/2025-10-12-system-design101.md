@@ -3,6 +3,9 @@ layout: post
 title: "System Design 101"
 subtitle: "A comprehensive guide to system design concepts and patterns"
 date: 2025-10-12
+category: architecture
+series: "System Design"
+summary: "A practical index of system design concepts, patterns, and real-world architecture references."
 tags: [system-design, architecture, engineering, interview-prep]
 ---
 

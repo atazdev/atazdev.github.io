@@ -19,6 +19,7 @@ navbar-links:
   Journal: "/"
   Topics: "tags"
   Resources: "resources"
+  Projects: "projects"
   About: "aboutme"
 
 
@@ -95,7 +96,7 @@ feed_show_tags: true
 post_search: true
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "cybersecurity, DevSecOps, GitOps, AI governance, cloud architecture, system design"
 
 # --- Colours / background image --- #
 
@@ -106,11 +107,11 @@ navbar-text-col: "#E6EDF3"
 navbar-border-col: "#30363D"
 page-col: "#0D1117"
 text-col: "#E6EDF3"
-link-col: "#00FF88"
-hover-col: "#0EA5E9"
+link-col: "#38BDF8"
+hover-col: "#6EE7B7"
 footer-col: "#161B22"
 footer-text-col: "#8B949E"
-footer-link-col: "#00FF88"
+footer-link-col: "#38BDF8"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -120,7 +121,7 @@ footer-link-col: "#00FF88"
 #page-img: "/assets/img/bgimage.png"
 
 # Suggest a colour for mobile browsers to use as the browser's theme. This is only supported by a few mobile browsers.
-#mobile-theme-col: "#0085A1"
+mobile-theme-col: "#0D1117"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
 site-css:

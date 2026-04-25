@@ -3,6 +3,9 @@ layout: post
 title: "The Power of Open Source Software Tools"
 subtitle: "Why modern development relies on the open source ecosystem and how to leverage it"
 date: 2026-03-18
+category: development
+series: "Resource Guides"
+summary: "How open source tools shape modern development workflows and technical capability."
 tags: [open-source, software-development, programming, tools, community]
 ---
 

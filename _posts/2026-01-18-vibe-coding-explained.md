@@ -3,6 +3,9 @@ layout: post
 title: "What is Vibe Coding? A Guide to Intuitive Development"
 subtitle: "Understanding the flow-based approach to modern programming"
 date: 2026-01-18
+category: development
+series: "AI Development"
+summary: "An introduction to vibe coding and the shift toward more intuitive, flow-based development."
 tags: [coding, development, ai, workflow]
 ---
 

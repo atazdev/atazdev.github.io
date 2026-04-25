@@ -3,6 +3,9 @@ layout: post
 title: "GitOps in the Age of AI and Modern Warfare"
 subtitle: "Why declarative infrastructure management is critical for autonomous systems and rapid deployment"
 date: 2026-01-27
+category: gitops
+series: "Secure Delivery"
+summary: "Why GitOps matters for reproducible infrastructure, automation, and accountable software delivery."
 tags: [gitops, devops, ai, infrastructure, defense, automation]
 ---
 

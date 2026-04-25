@@ -13,6 +13,7 @@
         { \
           "title"    : "{% if post.title != "" %}{{ post.title | escape }}{% else %}{{ post.excerpt | strip_html | escape | strip }}{%endif%}", \
           "category" : "{{ post.tags | join: \', \' }}", \
+          "summary"  : "{% if post.summary %}{{ post.summary | escape }}{% elsif post.subtitle %}{{ post.subtitle | escape }}{% else %}{{ post.excerpt | strip_html | escape | strip }}{% endif %}", \
           "url"      : "{{ site.baseurl }}{{ post.url }}", \
           "date"     : "{{ post.date | date: "%B %e, %Y" | default: "January 1, 1970" }}" \
         }, \
@@ -21,6 +22,7 @@
         { \
           "title"    : "{% if page.title != "" %}{{ page.title | escape }}{% else %}{{ page.excerpt | strip_html | escape | strip }}{% endif %}", \
           "category" : "{% if page.tags %}{{ page.tags | join: \', \' }}{% else %}page{% endif %}", \
+          "summary"  : "{% if page.subtitle %}{{ page.subtitle | escape }}{% else %}{{ page.excerpt | strip_html | escape | strip }}{% endif %}", \
           "url"      : "{{ site.baseurl }}{{ page.url }}", \
           "date"     : "{{ page.date | date: '%B %e, %Y' | default: "January 1, 1970" }}" \
         }{% unless forloop.last %},{% endunless %} \
@@ -31,7 +33,9 @@
     var sjs = SimpleJekyllSearch({
       searchInput: document.getElementById('nav-search-input'),
       resultsContainer: document.getElementById('search-results-container'),
-      json: searchjson
+      json: searchjson,
+      searchResultTemplate: '<li><a href="{url}"><span>{category}</span><strong>{title}</strong><em>{summary}</em></a></li>',
+      noResultsText: '<li class="search-empty">No matching notes found.</li>'
     });
   </script>
 </div>

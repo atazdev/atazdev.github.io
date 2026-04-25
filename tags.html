@@ -40,7 +40,9 @@ subtitle: "Browse the journal by theme"
       {%- for post in site.tags[tag] -%}
       <article class="topic-post">
         <a href="{{ post.url | relative_url }}">{{- post.title -}}</a>
-        {% if post.subtitle %}
+        {% if post.summary %}
+        <p>{{ post.summary }}</p>
+        {% elsif post.subtitle %}
         <p>{{ post.subtitle }}</p>
         {% endif %}
         <time datetime="{{- post.date | date_to_xmlschema -}}">{{- post.date | date: date_format -}}</time>

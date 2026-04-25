@@ -3,6 +3,9 @@ layout: post
 title: "JADC2 and the Software-Defined Battlefield"
 subtitle: "Joint All-Domain Command & Control isn't a weapons program — it's a distributed systems problem"
 date: 2026-03-22
+category: architecture
+series: "Software-Defined Operations"
+summary: "A systems view of JADC2 as a distributed software, data, and architecture challenge."
 tags: [jadc2, defense, software-defined-warfare, devops, architecture, ai, military]
 ---
 
