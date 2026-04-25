@@ -215,6 +215,18 @@ input:focus-visible {
   margin-left: 0.35rem;
 }
 
+.navbar-custom .nav-search-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.15rem;
+}
+
+.navbar-custom .nav-search-link .fa {
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
 .footer-note {
   color: var(--text-muted);
   font-family: var(--font-mono);
@@ -284,9 +296,31 @@ input:focus-visible {
     background-color: rgba(13, 17, 23, 0.96);
   }
 
+  .navbar-custom .navbar-nav {
+    align-items: stretch;
+  }
+
+  .navbar-custom .nav-item {
+    display: block;
+  }
+
   .navbar-custom .nav-link {
     padding: 0.6rem 0.75rem !important;
     width: 100%;
+  }
+
+  .navbar-custom .nav-search-link {
+    justify-content: flex-start;
+  }
+
+  .navbar-custom .nav-search-link .sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 0 0 0.55rem;
+    overflow: visible;
+    clip: auto;
+    white-space: nowrap;
   }
 
   .navbar-custom .nav-link.active::after {
