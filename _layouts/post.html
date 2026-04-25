@@ -167,6 +167,21 @@ layout: base
       </div>
       {% endif %}
 
+      <aside class="follow-block" aria-labelledby="follow-block-title">
+        <div>
+          <span class="profile-kicker">Follow Along</span>
+          <h2 id="follow-block-title">More notes on secure systems and software delivery.</h2>
+          <p>Use RSS for updates, GitHub for source, or email for direct contact.</p>
+        </div>
+        <div class="follow-actions">
+          <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+          <a href="https://github.com/{{ site.social-network-links.github | default: 'atazdev' }}" target="_blank" rel="noopener">GitHub</a>
+          {% if site.social-network-links.email %}
+          <a href="mailto:{{ site.social-network-links.email }}">Email</a>
+          {% endif %}
+        </div>
+      </aside>
+
       <ul class="pagination blog-pager">
         {% if page.previous.url %}
         <li class="page-item previous">

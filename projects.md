@@ -19,7 +19,8 @@ subtitle: "Experiments, prototypes, and working notes"
     <h3>Dashboard Experiment</h3>
     <p>
       A Vite-based dashboard prototype in the repository for exploring operational
-      interface ideas separately from the Jekyll site.
+      interface ideas separately from the Jekyll site. It is source-backed here
+      and intended as a prototype surface rather than a primary blog page.
     </p>
     <a href="{{ '/dashboard/' | relative_url }}">View dashboard</a>
   </section>

@@ -675,6 +675,7 @@ input:focus-visible {
 }
 
 .post-preview {
+  --category-accent: var(--accent-blue);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(9rem, 14rem);
   gap: 1.25rem;
@@ -719,7 +720,7 @@ input:focus-visible {
   left: 0;
   bottom: 0;
   width: 2px;
-  background: var(--accent-blue);
+  background: var(--category-accent);
   pointer-events: none;
   opacity: 0.55;
   transition: opacity 0.2s ease;
@@ -736,14 +737,37 @@ input:focus-visible {
 .post-category {
   display: inline-block;
   margin-bottom: 0.65rem;
-  border: 1px solid rgba(56, 189, 248, 0.32);
+  border: 1px solid var(--category-accent);
   border-radius: 999px;
   padding: 0.18rem 0.5rem;
-  color: var(--accent-blue);
+  color: var(--category-accent);
   font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+.category-ai {
+  --category-accent: #A78BFA;
+}
+
+.category-devsecops,
+.category-cybersecurity {
+  --category-accent: #6EE7B7;
+}
+
+.category-architecture,
+.category-gitops {
+  --category-accent: #38BDF8;
+}
+
+.category-development,
+.category-delivery {
+  --category-accent: #FBBF24;
+}
+
+.category-finance {
+  --category-accent: #F472B6;
 }
 
 .post-preview .post-title {
@@ -1170,6 +1194,53 @@ pre {
   border-top: 1px solid var(--border);
 }
 
+.follow-block {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  margin: 2rem 0 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(110, 231, 183, 0.04));
+}
+
+.follow-block h2 {
+  margin: 0;
+  color: var(--text-primary) !important;
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+}
+
+.follow-block p {
+  margin: 0.5rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+.follow-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.follow-actions a {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  color: var(--text-primary) !important;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  text-decoration: none !important;
+}
+
+.follow-actions a:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue) !important;
+}
+
 .post-actions a {
   color: var(--accent-blue) !important;
   font-family: var(--font-mono);
@@ -1510,6 +1581,14 @@ footer a:hover {
   .related-post-grid,
   .project-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  .follow-block {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .follow-actions {
+    justify-content: flex-start;
   }
 
   .resource-intro h2,
