@@ -148,9 +148,10 @@ input:focus-visible {
 .navbar-brand {
   font-family: var(--font-mono) !important;
   font-weight: 700 !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: 0.02em !important;
   text-transform: uppercase !important;
   color: var(--text-primary) !important;
+  white-space: nowrap;
 }
 
 /* Compact secondary brand label */
@@ -159,24 +160,36 @@ input:focus-visible {
   font-size: 0.58rem !important;
   color: var(--accent-blue) !important;
   opacity: 0.6;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.06em;
   margin-left: 0.6rem;
   vertical-align: middle;
   font-weight: 400;
+  text-transform: none;
 }
 
 .navbar-brand:hover {
   color: var(--accent-blue) !important;
 }
 
+.navbar-custom .navbar-nav {
+  align-items: center;
+}
+
+.navbar-custom .nav-item {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-custom .nav-link {
   position: relative;
   font-family: var(--font-mono) !important;
-  font-size: 0.82rem !important;
-  letter-spacing: 0.06em !important;
-  text-transform: uppercase !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  text-transform: none !important;
   color: var(--text-muted) !important;
-  padding-inline: 0.85rem !important;
+  padding: 0.55rem 0.62rem !important;
+  white-space: nowrap;
   transition: color 0.15s ease, background-color 0.15s ease !important;
 }
 
@@ -189,12 +202,17 @@ input:focus-visible {
 .navbar-custom .nav-link.active::after {
   content: '';
   position: absolute;
-  left: 0.85rem;
-  right: 0.85rem;
-  bottom: 0.25rem;
+  left: 0.62rem;
+  right: 0.62rem;
+  bottom: 0.2rem;
   height: 1px;
   background-color: var(--accent-blue);
   opacity: 0.85;
+}
+
+.navbar-custom .dropdown-toggle::after {
+  vertical-align: 0.12em;
+  margin-left: 0.35rem;
 }
 
 .footer-note {
@@ -231,6 +249,7 @@ input:focus-visible {
   border-radius: 6px !important;
   padding: 0.35rem !important;
   box-shadow: 0 16px 36px rgba(2, 6, 23, 0.38);
+  min-width: 11rem;
 }
 
 .dropdown-item {
@@ -239,6 +258,7 @@ input:focus-visible {
   font-size: 0.78rem !important;
   border-radius: 4px;
   padding: 0.5rem 0.65rem !important;
+  white-space: nowrap;
 }
 
 .dropdown-item:hover {
@@ -266,6 +286,7 @@ input:focus-visible {
 
   .navbar-custom .nav-link {
     padding: 0.6rem 0.75rem !important;
+    width: 100%;
   }
 
   .navbar-custom .nav-link.active::after {
@@ -277,6 +298,13 @@ input:focus-visible {
 
   .dropdown-menu {
     margin: 0.25rem 0 0.5rem !important;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar-status {
+    display: none;
   }
 }
 
