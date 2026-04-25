@@ -1,0 +1,66 @@
+---
+layout: page
+title: Categories
+subtitle: "Browse by primary editorial theme"
+---
+
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+
+{%- capture category_capture -%}
+  {%- for post in site.posts -%}
+    {%- if post.category -%}
+      {{- post.category -}}{%- unless forloop.last -%},{%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{% assign categories = category_capture | split: "," | uniq | sort %}
+
+<section class="tags-intro">
+  <p class="profile-kicker">Category Index</p>
+  <h2>{{ categories.size }} primary categories.</h2>
+  <p>Use categories for a higher-level view than tags or series.</p>
+</section>
+
+<div class="tag-cloud">
+  {% for category in categories %}
+  <a href="#{{ category | slugify }}">
+    <span>{{ category }}</span>
+    <strong>
+      {% assign count = 0 %}
+      {% for post in site.posts %}
+        {% if post.category == category %}
+          {% assign count = count | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {{ count }}
+    </strong>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="topic-sections">
+  {% for category in categories %}
+  <section id="{{ category | slugify }}" class="topic-section">
+    <div class="topic-section-header">
+      <h2>{{ category }}</h2>
+      <span>Category</span>
+    </div>
+
+    <div class="topic-post-list">
+      {% for post in site.posts %}
+        {% if post.category == category %}
+        <article class="topic-post">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.summary %}
+          <p>{{ post.summary }}</p>
+          {% elsif post.subtitle %}
+          <p>{{ post.subtitle }}</p>
+          {% endif %}
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>

@@ -58,6 +58,34 @@ body {
   color: var(--text-primary) !important;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10002;
+  transform: translateY(-200%);
+  border: 1px solid var(--accent-blue);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  background-color: var(--bg-primary);
+  color: var(--accent-blue) !important;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-decoration: none !important;
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -291,6 +319,11 @@ body {
   color: var(--text-muted) !important;
   text-decoration: none !important;
   border-bottom: none !important;
+}
+
+.post-classification > a {
+  color: var(--accent-blue) !important;
+  text-decoration: none !important;
 }
 
 .post-classification .tag-list a:hover {
@@ -1131,6 +1164,19 @@ pre {
   line-height: 1.55;
 }
 
+.post-actions {
+  margin: 1.5rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.post-actions a {
+  color: var(--accent-blue) !important;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-decoration: none !important;
+}
+
 /* --- SVG / Image Figure --- */
 .post-figure {
   text-align: center;
@@ -1481,6 +1527,32 @@ footer a:hover {
   max-width: 46rem;
   border-radius: 8px !important;
   padding: 0.85rem 1rem !important;
+}
+
+.search-label {
+  display: block;
+  max-width: 46rem;
+  margin: 0 auto 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+#nav-search-exit {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  background-color: rgba(22, 27, 34, 0.92);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+}
+
+#nav-search-exit:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
 }
 
 #search-results-container {

@@ -4,7 +4,7 @@ layout: base
 
 {% include header.html type="post" %}
 
-<div class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+<div id="main-content" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
 
@@ -43,7 +43,16 @@ layout: base
       <div class="post-classification">
         {% assign read_minutes = content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
         <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+        {% if page.last-updated %}
+        <span>Updated {{ page.last-updated | date: "%B %-d, %Y" }}</span>
+        {% endif %}
         <span>{{ read_minutes }} min read</span>
+        {% if page.category %}
+        <a href="{{ '/categories' | relative_url }}#{{ page.category | slugify }}">{{ page.category }}</a>
+        {% endif %}
+        {% if page.series %}
+        <a href="{{ '/series' | relative_url }}#{{ page.series | slugify }}">{{ page.series }}</a>
+        {% endif %}
         <span class="tag-list">
           {% for tag in page.tags %}<a href="{{ '/tags' | relative_url }}#{{- tag -}}">#{{- tag -}}</a>{% endfor %}
         </span>
@@ -79,6 +88,38 @@ layout: base
 
       {% if page.social-share %}
         {% include social-share.html %}
+      {% endif %}
+
+      {% if page.series %}
+      {% capture series_markup %}
+        {% assign series_count = 0 %}
+        {% for series_post in site.posts reversed %}
+          {% if series_post.series == page.series and series_post.url != page.url %}
+            {% assign series_count = series_count | plus: 1 %}
+            <a href="{{ series_post.url | relative_url }}">
+              <time datetime="{{ series_post.date | date_to_xmlschema }}">{{ series_post.date | date: "%B %-d, %Y" }}</time>
+              <strong>{{ series_post.title }}</strong>
+              {% if series_post.summary %}
+              <span>{{ series_post.summary }}</span>
+              {% elsif series_post.subtitle %}
+              <span>{{ series_post.subtitle }}</span>
+              {% endif %}
+            </a>
+          {% endif %}
+        {% endfor %}
+      {% endcapture %}
+      {% assign series_markup = series_markup | strip %}
+      {% if series_markup != "" %}
+      <aside class="related-posts" aria-labelledby="series-posts-title">
+        <div class="section-label">
+          <span id="series-posts-title">More In {{ page.series }}</span>
+          <span>Series</span>
+        </div>
+        <div class="related-post-grid">
+          {{ series_markup }}
+        </div>
+      </aside>
+      {% endif %}
       {% endif %}
 
       {% capture related_markup %}
@@ -118,6 +159,12 @@ layout: base
           {{ related_markup }}
         </div>
       </aside>
+      {% endif %}
+
+      {% if site.repository %}
+      <div class="post-actions">
+        <a href="https://github.com/{{ site.repository }}/edit/main/{{ page.path }}" target="_blank" rel="noopener">Edit this note on GitHub</a>
+      </div>
       {% endif %}
 
       <ul class="pagination blog-pager">

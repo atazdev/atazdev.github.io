@@ -1,0 +1,49 @@
+---
+layout: page
+title: Series
+subtitle: "Follow connected writing paths"
+---
+
+{% assign date_format = site.date_format | default: "%B %-d, %Y" %}
+
+{%- capture series_capture -%}
+  {%- for post in site.posts -%}
+    {%- if post.series -%}
+      {{- post.series -}}{%- unless forloop.last -%},{%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{% assign series_names = series_capture | split: "," | uniq | sort %}
+
+<section class="tags-intro">
+  <p class="profile-kicker">Series Index</p>
+  <h2>{{ series_names.size }} writing series.</h2>
+  <p>Follow recurring themes across related essays and technical notes.</p>
+</section>
+
+<div class="topic-sections">
+  {% for series in series_names %}
+  <section id="{{ series | slugify }}" class="topic-section">
+    <div class="topic-section-header">
+      <h2>{{ series }}</h2>
+      <span>Series</span>
+    </div>
+
+    <div class="topic-post-list">
+      {% for post in site.posts %}
+        {% if post.series == series %}
+        <article class="topic-post">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          {% if post.summary %}
+          <p>{{ post.summary }}</p>
+          {% elsif post.subtitle %}
+          <p>{{ post.subtitle }}</p>
+          {% endif %}
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+        </article>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>

@@ -64,6 +64,33 @@ Featured examples:
 - `2025-10-12-System design101.md` - system design guides and architecture case studies.
 - `2026-01-27-gitops-modern-age.md` - GitOps and modern delivery practices.
 
+## Authoring Checklist
+
+Use this front matter for new posts:
+
+```yaml
+---
+layout: post
+title: "Post title"
+subtitle: "Short supporting line"
+date: YYYY-MM-DD
+last-updated: YYYY-MM-DD # optional
+category: devsecops
+series: "Secure Delivery"
+summary: "One sentence used for cards, search, SEO, and related posts."
+tags: [devsecops, security, automation]
+---
+```
+
+Guidelines:
+
+- Keep `summary` under 160 characters when possible.
+- Use one lowercase `category` for the primary theme.
+- Use `series` when the post belongs to a recurring writing path.
+- Add 3-8 tags, ordered from broad to specific.
+- Prefer H2/H3 headings so the article table of contents is useful.
+- Add `last-updated` for evergreen technical references.
+
 ## Design System
 
 The current visual direction is documented in [.stitch/DESIGN.md](.stitch/DESIGN.md): a quiet technical journal with dark surfaces, restrained accents, and readable editorial hierarchy.

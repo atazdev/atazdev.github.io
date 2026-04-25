@@ -12,12 +12,16 @@ title: Ataz Labs
 
 # Your name to show in the footer
 author: Ataz Labs
+repository: atazdev/atazdev.github.io
+default-share-img: "/assets/img/thumb.png"
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
   Journal: "/"
   Topics: "tags"
+  Series: "series"
+  Categories: "categories"
   Resources: "resources"
   Projects: "projects"
   About: "aboutme"
