@@ -221,6 +221,10 @@ paginate: 5
 kramdown:
   input: GFM
 
+# Include _pages so Jekyll processes it (underscore dirs are excluded by default)
+include:
+  - _pages
+
 # Default YAML values (more information on Jekyll's site)
 defaults:
   -
@@ -229,11 +233,16 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      comments: false  # comments are replaced by a lightweight contact/discussion CTA
-      social-share: true # add social media sharing buttons to all blog posts
+      comments: false
+      social-share: true
   -
     scope:
-      path: "" # any file that's not a post will be a "page" layout by default
+      path: "_pages"
+    values:
+      permalink: /:basename/
+  -
+    scope:
+      path: ""
     values:
       layout: "page"
 
@@ -241,10 +250,14 @@ defaults:
 exclude:
   - CHANGELOG.md
   - CNAME
+  - DESIGN.md
+  - DOCKER.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
   - README.md
+  - beautiful-jekyll-theme.gemspec
+  - "*.code-workspace"
   - screenshot.png
   - docs/
   - vendor/

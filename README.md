@@ -7,7 +7,7 @@ Personal website and technical journal built with Jekyll, based on the Beautiful
 - Cybersecurity professional with leadership experience across technical, operational, and strategic environments.
 - Certified Information Systems Security Professional (CISSP).
 
-For the full bio and details, see [aboutme.md](aboutme.md).
+For the full bio and details, see [_pages/aboutme.md](_pages/aboutme.md).
 
 ## Project Structure
 
@@ -15,16 +15,14 @@ For the full bio and details, see [aboutme.md](aboutme.md).
 .
 |-- _config.yml                  # Main Jekyll site configuration
 |-- index.html                   # Home page entry point
-|-- aboutme.md                   # About page content
-|-- tags.html                    # Tag index page
 |-- 404.html                     # Not-found page
 |-- feed.xml                     # RSS feed template
 |-- CNAME                        # Custom domain configuration
 |
+|-- _pages/                      # Standalone site pages with stable permalinks
 |-- _posts/                      # Blog post Markdown files
 |-- _layouts/                    # Jekyll page, post, and home layouts
 |-- _includes/                   # Shared HTML partials such as nav and footer
-|-- _data/                       # Theme/site data files
 |
 |-- assets/                      # Site CSS, images, JavaScript, and static assets
 |   `-- css/                     # Beautiful Jekyll and custom styling
@@ -44,7 +42,6 @@ For the full bio and details, see [aboutme.md](aboutme.md).
 |-- DOCKER.md                    # Docker usage notes
 |-- Gemfile                      # Ruby/Jekyll dependencies
 |-- beautiful-jekyll-theme.gemspec
-|-- staticman.yml                # Staticman comment configuration
 |-- CHANGELOG.md
 |-- LICENSE
 `-- README.md
