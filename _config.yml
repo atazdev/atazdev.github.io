@@ -18,12 +18,8 @@ author: Ataz Labs
 navbar-links:
   Journal: "/"
   Topics: "tags"
+  Resources: "resources"
   About: "aboutme"
-  Resources:
-    - DoD DevSecOps Guide: "https://dodcio.defense.gov/Portals/0/Documents/DoD%20Enterprise%20DevSecOps%20Reference%20Design%20v1.0_Public%20Release.pdf"
-    - GitOps Principles: "https://opengitops.dev"
-    - System Design Primer: "https://github.com/donnemartin/system-design-primer"
-    - DoD AI Resources: "https://www.ai.mil"
 
 
 # --- Logo --- #

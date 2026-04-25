@@ -20,6 +20,27 @@ layout: page
   </div>
 </section>
 
+<section class="start-here" aria-labelledby="start-here-title">
+  <div>
+    <p class="home-kicker">Start Here</p>
+    <h2 id="start-here-title">Choose a path through the journal.</h2>
+  </div>
+  <div class="start-here-grid">
+    <a href="{{ '/tags' | relative_url }}#devsecops">
+      <span>DevSecOps</span>
+      <strong>Secure delivery, policy-as-code, and platform practices.</strong>
+    </a>
+    <a href="{{ '/tags' | relative_url }}#ai">
+      <span>Applied AI</span>
+      <strong>Governance, agents, automation, and AI-enabled workflows.</strong>
+    </a>
+    <a href="{{ '/tags' | relative_url }}#system-design">
+      <span>Architecture</span>
+      <strong>System design, cloud patterns, and resilient operating models.</strong>
+    </a>
+  </div>
+</section>
+
 {% if site.tags.size > 0 %}
 <section class="topic-filter" aria-label="Filter journal by topic">
   <span>Browse by topic</span>

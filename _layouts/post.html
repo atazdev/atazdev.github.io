@@ -41,6 +41,9 @@ layout: base
 
       {% if page.tags.size > 0 %}
       <div class="post-classification">
+        {% assign read_minutes = content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
+        <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+        <span>{{ read_minutes }} min read</span>
         <span class="tag-list">
           {% for tag in page.tags %}<a href="{{ '/tags' | relative_url }}#{{- tag -}}">#{{- tag -}}</a>{% endfor %}
         </span>
@@ -69,6 +72,43 @@ layout: base
 
       {% if page.social-share %}
         {% include social-share.html %}
+      {% endif %}
+
+      {% capture related_markup %}
+        {% assign related_count = 0 %}
+        {% for related in site.posts %}
+          {% if related.url != page.url and related_count < 3 %}
+            {% assign matched = false %}
+            {% for tag in page.tags %}
+              {% if related.tags contains tag %}
+                {% assign matched = true %}
+              {% endif %}
+            {% endfor %}
+            {% if matched %}
+            {% assign related_count = related_count | plus: 1 %}
+            <a href="{{ related.url | relative_url }}">
+              <time datetime="{{ related.date | date_to_xmlschema }}">{{ related.date | date: "%B %-d, %Y" }}</time>
+              <strong>{{ related.title }}</strong>
+              {% if related.subtitle %}
+              <span>{{ related.subtitle }}</span>
+              {% endif %}
+            </a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endcapture %}
+
+      {% assign related_markup = related_markup | strip %}
+      {% if related_markup != "" %}
+      <aside class="related-posts" aria-labelledby="related-posts-title">
+        <div class="section-label">
+          <span id="related-posts-title">Related Notes</span>
+          <span>More to read</span>
+        </div>
+        <div class="related-post-grid">
+          {{ related_markup }}
+        </div>
+      </aside>
       {% endif %}
 
       <ul class="pagination blog-pager">
