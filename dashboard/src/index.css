@@ -73,3 +73,18 @@ h1, h2, h3 {
   animation: blink 1s step-end infinite;
   color: var(--accent-green);
 }
+
+/* --- Interactive Elements --- */
+.intel-card:hover {
+  border-color: var(--accent-green) !important;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+  transform: scale(1.02) !important;
+  background: rgba(0, 255, 136, 0.1) !important;
+}
+
+.transmission-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: var(--accent-blue) !important;
+  transform: translateX(4px);
+  color: var(--accent-blue) !important;
+}

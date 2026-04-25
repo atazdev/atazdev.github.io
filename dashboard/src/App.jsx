@@ -103,10 +103,10 @@ function App() {
               <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', textAlign: 'center', width: '80%' }}>
                 <div style={{ fontSize: '0.6rem', color: 'var(--accent-green)', letterSpacing: '0.5em', marginBottom: '1rem' }}>SCANNING_INFRASTRUCTURE...</div>
                 {data?.latest_posts?.[0] && (
-                  <div style={{ border: '1px solid var(--accent-green)', padding: '1rem', background: 'rgba(0,0,0,0.5)' }}>
+                  <a href={data.latest_posts[0].url} style={{ display: 'block', textDecoration: 'none', border: '1px solid var(--accent-green)', padding: '1rem', background: 'rgba(0,0,0,0.5)', transition: 'all 0.2s ease' }} className="intel-card">
                     <div style={{ fontSize: '0.6rem', color: 'var(--text-muted)' }}>LATEST_INTEL:</div>
                     <div style={{ fontSize: '1rem', color: 'var(--text-primary)', marginTop: '0.5rem' }}>{data.latest_posts[0].title}</div>
-                  </div>
+                  </a>
                 )}
               </div>
             </div>
@@ -119,9 +119,16 @@ function App() {
             <h2 style={{ fontSize: '0.9rem', marginBottom: '1.5rem', color: 'var(--accent-blue)' }}>// RECENT_TRANSMISSIONS</h2>
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '1rem', overflowY: 'auto', fontSize: '0.75rem', fontFamily: 'var(--font-mono)' }}>
               {data?.latest_posts?.map((post, idx) => (
-                <div key={idx} style={{ borderLeft: `2px solid ${idx === 0 ? 'var(--accent-green)' : 'var(--border)'}`, paddingLeft: '0.5rem' }}>
+                <a key={idx} href={post.url} style={{ 
+                  display: 'block',
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  borderLeft: `2px solid ${idx === 0 ? 'var(--accent-green)' : 'var(--border)'}`, 
+                  paddingLeft: '0.5rem',
+                  transition: 'all 0.2s ease'
+                }} className="transmission-link">
                   <span style={{ color: 'var(--text-muted)' }}>[{post.date}]</span> {post.title}
-                </div>
+                </a>
               ))}
               {!data?.latest_posts && <div style={{ color: 'var(--text-muted)' }}>NO_TRANSMISSIONS_FOUND...</div>}
             </div>
