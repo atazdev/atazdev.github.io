@@ -24,7 +24,6 @@
         </span>
       {% endif %}
       &nbsp;&bull;&nbsp; <span class="footer-note">Quiet technical notes</span>
-
       {% if site.matomo %}
         {% if site.matomo.opt-out %}
           &nbsp;&bull;&nbsp;
@@ -32,6 +31,13 @@
         {% endif %}
       {% endif%}
       </p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="{{ '/recommended' | relative_url }}">Recommended</a>
+        <a href="{{ '/ai-governance' | relative_url }}">AI Governance</a>
+        <a href="{{ '/devsecops' | relative_url }}">DevSecOps</a>
+        <a href="{{ '/resources' | relative_url }}">Resources</a>
+        <a href="{{ '/site-changelog' | relative_url }}">Changelog</a>
+      </nav>
       {% unless site.remove-ads %}<p class="theme-by text-muted">
         Powered by
         <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>

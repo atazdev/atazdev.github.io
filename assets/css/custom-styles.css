@@ -204,6 +204,26 @@ input:focus-visible {
   letter-spacing: 0.04em;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem 0.8rem;
+  margin: 0.9rem 0 0;
+}
+
+.footer-links a {
+  color: var(--text-muted) !important;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-decoration: none !important;
+}
+
+.footer-links a:hover {
+  color: var(--accent-blue) !important;
+}
+
 /* Dropdown */
 .dropdown-menu {
   background-color: var(--bg-surface) !important;
@@ -458,6 +478,15 @@ input:focus-visible {
   height: 0.6rem;
   border-radius: 999px;
   background-color: var(--accent-blue);
+}
+
+.contact-panel {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-actions {
+  justify-content: flex-start;
 }
 
 /* --- Home feed --- */

@@ -78,6 +78,19 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
   </div>
 </section>
 
+<section class="profile-panel contact-panel">
+  <h3>Contact</h3>
+  <p>
+    For questions, corrections, collaboration, or professional context, email is
+    the most direct path. GitHub is best for site or writing-system changes.
+  </p>
+  <div class="follow-actions contact-actions">
+    <a href="mailto:{{ site.social-network-links.email }}">Email</a>
+    <a href="https://github.com/{{ site.social-network-links.github }}" target="_blank" rel="noopener">GitHub</a>
+    <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+  </div>
+</section>
+
 <section class="follow-block" aria-labelledby="about-cta-title">
   <div>
     <span class="profile-kicker">Next Steps</span>

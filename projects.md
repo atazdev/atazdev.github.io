@@ -15,14 +15,14 @@ subtitle: "Experiments, prototypes, and working notes"
 
 <div class="project-grid">
   <section class="project-card">
-    <span>Prototype</span>
+    <span>Source Prototype</span>
     <h3>Dashboard Experiment</h3>
     <p>
       A Vite-based dashboard prototype in the repository for exploring operational
       interface ideas separately from the Jekyll site. It is source-backed here
-      and intended as a prototype surface rather than a primary blog page.
+      and excluded from the Jekyll build until it has a dedicated deployment path.
     </p>
-    <a href="{{ '/dashboard/' | relative_url }}">View dashboard</a>
+    <a href="https://github.com/{{ site.repository }}/tree/main/dashboard" target="_blank" rel="noopener">View source</a>
   </section>
 
   <section class="project-card">
