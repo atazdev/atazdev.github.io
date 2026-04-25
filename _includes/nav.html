@@ -32,8 +32,10 @@
           </li>
         {% else %}
           {%- assign item_url = link[1] | relative_url -%}
+          {%- assign item_url_slash = item_url | append:'/' -%}
+          {%- assign current_url_slash = current_url | append:'/' -%}
           <li class="nav-item">
-            <a class="nav-link{% if current_url == item_url %} active{% endif %}" href="{{ item_url }}">{{ link[0] }}</a>
+            <a class="nav-link{% if current_url == item_url or current_url == item_url_slash or current_url_slash == item_url %} active{% endif %}" href="{{ item_url }}">{{ link[0] }}</a>
           </li>
         {%- endif -%}
       {%- endfor -%}
