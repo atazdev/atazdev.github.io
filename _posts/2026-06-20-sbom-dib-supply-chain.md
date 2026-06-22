@@ -47,11 +47,11 @@ These are minimum elements. A useful SBOM for CUI environments also includes lic
 
 Two formats dominate the SBOM ecosystem. The contracting officer's solicitation will typically specify one; understanding both is necessary for toolchain selection.
 
-**SPDX (Software Package Data Exchange)** — ISO/IEC 5962:2021 — was developed by the Linux Foundation with a focus on license compliance. It is the older standard, with broad tooling support and the advantage of being an ISO standard (which matters for some acquisition vehicles). SPDX 2.3 added support for vulnerability data and relationships that make it more competitive for security use cases.
+**[SPDX](https://spdx.dev) (Software Package Data Exchange)** — ISO/IEC 5962:2021 — was developed by the Linux Foundation with a focus on license compliance. It is the older standard, with broad tooling support and the advantage of being an ISO standard (which matters for some acquisition vehicles). SPDX 2.3 added support for vulnerability data and relationships that make it more competitive for security use cases.
 
-**CycloneDX** — maintained by OWASP — was built security-first. It natively supports vulnerability information (VEX — Vulnerability Exploitability eXchange), hardware BOMs, machine learning model BOMs, and service dependency graphs. For defense contractors producing embedded systems or ML-enabled software, CycloneDX's hardware BOM support is a meaningful differentiator.
+**[CycloneDX](https://cyclonedx.org)** — maintained by OWASP — was built security-first. It natively supports vulnerability information (VEX — Vulnerability Exploitability eXchange), hardware BOMs, machine learning model BOMs, and service dependency graphs. For defense contractors producing embedded systems or ML-enabled software, CycloneDX's hardware BOM support is a meaningful differentiator.
 
-The practical answer for most DIB contractors: generate both. The toolchain overhead is minimal, and federal customers have not standardized on one format. Syft generates both natively. The NTIA interoperability study confirmed that minimal-element SBOMs in either format are parseable by both communities.
+The practical answer for most DIB contractors: generate both. The toolchain overhead is minimal, and federal customers have not standardized on one format. [Syft](https://github.com/anchore/syft) generates both natively. The NTIA interoperability study confirmed that minimal-element SBOMs in either format are parseable by both communities.
 
 ## The Toolchain
 
@@ -59,14 +59,14 @@ An SBOM pipeline has three stages: generation, enrichment, and distribution. Mos
 
 **Generation tools** scan build artifacts, containers, or source trees and produce raw SBOMs:
 
-- **Syft** (Anchore) — open source, generates SPDX and CycloneDX, works on container images, filesystems, and language-specific manifests. The de facto standard for container-era workloads.
-- **Trivy** (Aqua Security) — open source, combines SBOM generation with vulnerability scanning in a single pass. Well-suited for CI pipeline integration.
-- **cdxgen** — open source, CycloneDX-native, strong support for polyglot repos and language-specific package managers that Syft sometimes misses.
-- **FOSSA** and **Snyk** — commercial, add license compliance workflows and continuous monitoring. Common in enterprises with legal requirements around open source licensing.
+- **[Syft](https://github.com/anchore/syft)** (Anchore) — open source, generates SPDX and CycloneDX, works on container images, filesystems, and language-specific manifests. The de facto standard for container-era workloads.
+- **[Trivy](https://trivy.dev)** (Aqua Security) — open source, combines SBOM generation with vulnerability scanning in a single pass. Well-suited for CI pipeline integration.
+- **[cdxgen](https://github.com/CycloneDX/cdxgen)** — open source, CycloneDX-native, strong support for polyglot repos and language-specific package managers that Syft sometimes misses.
+- **[FOSSA](https://fossa.com)** and **[Snyk](https://snyk.io)** — commercial, add license compliance workflows and continuous monitoring. Common in enterprises with legal requirements around open source licensing.
 
-**Enrichment** is where most pipelines stop prematurely. A raw SBOM from Syft is a snapshot of components with version strings. An actionable SBOM correlates those versions against known vulnerability databases — NVD, OSV, GitHub Advisory — and produces either a scored vulnerability list or a VEX document asserting which known vulnerabilities are not exploitable in this context. **Grype** (Anchore), **OWASP Dependency-Track**, and **Trivy** all perform this enrichment step.
+**Enrichment** is where most pipelines stop prematurely. A raw SBOM from Syft is a snapshot of components with version strings. An actionable SBOM correlates those versions against known vulnerability databases — [NVD](https://nvd.nist.gov), [OSV](https://osv.dev), [GitHub Advisory](https://github.com/advisories) — and produces either a scored vulnerability list or a VEX document asserting which known vulnerabilities are not exploitable in this context. **[Grype](https://github.com/anchore/grype)** (Anchore), **[OWASP Dependency-Track](https://dependencytrack.org)**, and **Trivy** all perform this enrichment step.
 
-**Distribution** — securely delivering SBOMs to customers alongside software releases — is operationally immature across most of the DIB. The emerging standard is embedding SBOMs as OCI artifacts attached to container image digests (using tools like **cosign** and the ORAS spec). For traditional software deliverables, contractual delivery alongside the release package is still common and acceptable.
+**Distribution** — securely delivering SBOMs to customers alongside software releases — is operationally immature across most of the DIB. The emerging standard is embedding SBOMs as OCI artifacts attached to container image digests (using tools like **[cosign](https://github.com/sigstore/cosign)** and the [ORAS spec](https://oras.land)). For traditional software deliverables, contractual delivery alongside the release package is still common and acceptable.
 
 ## The CMMC Connection
 
