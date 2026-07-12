@@ -7,6 +7,10 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
 <div class="profile-page">
 
 <section class="profile-hero">
+  <div class="status-ticker" style="margin-bottom: 1.5rem;">
+    <div class="status-bit pulse"></div>
+    <span class="status-text">SYSTEMS_ACTIVE // NODE_ONLINE</span>
+  </div>
   <p class="profile-kicker">Professional Background</p>
   <h2>Cybersecurity and cloud operations leader</h2>
   <p>
@@ -121,7 +125,7 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
           <h3 class="timeline-title">National Defense University</h3>
         </div>
         <div class="timeline-body">
-          Earned a **Master of Science in Cybersecurity**, specializing in enterprise risk and infrastructure security.
+          Earned a <strong>Master of Science in Cybersecurity</strong>, specializing in enterprise risk and infrastructure security.
         </div>
         <div class="timeline-tags">
           <span class="timeline-tag">MS Cybersecurity</span>
@@ -138,7 +142,7 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
           <h3 class="timeline-title">New York University</h3>
         </div>
         <div class="timeline-body">
-          Earned a **Master of Public Administration (MPA)**, focusing on public policy, governance, and organizational leadership.
+          Earned a <strong>Master of Public Administration (MPA)</strong>, focusing on public policy, governance, and organizational leadership.
         </div>
         <div class="timeline-tags">
           <span class="timeline-tag">MPA</span>
