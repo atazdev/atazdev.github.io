@@ -37,6 +37,7 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
     <div class="focus-list">
       <div class="status-value" style="margin-bottom: 1rem;">CISSP_CERTIFIED</div>
       <div class="status-value" style="margin-bottom: 1rem;">MS_CYBERSECURITY</div>
+      <div class="status-value" style="margin-bottom: 1rem;">MPA_NYU</div>
       <div style="margin-top: 2rem;">
         <span class="sidebar-label">Core Domains</span>
         <ul class="tech-list" style="margin-top: 1rem;">
@@ -69,6 +70,13 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
   content: "Earned a **Master of Science in Cybersecurity**, specializing in enterprise risk and infrastructure security."
   tags: ["MS Cybersecurity", "Risk Management"]
   {% endcapture %}
+
+  {% capture e2b %}
+  date: "Education"
+  title: "New York University"
+  content: "Earned a **Master of Public Administration (MPA)**, focusing on public policy, governance, and organizational leadership."
+  tags: ["MPA", "Governance"]
+  {% endcapture %}
   
   {% capture e3 %}
   date: "20+ Years"
@@ -84,7 +92,7 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
   tags: ["Web", "DevOps"]
   {% endcapture %}
 
-  {% assign entries = "e1,e2,e3,e4" | split: "," %}
+  {% assign entries = "e1,e2,e2b,e3,e4" | split: "," %}
   
   <div class="mission-timeline">
     <div class="timeline-item">
@@ -118,6 +126,23 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
         <div class="timeline-tags">
           <span class="timeline-tag">MS Cybersecurity</span>
           <span class="timeline-tag">Risk Management</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content glass-panel">
+        <div class="timeline-header">
+          <span class="timeline-date">Education</span>
+          <h3 class="timeline-title">New York University</h3>
+        </div>
+        <div class="timeline-body">
+          Earned a **Master of Public Administration (MPA)**, focusing on public policy, governance, and organizational leadership.
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">MPA</span>
+          <span class="timeline-tag">Governance</span>
         </div>
       </div>
     </div>
