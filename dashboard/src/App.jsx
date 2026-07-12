@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Activity, Shield, Terminal, Layers } from 'lucide-react'
+import Activity from 'lucide-react/dist/esm/icons/activity'
+import Shield from 'lucide-react/dist/esm/icons/shield'
+import Terminal from 'lucide-react/dist/esm/icons/terminal'
+import Layers from 'lucide-react/dist/esm/icons/layers'
 
 function App() {
   const [data, setData] = useState(null);
