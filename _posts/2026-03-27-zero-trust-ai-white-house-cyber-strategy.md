@@ -14,39 +14,21 @@ tags: [zero-trust, cybersecurity, ai, devsecops, defense, policy, federal, compl
   <figcaption>PERIMETER_STATUS: ZERO_TRUST_ENFORCEMENT_ACTIVE</figcaption>
 </figure>
 
-## The Era of AI as a Perimeter
+**The Big Picture:** The 2026 National Cyber Strategy explicitly mandates extending **Zero Trust Architecture (ZTA)** to the AI stack. For federal contractors, AI models are no longer standalone apps; they represent the new enterprise perimeter.
 
-In early 2026, the White House and Microsoft sent unambiguous signals: the era of treating AI as a standalone application is over. The 2026 National Cyber Strategy now mandates **Zero Trust Architecture (ZTA)** and AI security across federal networks. For defense contractors, the AI stack *is* the security perimeter, and it must be defended as rigorously as the network itself.
+---
 
-## Why Traditional Zero Trust Fails AI
+### Why It Matters
+Traditional Zero Trust was designed for human users and static endpoints. AI systems introduce non-deterministic agents, float-weight datasets, and overly broad service accounts that bypass standard network segmentation.
 
-Traditional Zero Trust was designed for human users and managed devices. AI systems break this model in three fundamental ways:
-1.  **The Identity Problem:** AI agents often inherit broad service account permissions rather than scoped, verifiable identities.
-2.  **The Data Problem:** Models "absorb" data during training. Weights become data artifacts that carry the classification of their source, yet traditional labels can't track floating-point weights.
-3.  **The Verification Problem:** Continuous verification built on behavioral baselines fails against non-deterministic AI agents whose outputs are variable by design.
+### The Details
+- **AI Bill of Materials (AI-BOM):** Every deployed model must be cryptographically signed, traced to authenticated training datasets, and attested before deployment.
+- **Dynamic Least Privilege:** Scopes AI agent API keys to specific repositories and tasks, forcing automated expiration to limit token exposures.
+- **Data Lineage Tracking:** Labels model weights with the highest classification level of their absorbed training data to prevent exfiltrations.
 
-## A Framework for AI Zero Trust
+### Go Deeper: CMMC 2.0 Auditing
+For organizations handling Controlled Unclassified Information (CUI), AI stack configurations must meet federal audit gates:
+1. **System Security Plans (SSP):** AI models and prompt pipelines must be explicitly documented in network diagrams.
+2. **Configuration Management (CM):** Tracking model parameter updates and weights modifications as configuration changes.
+3. **Access Controls (AC):** Enforcing two-person integrity rules for AI code commits that alter security configurations.
 
-Extending ZTA to the AI stack requires four primary enforcement layers:
-
-### 1. Model Provenance and Attestation
-Every model version must be cryptographically signed, traceable to a known training run, and documented via **AI-BOM (AI Bill of Materials)**. Unsigned or unverified models must be blocked from deployment.
-
-### 2. Agent Least Privilege
-AI agents must operate under the strictest application of least privilege. Permissions should be scoped to specific repositories or tasks and automatically revoked upon completion. This is a technical implementation of **AC-6 (Least Privilege)** for automated systems.
-
-### 3. Pipeline Integrity Gates
-The CI/CD pipeline is the last line of defense. Organizations should implement AI-specific **Policy as Code (OPA)** gates that require human approval for any AI-authored changes to security controls or infrastructure manifests.
-
-### 4. Technical Data Governance
-AI data governance requires four-part lineage tracking:
-*   **Lineage:** Tracking every dataset used in fine-tuning.
-*   **Sensitivity Labeling:** Labeling model weights with the highest classification of their absorbed data.
-*   **Output Filtering:** Applying DLP controls to inference outputs.
-*   **Post-Quantum Encryption:** Encrypting all model weights on the 2030 federal migration timeline.
-
-## Summary: The Compliance Reality
-
-If your AI system touches **Controlled Unclassified Information (CUI)**, it is in scope for your **CMMC 2.0** assessment. Organizations must add AI components to their System Security Plan (SSP), document model provenance as a configuration management (CM) control, and implement agent least privilege as an access control (AC) requirement.
-
-The framework is clear and the tooling (SLSA, OPA, MLflow) is mature. The choice is whether to build this compliance in now or respond to an audit finding later.
