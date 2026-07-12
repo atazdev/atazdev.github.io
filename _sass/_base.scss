@@ -1,0 +1,97 @@
+/* ==============================================
+   Base Typography & Page Resets
+   ============================================== */
+body {
+  font-family: var(--font-body) !important;
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+}
+
+/* --- Subtle page texture --- */
+body::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(56, 189, 248, 0.05), transparent 30%),
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  z-index: 9999;
+  background-size: 100% 100%, 100% 32px;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+body::after {
+  display: none;
+}
+
+/* --- Glassmorphism Utility --- */
+.glass-panel {
+  background: var(--glass-bg) !important;
+  backdrop-filter: var(--glass-blur) !important;
+  -webkit-backdrop-filter: var(--glass-blur) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--neon-glow) !important;
+}
+
+/* --- Global Scroll & Navigation Utilities --- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+  transition: width 0.1s linear;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 10000;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  background-color: var(--surface-92);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem);
+  transition: opacity 0.18s ease, transform 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+/* --- Scroll Reveal Animations --- */
+.js-enabled .revealable {
+  opacity: 0;
+  transform: translateY(0.8rem);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.js-enabled .revealable.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

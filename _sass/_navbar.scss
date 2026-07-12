@@ -1,0 +1,303 @@
+/* ==============================================
+   Navbar & Navigation Base
+   ============================================== */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+  display: none;
+}
+
+.navbar-collapse.show {
+  display: block;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  white-space: nowrap;
+}
+
+.dropdown-menu {
+  position: static;
+  display: none;
+  float: none;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  text-align: left;
+  list-style: none;
+  background-clip: padding-box;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  text-decoration: none;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+@media (min-width: 1200px) {
+  .navbar-expand-xl {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-xl .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-xl .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .navbar-expand-xl .navbar-toggler {
+    display: none;
+  }
+  .navbar-expand-xl .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+  }
+}
+
+/* --- Custom Editorial Styling --- */
+.navbar-custom {
+  background-color: var(--bg-primary) !important;
+  border-bottom: 1px solid var(--border) !important;
+  font-family: var(--font-mono) !important;
+}
+
+.navbar-brand {
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em !important;
+  text-transform: none !important;
+  color: var(--text-primary) !important;
+  white-space: nowrap;
+}
+
+/* Compact secondary brand label */
+.navbar-status {
+  display: inline-block;
+  font-size: 0.58rem !important;
+  color: var(--accent-blue) !important;
+  opacity: 0.6;
+  letter-spacing: 0.06em;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.navbar-brand:hover {
+  color: var(--accent-blue) !important;
+}
+
+.navbar-custom .navbar-nav {
+  align-items: center;
+}
+
+.navbar-custom .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-custom .nav-link {
+  position: relative;
+  font-family: var(--font-mono) !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  text-transform: none !important;
+  color: var(--text-muted) !important;
+  padding: 0.55rem 0.62rem !important;
+  white-space: nowrap;
+  transition: color 0.15s ease, background-color 0.15s ease !important;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active,
+.navbar-custom .dropdown.show > .nav-link {
+  color: var(--accent-blue) !important;
+}
+
+.navbar-custom .nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0.62rem;
+  right: 0.62rem;
+  bottom: 0.2rem;
+  height: 1px;
+  background-color: var(--accent-blue);
+  opacity: 0.85;
+}
+
+.navbar-custom .dropdown-toggle::after {
+  vertical-align: 0.12em;
+  margin-left: 0.35rem;
+}
+
+.navbar-custom .nav-search-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.15rem;
+}
+
+.navbar-custom .nav-search-link .fa {
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  background-color: var(--bg-surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 6px !important;
+  padding: 0.35rem !important;
+  box-shadow: 0 16px 36px rgba(2, 6, 23, 0.38);
+  min-width: 11rem;
+}
+
+.dropdown-item {
+  color: var(--text-muted) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.78rem !important;
+  border-radius: 4px;
+  padding: 0.5rem 0.65rem !important;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-elevated) !important;
+  color: var(--accent-blue) !important;
+}
+
+/* Mobile toggler */
+.navbar-toggler {
+  border-color: var(--border) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%2338BDF8' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+@media (max-width: 1199px) {
+  .navbar-custom .navbar-collapse {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--surface-96);
+  }
+
+  .navbar-custom .navbar-nav {
+    align-items: stretch;
+  }
+
+  .navbar-custom .nav-item {
+    display: block;
+  }
+
+  .navbar-custom .nav-link {
+    padding: 0.6rem 0.75rem !important;
+    width: 100%;
+  }
+
+  .navbar-custom .nav-search-link {
+    justify-content: flex-start;
+  }
+
+  .navbar-custom .nav-search-link .sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0 0 0 0.55rem;
+    overflow: visible;
+    clip: auto;
+    white-space: nowrap;
+  }
+
+  .navbar-custom .nav-link.active::after {
+    left: 0.75rem;
+    right: auto;
+    bottom: 0.35rem;
+    width: 2rem;
+  }
+
+  .dropdown-menu {
+    margin: 0.25rem 0 0.5rem !important;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar-status {
+    display: none;
+  }
+}

@@ -1,0 +1,168 @@
+/* ==============================================
+   Light Mode Overrides
+   Fixes for values that cannot be captured by
+   CSS variable substitution alone.
+   ============================================== */
+
+:root.light-mode body::before {
+  /* Reduce CRT scanline effect — looks wrong on white */
+  opacity: 0.1;
+}
+
+/* Tables — ensure odd rows have a visible light background */
+:root.light-mode .blog-post tr:nth-child(odd) td {
+  background-color: #FFFFFF !important;
+}
+
+:root.light-mode .blog-post tr:nth-child(even) td {
+  background-color: #F8FAFC !important;
+}
+
+:root.light-mode .blog-post th {
+  background-color: #F1F5F9 !important;
+  color: var(--accent-blue) !important;
+}
+
+/* Post preview cards — fix hover shadow (was dark RGBA) */
+:root.light-mode .post-preview:hover {
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10) !important;
+  border-color: rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Post preview hover accent bar */
+:root.light-mode .post-preview:hover::before {
+  opacity: 0.7;
+}
+
+/* Resource / feature card hover */
+:root.light-mode .resource-card:hover,
+:root.light-mode .project-card:hover {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Start-here grid cards */
+:root.light-mode .start-here {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(5, 150, 105, 0.03));
+}
+
+/* Mini-card category accent dots */
+:root.light-mode .timeline-list div::before {
+  box-shadow: 0 0 8px rgba(5, 150, 105, 0.3);
+}
+
+/* Code inline — ensure text is readable */
+:root.light-mode code {
+  color: var(--accent-blue) !important;
+  background: rgba(37, 99, 235, 0.07) !important;
+  border-color: rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Code blocks */
+:root.light-mode .highlight {
+  border-left-color: var(--accent-blue) !important;
+}
+
+:root.light-mode pre {
+  background: #F8FAFC !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06) !important;
+}
+
+:root.light-mode .highlight > pre {
+  color: var(--text-primary) !important;
+}
+
+/* Reading progress bar — remove dark glow */
+:root.light-mode .reading-progress-bar {
+  box-shadow: none;
+}
+
+/* Code copy button */
+:root.light-mode .code-copy-btn:hover {
+  background: var(--accent-green);
+  color: #FFFFFF;
+  border-color: var(--accent-green);
+}
+
+/* Back to top button */
+:root.light-mode .back-to-top {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Search overlay backdrop */
+:root.light-mode #beautifuljekyll-search-overlay {
+  background-color: rgba(248, 250, 252, 0.99) !important;
+}
+
+/* Image shadow in posts */
+:root.light-mode .blog-post img {
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
+}
+
+/* Blockquote in light mode */
+:root.light-mode .blog-post blockquote {
+  background-color: #F8FAFC !important;
+  border-left-color: var(--accent-blue) !important;
+  color: var(--text-muted) !important;
+}
+
+/* Post hover glow accent border */
+:root.light-mode .post-preview:hover {
+  border-color: rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Featured preview */
+:root.light-mode .featured-preview {
+  border-color: rgba(5, 150, 105, 0.12);
+}
+
+/* Resource index list items */
+:root.light-mode .resource-index-post > ul > li {
+  background-color: #FFFFFF;
+  border-color: var(--border);
+}
+
+/* Article TOC */
+:root.light-mode .article-toc {
+  background-color: #F8FAFC;
+}
+
+/* Follow block gradient */
+:root.light-mode .follow-block {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(5, 150, 105, 0.03));
+}
+
+/* Series marker glow */
+:root.light-mode .series-item.active .series-marker {
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Pulse animation in light mode */
+:root.light-mode .status-bit {
+  background: var(--accent-green);
+}
+
+@keyframes pulse-green-light {
+  0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.5); }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 6px rgba(5, 150, 105, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+}
+
+:root.light-mode .pulse {
+  animation: pulse-green-light 2s infinite;
+}
+
+/* --- Styles for minimal layout --- */
+.main-content {
+  padding-bottom: 3.125rem;
+}
+
+footer.footer-min {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0.1875rem;
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
