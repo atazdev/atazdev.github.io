@@ -17,7 +17,7 @@ tags: [gitops, devops, ai, infrastructure, defense, automation]
 ---
 
 ### Why It Matters
-Battlefields and cloud architectures operate at extreme scale and speed. Maintaining human accountability over thousands of distributed devices (e.g., UAV fleets, sensor nodes) requires a declarative, version-controlled source of truth that continuously reconciles drift.
+You cannot keep humans accountable for thousands of distributed devices by hand. UAV fleets and cloud estates have the same requirement: one declarative, version-controlled source of truth that reconciles drift on its own.
 
 ### The Details
 - **Declarative Operations:** Defines *what* the system should look like rather than writing manual deployment scripts.
@@ -56,4 +56,4 @@ For critical infrastructure, this must be augmented with **Signed Commits** for 
 
 ### The Bottom Line
 
-GitOps provides the guardrails that modern automation requires. Whether you are managing cloud infrastructure or deploying software to thousands of drones, the operational framework remains the same. The side that can iterate fastest and reconcile most reliably holds a decisive advantage. GitOps is the engine that makes that speed possible.
+GitOps provides the guardrails that modern automation requires. Cloud infrastructure or a thousand drones — the operational framework is the same, and the side that iterates fastest with the fewest surprises wins. If your infrastructure isn't declarative and version-controlled yet, that's the first move. Everything else in this series builds on it.

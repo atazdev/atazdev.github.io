@@ -15,12 +15,12 @@ resource-index: true
 tags: [system-design, architecture, engineering, interview-prep]
 ---
 
-**The Big Picture:** Systems that survive scale and failure are built from a surprisingly small set of patterns — this index collects the architectural concepts every engineer needs, whether you're building at scale or interviewing for the job that does.
+**The Big Picture:** Systems that survive scale and failure are built from a small set of patterns. This index collects them — for building real systems or interviewing for the job that does.
 
 ---
 
 ### Why It Matters
-Modern applications demand high availability, low latency, and horizontal scaling. Understanding the core building blocks—from load balancers and APIs to cache invalidation and database sharding—is critical to designing systems that survive traffic spikes and component failures.
+Every system gets more traffic than planned, and every component eventually fails. Know the building blocks — load balancers, caching, sharding, replication — before the failure, not during it.
 
 ### The Details
 - **API & Web Protocols:** REST, gRPC, polling, WebSockets, and browser rendering.

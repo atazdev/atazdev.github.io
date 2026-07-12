@@ -13,12 +13,12 @@ resource-theme: market-toolkit-resource
 tags: [stocks, trading, investing, finance, tools]
 ---
 
-**The Big Picture:** Navigating the stock market requires institutional-grade tools for research, charting, and data access — this toolkit centralizes the highest-signal resources for active traders and long-term investors.
+**The Big Picture:** Retail traders lose to professionals on data before they lose on judgment. This toolkit collects the institutional-grade research, charting, and data tools that close that gap.
 
 ---
 
 ### Why It Matters
-Most retail traders lose capital due to poor risk management and sub-standard data feeds. Having immediate access to institutional-grade screeners, regulatory filings, and programmatic APIs establishes the foundational discipline needed to survive market volatility.
+Most retail traders lose on two things: risk management and bad data. Institutional-grade screeners, regulatory filings, and programmatic APIs fix the data half. The discipline half is on you.
 
 ### The Details
 - **Getting Started:** Passive versus active paths, fundamentals guides, and beginner definitions.

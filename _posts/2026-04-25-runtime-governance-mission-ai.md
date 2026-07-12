@@ -22,7 +22,7 @@ tags: [ai, defense, zero-trust, policy-as-code, devsecops, edge-computing, gover
 ---
 
 ### Why It Matters
-Autonomous systems operating at the tactical edge often have intermittent connectivity and high-stakes consequences. Autonomy without local runtime policy checks creates an accountability gap and increases the risk of catastrophic runaway behavior.
+At the tactical edge, connectivity is intermittent and consequences are high. Autonomy without local policy checks is an accountability gap waiting for an incident.
 
 ### The Details
 - **Context-Aware Scopes:** Permission scopes shift with live mission parameters, data freshness, and confidence levels — authority tracks context, not a static role.

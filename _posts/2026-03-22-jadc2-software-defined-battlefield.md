@@ -19,7 +19,7 @@ tags: [jadc2, defense, software-defined-warfare, devops, architecture, ai, milit
 ---
 
 ### Why It Matters
-Modern warfare is won by decision latency. Transitioning linear, fragile "kill chains" into self-healing "kill webs" requires normalising data across separate military branch silos into a single Zero-Trust data fabric.
+Wars are won on decision latency. Turning fragile, linear kill chains into self-healing kill webs means one thing: normalizing data across service silos into a single Zero-Trust data fabric.
 
 ### The Details
 - **Decentralized Meshes:** Any sensor cues any shooter. If a communication node is jammed, routing protocols dynamically heal connections.

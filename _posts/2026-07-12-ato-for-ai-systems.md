@@ -22,7 +22,7 @@ tags: [ai, ato, rmf, devsecops, compliance, dod, nist, cdao, authorization, gove
 ---
 
 ### Why It Matters
-Every DoD program fielding AI right now is answering the same question with a different improvised process: what exactly did the Authorizing Official authorize, and is it still the thing running in production? The traditional ATO has no vocabulary for a system whose behavior changes without a code change. Until the authorization model catches up, AI programs are either stuck at the accreditation gate or operating on paperwork that describes a model that no longer exists.
+Every DoD program fielding AI is improvising an answer to the same question: what did the AO actually authorize, and is it still what's running? The traditional ATO has no vocabulary for behavior change without a code change. Until it does, programs sit stuck at the accreditation gate — or operate on paperwork describing a model that no longer exists.
 
 ### The Details
 - **Models don't get ATOs — systems do.** The DoD AI Cybersecurity Risk Management Tailoring Guide routes AI models through the RMF **Assess Only** construct: the model produces a body of evidence (T&E results, change management records, acquisition documentation) that gets folded into the hosting system's authorization package.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Continuous ATO in Practice"
-subtitle: "The traditional Authority to Operate process is a compliance bottleneck — here is how to replace it with an automated, always-on evidence pipeline"
+subtitle: "The traditional Authority to Operate process is a compliance bottleneck — here is how to replace it with an automated evidence pipeline that never goes stale"
 date: 2026-07-12
 category: devsecops
 series: "Secure Delivery"
@@ -17,7 +17,7 @@ tags: [ato, devsecops, compliance, security, dod, nist, oscal, platform-one, cmm
   <figcaption>ATO_STATUS: CONTINUOUSLY_AUTHORIZED — EVIDENCE_PIPELINE_ACTIVE</figcaption>
 </figure>
 
-**The Big Picture:** The traditional Authority to Operate process takes 18 months to produce a compliance document no one reads — Continuous ATO replaces the annual gate with an automated, always-on evidence pipeline wired directly into the CI/CD workflow.
+**The Big Picture:** The traditional Authority to Operate process takes 18 months to produce a compliance document no one reads. Continuous ATO replaces the annual gate with an automated evidence pipeline wired directly into CI/CD.
 
 ---
 

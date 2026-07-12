@@ -22,7 +22,7 @@ tags: [cdao, jadc2, defense, swarms, autonomy, architecture, microservices, soft
 ---
 
 ### Why It Matters
-Replicator was dissolved into the Defense Autonomous Warfare Group in late 2025, and the postmortem reads like a distributed systems incident report: platforms that couldn't integrate with existing command-and-control, no software able to orchestrate heterogeneous swarms, "hundreds" fielded against a target of thousands. Every one of those failure modes has a name in commercial software engineering. The DoD is now betting roughly $54 billion that it can solve the orchestration problem it skipped the first time.
+Replicator dissolved into the Defense Autonomous Warfare Group in late 2025. The postmortem reads like a distributed systems incident report: platforms that couldn't integrate with existing C2, no software to orchestrate mixed-vendor swarms, "hundreds" fielded against a target of thousands. Every failure mode has a name in commercial software engineering. The DoD is now betting roughly $54 billion it can solve the orchestration problem it skipped the first time.
 
 ### The Details
 - **Replicator's real lesson:** The drones mostly worked. What failed was the coordination layer — the [ACT program](https://www.diu.mil/latest/defense-innovation-unit-announces-software-vendors-to-support-replicator) (Anduril, L3Harris, Swarm Aero) was supposed to make thousands of individually capable platforms behave as one coherent system, and it wasn't ready when the hardware was.
