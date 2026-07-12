@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "The Ultimate Stock Market Toolkit"
-subtitle: "A comprehensive collection of trading tools, resources, and educational materials"
+subtitle: "The trading tools, research resources, and education materials worth bookmarking"
 date: 2021-09-11
 category: finance
 series: "Resource Guides"

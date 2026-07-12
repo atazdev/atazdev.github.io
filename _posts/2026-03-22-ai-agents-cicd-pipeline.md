@@ -52,7 +52,7 @@ Standard SAST tools catch known vulnerabilities, but AI can produce novel, seman
 LLMs occasionally invent plausible but non-existent package names—a major risk for *dependency confusion* attacks. Mitigation requires strict lockfile enforcement and treating any unrecognized dependency in an AI PR as a high-priority human review item.
 
 ### 4. Intent-Oriented Human Review
-When agents write code, human review changes character. It is no longer about mechanical correctness (tests handle that). It is about **intent alignment**: Should this feature exist? Does this infrastructure change match our architectural direction? The reviewer moves from checking the implementation to checking the *decision*.
+When agents write code, human review changes character. Tests already cover mechanical correctness, so the reviewer's real job becomes **intent alignment**: should this feature exist? Does this infrastructure change match our architectural direction? You stop checking the implementation and start checking the *decision*.
 
 ### Risk Modeling for Agentic Development
 

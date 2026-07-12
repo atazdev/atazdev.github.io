@@ -43,7 +43,7 @@ The failure modes are structural:
 
 **2. The authorization cycle creates security debt.** When an ATO takes 12–18 months, program teams learn to batch changes. Security improvements are deferred until the next authorization cycle rather than deployed incrementally. The result is a system that is simultaneously over-documented and under-secured.
 
-**3. Assessors become bottlenecks, not advisors.** When security professionals spend the majority of their time writing and reviewing documentation artifacts, they have little capacity to engage with engineering teams on actual risk reduction. The process optimizes for documentation quality, not security posture.
+**3. Assessors become bottlenecks, not advisors.** When security professionals spend the majority of their time writing and reviewing documentation artifacts, they have little capacity to engage with engineering teams on actual risk reduction. The process rewards documentation quality, not security posture.
 
 ### What Continuous ATO Actually Is
 
@@ -113,7 +113,7 @@ When a new CVE is published against a library in a production container, the mon
 
 #### 4. Control Inheritance and Component Reuse
 
-One of the highest-leverage capabilities in a mature cATO program is **control inheritance** — the ability for multiple systems to inherit control implementations from a shared platform rather than re-documenting them independently.
+The capability that pays for itself fastest in a mature cATO program is **control inheritance** — the ability for multiple systems to inherit control implementations from a shared platform rather than re-documenting them independently.
 
 Platform One's **Iron Bank** (the DoD's hardened container registry) and the associated **Big Bang** Kubernetes platform ship with pre-assessed OSCAL component definitions. A program team deploying on Platform One inherits the platform's container hardening controls, FIPS-compliant cryptography, and network policy implementations — reducing the controls the program must independently implement and evidence from 110 to roughly 40–60, depending on the system profile.
 

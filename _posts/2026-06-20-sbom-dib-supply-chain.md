@@ -22,7 +22,7 @@ tags: [sbom, supply-chain, defense, cybersecurity, nist, dod, dib, devsecops, cm
 ---
 
 ### Why It Matters
-Exploits in transitive dependencies (like Log4Shell) highlight the threat of opaque software components. Programmatic SBOM pipelines allow security officers to verify dependency integrity and identify vulnerabilities instantly when new CVEs drop.
+Log4Shell proved the threat lives in dependencies you didn't know you had. Programmatic SBOM pipelines let security officers verify dependency integrity and answer "are we affected?" in minutes when new CVEs drop, instead of weeks.
 
 ### The Details
 - **Required Telemetry:** CISA requires SBOMs to document supplier names, component names, exact version strings, dependencies, and SHA-based hashes.
@@ -117,7 +117,7 @@ Organizations that have solved SBOM operationally share a pipeline pattern:
 4. **Continuous monitoring** — Dependency-Track or a commercial equivalent monitors production SBOMs against new CVE publications and alerts on new exposures in deployed software — not just at release time.
 5. **Contractual delivery** — SBOMs in both SPDX and CycloneDX formats are delivered alongside software releases, signed with the same code-signing certificate as the software itself.
 
-The key insight is that stage 4 — continuous monitoring — is what converts SBOM from a compliance artifact into an operational security capability. A new critical CVE disclosed against a library in production requires the same response speed regardless of when the software was released. Without monitoring, the SBOM is dead on arrival from a security standpoint.
+Stage 4 — continuous monitoring — is what converts SBOM from a compliance artifact into an operational security capability. A new critical CVE disclosed against a library in production requires the same response speed regardless of when the software was released. Without monitoring, the SBOM is dead on arrival from a security standpoint.
 
 ### The Bottom Line
 

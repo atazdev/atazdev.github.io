@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "System Design 101"
-subtitle: "A comprehensive guide to system design concepts and patterns"
+subtitle: "The system design concepts and patterns worth knowing cold"
 date: 2025-10-12
 category: architecture
 series: "System Design"
@@ -15,7 +15,7 @@ resource-index: true
 tags: [system-design, architecture, engineering, interview-prep]
 ---
 
-**The Big Picture:** System design is the foundation of scalable, fault-tolerant engineering — this index collects the architectural patterns and distributed system concepts every engineer needs to build and interview at scale.
+**The Big Picture:** Systems that survive scale and failure are built from a surprisingly small set of patterns — this index collects the architectural concepts every engineer needs, whether you're building at scale or interviewing for the job that does.
 
 ---
 
@@ -26,7 +26,7 @@ Modern applications demand high availability, low latency, and horizontal scalin
 - **API & Web Protocols:** REST, gRPC, polling, WebSockets, and browser rendering.
 - **Database & Storage:** RDBMS vs. NoSQL, caching strategies, replication, and indexing.
 - **Infrastructure & DevOps:** Cloud blueprints, proxy servers, networks, and containers.
-- **System Architecture:** Scalability strategies, microservices, and fault tolerance.
+- **System Architecture:** Scaling strategies, microservices, and fault tolerance.
 
 
 <section class="resource-start" aria-labelledby="system-design-start">

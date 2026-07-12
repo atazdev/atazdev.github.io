@@ -32,7 +32,7 @@ A traditional 18-to-36 month software waterfall delivery lifecycle is obsolete a
 
 ### The Necessity of Defense Agility
 
-Agile—iterative progress, collaboration, and adaptability—is no longer optional for the defense industry. When threats emerge weekly, the traditional 18-36 month "Waterfall" cycle is obsolete. Iterative development allows systems to adapt to accelerating threat landscapes and integrate warfighter feedback in weeks, not years.
+When threats evolve weekly, an 18-36 month waterfall cycle isn't a process choice — it's a decision to field obsolete software. Iterative development lets systems adapt to new threats and fold in warfighter feedback in weeks. The defense industry knows this; the argument ended years ago.
 
 However, standard Silicon Valley Agile often fails in defense due to **Documentation Gaps**, **Security Accreditation (ATO) bottlenecks**, and **Contractual Rigidity**. The goal is not to adopt Agile blindly, but to adapt it for the unique constraints of high-stakes mission systems.
 
@@ -57,4 +57,4 @@ Iteration without vision creates technical debt. Organizations must define a mod
 
 ### The Bottom Line
 
-Agile in defense is a mindset, not a checklist. It requires a fundamental shift in legal, cultural, and technical practice. Organizations that succeed will build systems that are modular, secure, and responsive to the battlefield; those that fail will continue building systems too rigid to adapt and too slow to matter.
+You can't buy defense agility as a certification course — it takes real changes to contracts, culture, and technical practice, and most organizations only get two of the three. The ones that manage all three ship systems that are modular, secure, and responsive to the battlefield. The rest keep building software that's too rigid to adapt and too slow to matter, with better standup meetings.

@@ -30,9 +30,9 @@ Traditional Zero Trust was designed for human users and static endpoints. AI sys
 
 ## Go Deeper
 
-### The Era of AI as a Perimeter
+### AI as a Perimeter
 
-In early 2026, the White House and Microsoft sent unambiguous signals: the era of treating AI as a standalone application is over. The 2026 National Cyber Strategy now mandates **Zero Trust Architecture (ZTA)** and AI security across federal networks. For defense contractors, the AI stack *is* the security perimeter, and it must be defended as rigorously as the network itself.
+In early 2026 the White House stopped treating AI as just another application. The 2026 National Cyber Strategy mandates **Zero Trust Architecture (ZTA)** and AI security across federal networks, and industry moved the same direction at the same time. For defense contractors the implication is direct: the AI stack *is* the security perimeter now, and it gets defended like one.
 
 ### Why Traditional Zero Trust Fails AI
 

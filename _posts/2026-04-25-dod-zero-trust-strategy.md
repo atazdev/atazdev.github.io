@@ -22,7 +22,7 @@ tags: [zero-trust, dod, defense, cybersecurity, policy, federal, compliance, dis
 ---
 
 ### Why It Matters
-This is the most complex security migration in history, spanning millions of users and thousands of legacy/cloud networks. Success dictates whether the DoD can secure distributed networks in contested environments or if legacy IT continues to be an open vulnerability.
+Nobody has attempted a security migration at this scale — millions of users, thousands of networks spanning COBOL-era systems and cloud. Whether it lands decides if the DoD can secure distributed networks in contested environments or keeps carrying legacy IT as an open vulnerability.
 
 ### The Details
 The framework classifies security controls across 7 distinct fields:
@@ -68,7 +68,7 @@ The strategy defines two tiers of compliance:
 
 **Advanced ZT** — an additional 61 activities representing a more mature, automated, and analytically sophisticated posture. This is the long-term destination, not a near-term mandate.
 
-The distinction matters operationally: Target ZT is survivable for legacy-heavy organizations. Advanced ZT assumes modern infrastructure, robust telemetry, and policy-as-code enforcement — capabilities that require significant re-platforming for many DoD components.
+The distinction matters operationally: Target ZT is survivable for legacy-heavy organizations. Advanced ZT assumes modern infrastructure, deep telemetry, and policy-as-code enforcement — capabilities that require significant re-platforming for many DoD components.
 
 ### What DISA Is Building
 
@@ -98,7 +98,7 @@ The ZT PMO — housed under the DoD CIO — publishes annual assessments. The pi
 
 The FY2027 deadline for Target ZT is aggressive but achievable for the majority of DoD components — if procurement and integration timelines hold. The realistic risk is a two-speed outcome: modern, cloud-forward organizations clearing Target ZT, while legacy-heavy components receive waivers or partial credit on the 20–30 activities that require infrastructure modernization.
 
-**Advanced ZT by FY2027 is not the goal**, and conflating the two tiers creates false urgency in the wrong places. Organizations should focus resources on the 91 Target activities before optimizing toward the Advanced tier.
+**Advanced ZT by FY2027 is not the goal**, and conflating the two tiers creates false urgency in the wrong places. Organizations should put their resources into the 91 Target activities before reaching for the Advanced tier.
 
 ### The Bottom Line
 

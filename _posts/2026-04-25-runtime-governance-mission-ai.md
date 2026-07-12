@@ -25,7 +25,7 @@ tags: [ai, defense, zero-trust, policy-as-code, devsecops, edge-computing, gover
 Autonomous systems operating at the tactical edge often have intermittent connectivity and high-stakes consequences. Autonomy without local runtime policy checks creates an accountability gap and increases the risk of catastrophic runaway behavior.
 
 ### The Details
-- **Context-Aware Scopes:** Permissive scopes dynamically adjust based on live mission parameters, data freshness, and confidence levels.
+- **Context-Aware Scopes:** Permission scopes shift with live mission parameters, data freshness, and confidence levels — authority tracks context, not a static role.
 - **Local Edge Policies:** Policy-as-code bundles (e.g. Open Policy Agent) run locally at the edge, ensuring safety even in degraded/disconnected environments.
 - **Human-in-the-Loop Thresholds:** Programmatically separates recommendation logic from execution permissions, forcing human overrides for high-impact actions.
 
@@ -44,7 +44,7 @@ In these environments, governance cannot stop at the pipeline. Build-time govern
 A runtime control plane for autonomous behavior is required to manage speed, trust, and accountability. This control plane needs six primary capabilities:
 
 ### 1. Context-Aware Authorization
-Authority should belong to the mission context, not just a service account. An agent's permissions should be dynamically scoped by mission role, data sensitivity, operational phase, and confidence thresholds.
+Authority should belong to the mission context, not just a service account. An agent's permissions should be scoped in real time by mission role, data sensitivity, operational phase, and confidence thresholds.
 
 ### 2. Policy-as-Code at the Edge
 Mission AI needs executable policy bundles that run locally. This "hybrid" model ensures that even when disconnected from a central control plane, the system continues to enforce approved boundaries.
@@ -71,4 +71,4 @@ A mature mission AI architecture requires four distinct layers:
 
 ### The Bottom Line
 
-Autonomy without runtime governance is just automation with an accountability gap. The goal is not to slow operators down, but to ensure that speed does not erase accountability and that autonomous behavior remains strictly aligned with mission intent. Runtime governance is what keeps a system worthy of trust once it leaves the clean environment of the dashboard and enters the field.
+Autonomy without runtime governance is just automation with an accountability gap. None of this exists to slow operators down — it exists so that speed doesn't erase accountability, and so autonomous behavior stays tied to mission intent. Runtime governance is what keeps a system worthy of trust once it leaves the clean environment of the dashboard and enters the field.

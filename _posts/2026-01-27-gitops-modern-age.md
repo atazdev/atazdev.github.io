@@ -21,20 +21,20 @@ Battlefields and cloud architectures operate at extreme scale and speed. Maintai
 
 ### The Details
 - **Declarative Operations:** Defines *what* the system should look like rather than writing manual deployment scripts.
-- **Automated Reconciliation:** Toolings like ArgoCD or Flux continually push actual system states to align with Git configs, eliminating manual drift.
+- **Automated Reconciliation:** Tools like ArgoCD or Flux continually pull the actual system state back toward the Git config, so drift gets corrected instead of accumulating.
 - **Cryptographic Provenance:** Enforces signed Git commits to verify identity and auth before changes sync to air-gapped networks.
 
 ---
 
 ## Go Deeper
 
-### GitOps as a Strategic Imperative
+### From Convenience to Control Plane
 
-GitOps applies DevOps best practices—version control, collaboration, and CI/CD—to infrastructure automation. By using Git as the single source of truth for declarative state, teams can manage complex systems through pull requests and automated reconciliation. In an era defined by AI-driven automation and software-defined warfare, GitOps has shifted from a convenience to a strategic necessity.
+GitOps applies DevOps practice — version control, collaboration, CI/CD — to infrastructure. Git holds the declarative state, and everything else works to match it: complex systems managed through pull requests and automated reconciliation. That used to be a nice-to-have for cloud teams. With AI agents running operations and warfare going software-defined, it's become the accountability layer everything else depends on.
 
 ### Why GitOps Matters Now
 *   **Reproducibility for AI Agents:** As AI agents handle more operations, GitOps provides the immutable infrastructure and audit trails necessary to maintain human oversight of autonomous decisions.
-*   **Scale and Speed:** Whether scaling a global SaaS platform or a distributed sensor network, GitOps enables continuous reconciliation, ensuring systems constantly converge toward their desired state.
+*   **Scale and Speed:** A global SaaS platform and a distributed sensor network have the same problem at scale — thousands of nodes that need to converge on a desired state without a human touching each one. Continuous reconciliation is the only mechanism that survives that scale.
 
 ### Software-Defined Warfare: Lessons from Ukraine
 

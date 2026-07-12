@@ -22,7 +22,7 @@ When code changes deploy multiple times daily, manual reviews become security li
 ### The Details
 - **Build-Time Blocking:** Catching cloud misconfigurations (like public storage buckets) at the CI pipeline gate rather than during runtime audits.
 - **Git Audit Trails:** Tracks policy modifications via standard Pull Requests, providing an immutable history of compliance changes.
-- **Unified Scalability:** Enforces identical compliance checks across all development environments, regardless of team sizes.
+- **Same Rules Everywhere:** The compliance check that runs for a 5-person team is byte-identical to the one running for 5,000 — no per-team interpretation of the policy doc.
 
 ---
 
@@ -30,7 +30,7 @@ When code changes deploy multiple times daily, manual reviews become security li
 
 ### The Problem with Document-Based Policy
 
-Traditional security policies—Word documents, PDF checklists, and manual reviews—cannot scale with modern infrastructure. In a world where code deploys dozens of times per day, document-based policy is a liability. **Policy as Code (PaC)** solves this by expressing security rules as machine-readable, executable code version-controlled in Git.
+Traditional security policy lives in Word documents, PDF checklists, and manual reviews. That worked when deployments were quarterly. Against code that ships dozens of times a day, a policy nobody's pipeline can read is a liability with a signature page. **Policy as Code (PaC)** expresses the same rules as machine-readable, executable code, version-controlled in Git.
 
 Instead of a document stating "No public S3 buckets," PaC uses logic (e.g., Rego) to automatically reject any infrastructure manifest that lacks encryption or blocks public access. This is testable, versionable, and automatically enforced in the CI/CD pipeline.
 
@@ -39,7 +39,7 @@ Instead of a document stating "No public S3 buckets," PaC uses logic (e.g., Rego
 *   **Automatic Enforcement:** PaC shifts security to the left, catching violations at the build gate rather than during a post-deployment audit.
 *   **Testability:** Policies can have unit tests, ensuring they correctly block risks while allowing legitimate traffic before they reach production.
 *   **Auditability:** Every policy change is a Pull Request in Git, providing a complete, tamper-evident record of who approved what rule and when.
-*   **Scalability:** A codified policy is enforced identically across 5 developers or 5,000, ensuring consistent governance across every team.
+*   **Scale:** A codified policy is enforced identically for 5 developers or 5,000. Consistency stops depending on how each team read the document.
 
 ### The Implementation Stack
 
