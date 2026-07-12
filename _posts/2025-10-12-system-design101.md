@@ -19,7 +19,19 @@ Credit to [ByteByteGo](https://bytebytego.com/guides/) - [YouTube](https://www.y
 
 [![ByteByteGoHq/system-design-101 | Trendshift](https://trendshift.io/api/badge/repositories/3709)](https://trendshift.io/repositories/3709)
 
-Explain complex systems using visuals and simple terms. Whether you're preparing for a System Design Interview or you simply want to understand how systems work beneath the surface, we hope this repository will help you achieve that.
+**The Big Picture:** System design is the foundation of scalable, fault-tolerant software engineering. This resource index collects architectural guides and distributed patterns to help engineers prepare for technical interviews and build production-grade systems.
+
+---
+
+### Why It Matters
+Modern applications demand high availability, low latency, and horizontal scaling. Understanding the core building blocks—from load balancers and APIs to cache invalidation and database sharding—is critical to designing systems that survive traffic spikes and component failures.
+
+### The Details
+- **API & Web Protocols:** REST, gRPC, polling, WebSockets, and browser rendering.
+- **Database & Storage:** RDBMS vs. NoSQL, caching strategies, replication, and indexing.
+- **Infrastructure & DevOps:** Cloud blueprints, proxy servers, networks, and containers.
+- **System Architecture:** Scalability strategies, microservices, and fault tolerance.
+
 
 <section class="resource-start" aria-labelledby="system-design-start">
   <div class="section-label">

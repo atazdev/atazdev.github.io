@@ -15,7 +15,20 @@ tags: [stocks, trading, investing, finance, tools]
 
 Content from and Credit to: [Market Toolkit](https://github.com/ckz8780/market-toolkit "Market Toolkit")
 
-Over the years I've amassed a large collection of links, resources, tools and so on that I find useful in my trading/investing activities. I'm compiling those here, along with any that were shared with me via Twitter/Reddit/email/etc and seemed useful after a cursory look. While I've done my best to link to tools that are not only legitimate but also likely to stay active, alive and useful for the foreseeable future, obviously I have no control over these companies/websites and over time some of the links may break or situations may emerge that turn them into poor recommendations. Also, this list is not exhaustive by any means and may be updated in the future as new tools/resources emerge.
+**The Big Picture:** Navigating the stock market requires a curated collection of research databases, charting platforms, API integrations, and educational guides. This toolkit centralizes high-signal tools for active traders and long-term investors.
+
+---
+
+### Why It Matters
+Most retail traders lose capital due to poor risk management and sub-standard data feeds. Having immediate access to institutional-grade screeners, regulatory filings, and programmatic APIs establishes the foundational discipline needed to survive market volatility.
+
+### The Details
+- **Getting Started:** Passive versus active paths, fundamentals guides, and beginner definitions.
+- **Market Research:** Real-time dashboards, financial calendars, and SEC filings.
+- **Technical Charting:** Advanced charting engines, screeners, and analysis software.
+- **Builder Resources:** Developer APIs, backtesting engines, and historical datasets.
+
+***Disclaimer:** This toolkit does not represent financial advice. Bolding indicates tools personally tested or utilized; non-bolded links are curated for general utility. Perform independent due diligence before committing capital.*
 
 <section class="resource-start" aria-labelledby="market-toolkit-start">
   <div class="section-label">
@@ -76,9 +89,6 @@ Over the years I've amassed a large collection of links, resources, tools and so
   </div>
 </section>
 
-**DISCLAIMER:** *In general, there is **no preference** given to any of these resources and this is not a recommendation to use them. Besides categorizing them and deciding to include some based on personal experience, I am not officially suggesting any opinion on any of these, but I do have experience with many of them and have tried to include things I've had good experiences with or that I personally use in my trading/investing activities.*
-
-*Any links that are **bold** are things I either currently use or have used enough in the past to get a good feel for their quality/functionality, but that does not mean I am recommending them, only that I have personal experience with them. If it is not bold, it doesn't mean I've never used it, only that it's something I just use now and then or that it seemed handy at a cursory glance. In short regarding this entire list, I am not a financial advisor. **Do your own due diligence and speak to a professional before making any financial decisions.***
 ## Resource Index
 **<a id="getting-started"></a>GETTING STARTED:**
 
