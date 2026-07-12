@@ -11,6 +11,26 @@ subtitle: "Audit log of design, content, and publishing-system changes"
 </section>
 
 <div class="mission-timeline">
+  <!-- v4.0.0 -->
+  <div class="timeline-item">
+    <div class="timeline-marker"></div>
+    <div class="timeline-content glass-panel">
+      <div class="timeline-header">
+        <span class="timeline-date">v4.0.0 // July 2026</span>
+        <h3 class="timeline-title">Standalone Engine & Accessibility Pass</h3>
+      </div>
+      <div class="timeline-body">
+        Complete migration away from the legacy **Beautiful Jekyll** theme dependencies, Bootstrap 4 CSS framework, jQuery, and Popper.js. Replaced layout engine with a lightweight, optimized vanilla CSS grid and custom vanilla JS toggles. Upgraded environment to **Jekyll 4.3** with an explicit standalone `Gemfile`. Deployed a comprehensive light-mode accessibility pass fixing text, table, and card contrast across the entire journal.
+      </div>
+      <div class="timeline-tags">
+        <span class="timeline-tag">Standalone Engine</span>
+        <span class="timeline-tag">CSS Grid</span>
+        <span class="timeline-tag">Jekyll 4.3</span>
+        <span class="timeline-tag">Accessibility Pass</span>
+      </div>
+    </div>
+  </div>
+
   <!-- v3.0.0 -->
   <div class="timeline-item">
     <div class="timeline-marker"></div>
