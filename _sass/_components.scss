@@ -1793,6 +1793,8 @@ pre {
 footer {
   background-color: var(--bg-surface) !important;
   border-top: 1px solid var(--border) !important;
+  padding: 3rem 0 !important;
+  text-align: center !important;
 }
 
 footer .copyright,
@@ -1801,6 +1803,7 @@ footer p.copyright {
   font-size: 0.78rem !important;
   color: var(--text-muted) !important;
   letter-spacing: 0.04em !important;
+  margin: 1rem 0 !important;
 }
 
 footer .theme-by,
@@ -1817,6 +1820,79 @@ footer a {
 
 footer a:hover {
   color: var(--accent-green) !important;
+}
+
+/* --- Social Network Links in Footer --- */
+ul.footer-links {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 auto 1.5rem auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  gap: 1.25rem !important;
+  flex-wrap: wrap !important;
+}
+
+ul.footer-links .list-inline-item {
+  display: inline-block !important;
+  margin: 0 !important;
+}
+
+ul.footer-links a {
+  display: inline-block !important;
+  text-decoration: none !important;
+  transition: transform 0.2s ease !important;
+}
+
+ul.footer-links a:hover {
+  transform: translateY(-3px) !important;
+}
+
+ul.footer-links .fa-stack {
+  font-size: 1.15rem !important;
+  width: 2.3em !important;
+  height: 2.3em !important;
+  line-height: 2.3em !important;
+}
+
+ul.footer-links .fa-stack-2x {
+  color: var(--bg-elevated) !important;
+  transition: color 0.2s ease !important;
+}
+
+ul.footer-links .fa-stack-1x {
+  color: var(--text-muted) !important;
+  transition: color 0.2s ease !important;
+}
+
+ul.footer-links a:hover .fa-stack-2x {
+  color: rgba(56, 189, 248, 0.1) !important;
+}
+
+ul.footer-links a:hover .fa-stack-1x {
+  color: var(--accent-blue) !important;
+}
+
+/* --- Footer Navigation Links --- */
+nav.footer-links {
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 1.5rem !important;
+  margin-top: 1.5rem !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.76rem !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+}
+
+nav.footer-links a {
+  color: var(--text-muted) !important;
+  transition: color 0.15s ease !important;
+}
+
+nav.footer-links a:hover {
+  color: var(--accent-blue) !important;
 }
 
 /* --- Search overlay --- */
