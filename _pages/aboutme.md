@@ -156,6 +156,24 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
         </div>
       </div>
     </div>
+
+    <!-- UWED -->
+    <div class="timeline-item">
+      <div class="timeline-marker" style="border-color: var(--accent-blue); box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);"></div>
+      <div class="timeline-content glass-panel" style="border-left-color: var(--accent-blue);">
+        <div class="timeline-header">
+          <span class="timeline-date">Bachelor of Science</span>
+          <h3 class="timeline-title">University of World Economy and Diplomacy</h3>
+        </div>
+        <div class="timeline-body">
+          Earned a <strong>Bachelor of Science in International Relations</strong>.
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">BS</span>
+          <span class="timeline-tag">International Relations</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
