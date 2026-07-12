@@ -25,15 +25,17 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
     <h3>Background</h3>
     <p>
       My work spans cyberspace operations, enterprise IT, cloud platforms, and
-      software delivery practices for complex organizations.
+      secure software delivery practices for complex organizations.
     </p>
     <p>
-      I am drawn to practical systems: the kind that teams can understand, operate,
-      secure, and improve under real-world constraints.
+      I focus on practical, software-centric integration — such as utilizing commercial-off-the-shelf 
+      technologies to solve tactical data-sharing barriers and enable secure, real-time interoperability 
+      in multinational mission environments.
     </p>
-    <blockquote>
-      I care about building high-trust teams and dependable technical foundations.
-    </blockquote>
+    <p>
+      I write and publish on network modernization, partner integration, and translating commercial DevOps 
+      patterns into dependable mission systems.
+    </p>
   </div>
 
   <div class="profile-panel">
@@ -66,15 +68,15 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
       <div class="timeline-content glass-panel">
         <div class="timeline-header">
           <span class="timeline-date">Present</span>
-          <h3 class="timeline-title">Defense Sector Leadership</h3>
+          <h3 class="timeline-title">Cyberspace Operations & IT Leadership</h3>
         </div>
         <div class="timeline-body">
-          Progressing through IT leadership roles across defense agencies, focusing on secure systems, cloud modernization, and technical strategy.
+          Directing cybersecurity, cyberspace operations, and technical integration initiatives across complex defense environments. Led teams to implement agile, software-centric solutions and secure commercial off-the-shelf technologies that improve tactical interoperability and real-time partner data sharing.
         </div>
         <div class="timeline-tags">
-          <span class="timeline-tag">Leadership</span>
-          <span class="timeline-tag">Strategy</span>
-          <span class="timeline-tag">Cloud</span>
+          <span class="timeline-tag">Cyber Operations</span>
+          <span class="timeline-tag">Interoperability</span>
+          <span class="timeline-tag">Technical Strategy</span>
         </div>
       </div>
     </div>
