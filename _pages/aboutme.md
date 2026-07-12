@@ -57,48 +57,10 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
 </section>
 
 <section class="profile-timeline">
-  <h3>Experience</h3>
-  
-  {% assign timeline_entries = "" | split: "," %}
-  
-  {% capture e1 %}
-  date: "Present"
-  title: "Defense Sector Leadership"
-  content: "Progressing through IT leadership roles across defense agencies, focusing on secure systems, cloud modernization, and technical strategy."
-  tags: ["Leadership", "Strategy", "Cloud"]
-  {% endcapture %}
-  
-  {% capture e2 %}
-  date: "Education"
-  title: "National Defense University"
-  content: "Earned a **Master of Science in Cybersecurity**, specializing in enterprise risk and infrastructure security."
-  tags: ["MS Cybersecurity", "Risk Management"]
-  {% endcapture %}
-
-  {% capture e2b %}
-  date: "Education"
-  title: "New York University"
-  content: "Earned a **Master of Public Administration (MPA)**, focusing on public policy, governance, and organizational leadership."
-  tags: ["MPA", "Governance"]
-  {% endcapture %}
-  
-  {% capture e3 %}
-  date: "20+ Years"
-  title: "Enterprise Technology"
-  content: "Managed enterprise IT systems and led technical teams through complex modernization, operations, and security challenges."
-  tags: ["Operations", "Modernization"]
-  {% endcapture %}
-
-  {% capture e4 %}
-  date: "Early Career"
-  title: "CNET"
-  content: "Associate Technical Producer, deploying updates across major platforms using web technologies and early version control systems."
-  tags: ["Web", "DevOps"]
-  {% endcapture %}
-
-  {% assign entries = "e1,e2,e2b,e3,e4" | split: "," %}
+  <h3>Professional Experience</h3>
   
   <div class="mission-timeline">
+    <!-- Present -->
     <div class="timeline-item">
       <div class="timeline-marker"></div>
       <div class="timeline-content glass-panel">
@@ -117,40 +79,7 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
       </div>
     </div>
 
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content glass-panel">
-        <div class="timeline-header">
-          <span class="timeline-date">Education</span>
-          <h3 class="timeline-title">National Defense University</h3>
-        </div>
-        <div class="timeline-body">
-          Earned a <strong>Master of Science in Cybersecurity</strong>, specializing in enterprise risk and infrastructure security.
-        </div>
-        <div class="timeline-tags">
-          <span class="timeline-tag">MS Cybersecurity</span>
-          <span class="timeline-tag">Risk Management</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content glass-panel">
-        <div class="timeline-header">
-          <span class="timeline-date">Education</span>
-          <h3 class="timeline-title">New York University</h3>
-        </div>
-        <div class="timeline-body">
-          Earned a <strong>Master of Public Administration (MPA)</strong>, focusing on public policy, governance, and organizational leadership.
-        </div>
-        <div class="timeline-tags">
-          <span class="timeline-tag">MPA</span>
-          <span class="timeline-tag">Governance</span>
-        </div>
-      </div>
-    </div>
-
+    <!-- 20+ Years -->
     <div class="timeline-item">
       <div class="timeline-marker"></div>
       <div class="timeline-content glass-panel">
@@ -168,6 +97,7 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
       </div>
     </div>
 
+    <!-- Early Career -->
     <div class="timeline-item">
       <div class="timeline-marker"></div>
       <div class="timeline-content glass-panel">
@@ -181,6 +111,48 @@ subtitle: "Cybersecurity, cloud operations, and technical leadership"
         <div class="timeline-tags">
           <span class="timeline-tag">Web</span>
           <span class="timeline-tag">DevOps</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="profile-timeline" style="margin-top: 3.5rem;">
+  <h3>Education</h3>
+  
+  <div class="mission-timeline" style="--timeline-accent: var(--accent-blue);">
+    <!-- NDU -->
+    <div class="timeline-item">
+      <div class="timeline-marker" style="border-color: var(--accent-blue); box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);"></div>
+      <div class="timeline-content glass-panel" style="border-left-color: var(--accent-blue);">
+        <div class="timeline-header">
+          <span class="timeline-date">Master of Science</span>
+          <h3 class="timeline-title">National Defense University</h3>
+        </div>
+        <div class="timeline-body">
+          Earned a <strong>Master of Science in Cybersecurity</strong>, specializing in enterprise risk and infrastructure security.
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">MS Cybersecurity</span>
+          <span class="timeline-tag">Risk Management</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NYU -->
+    <div class="timeline-item">
+      <div class="timeline-marker" style="border-color: var(--accent-blue); box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);"></div>
+      <div class="timeline-content glass-panel" style="border-left-color: var(--accent-blue);">
+        <div class="timeline-header">
+          <span class="timeline-date">Master of Public Administration</span>
+          <h3 class="timeline-title">New York University</h3>
+        </div>
+        <div class="timeline-body">
+          Earned a <strong>Master of Public Administration (MPA)</strong>, focusing on public policy, governance, and organizational leadership.
+        </div>
+        <div class="timeline-tags">
+          <span class="timeline-tag">MPA</span>
+          <span class="timeline-tag">Governance</span>
         </div>
       </div>
     </div>
