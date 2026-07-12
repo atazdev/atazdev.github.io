@@ -2155,6 +2155,7 @@ footer a:hover {
   line-height: 1.5;
 }
 
+@media (max-width: 768px) {
   .follow-actions {
     justify-content: flex-start;
   }
