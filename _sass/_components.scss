@@ -11,6 +11,17 @@
   background-color: var(--bg-surface) !important;
 }
 
+.intro-header {
+  padding: 7rem 0 3.5rem !important;
+}
+
+@media (max-width: 767px) {
+  .intro-header {
+    padding: 5.5rem 0 2rem !important;
+  }
+}
+
+
 .page-heading h1,
 .post-heading h1 {
   font-family: var(--font-mono) !important;
