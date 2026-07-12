@@ -17,7 +17,7 @@ tags: [ai, defense, zero-trust, policy-as-code, devsecops, edge-computing, gover
   <figcaption>MISSION_CONTROL: RUNTIME_GOVERNANCE_SYSTEM_ACTIVE</figcaption>
 </figure>
 
-**The Big Picture:** Governing AI during build-time (validating training data and model versions) only secures the system before it operates. For autonomous tactical edge systems, organizations must implement **runtime governance** that programmatically constrains the system *while* it is running.
+**The Big Picture:** Build-time governance only secures the system before it operates — autonomous systems at the tactical edge require runtime governance that enforces policy while the mission is active.
 
 ---
 

@@ -14,7 +14,7 @@ tags: [jadc2, defense, software-defined-warfare, devops, architecture, ai, milit
   <figcaption>THEATER_STATUS: ALL_DOMAIN_DATA_FABRIC_SYNCHRONIZED</figcaption>
 </figure>
 
-**The Big Picture:** Joint All-Domain Command & Control (JADC2) is not a traditional hardware weapons program—it is a massive distributed software architecture challenge to connect sensors and shooters across all domains.
+**The Big Picture:** Joint All-Domain Command and Control is not a weapons program — it is a distributed systems architecture problem connecting sensors and shooters across every domain of warfare.
 
 ---
 

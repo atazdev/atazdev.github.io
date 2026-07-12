@@ -17,7 +17,7 @@ tags: [sbom, supply-chain, defense, cybersecurity, nist, dod, dib, devsecops, cm
   <figcaption>SBOM_STATUS: DEPENDENCY_GRAPH_INCOMPLETE — PROVENANCE_CHAIN_UNVERIFIED</figcaption>
 </figure>
 
-**The Big Picture:** Executive Order 14028 turned Software Bills of Materials (SBOM) into a mandatory federal procurement requirement. To win defense contracts, organizations must present a machine-readable inventory of their software supply chain.
+**The Big Picture:** Executive Order 14028 turned Software Bills of Materials into a mandatory federal procurement requirement — contractors must deliver a machine-readable inventory of their entire software supply chain.
 
 ---
 

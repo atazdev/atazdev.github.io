@@ -9,7 +9,7 @@ summary: "An introduction to vibe coding and the shift toward more intuitive, fl
 tags: [coding, development, ai, workflow]
 ---
 
-**The Big Picture:** AI agents are taking over mechanical code generation. In response, developer focus is shifting from syntax syntax construction to defining the "vibe"—governing the overall system intent, architecture, and logic.
+**The Big Picture:** Developer focus has shifted from writing syntax to directing AI agents — the new role is defining intent, not implementation.
 
 ---
 

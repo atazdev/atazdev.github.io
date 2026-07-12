@@ -17,7 +17,7 @@ tags: [cmmc, compliance, defense, cybersecurity, nist, dod, dib, devsecops]
   <figcaption>CMMC_STATUS: C3PAO_ASSESSMENT_PENDING — LEVEL2_CONTROLS_UNDER_REVIEW</figcaption>
 </figure>
 
-**The Big Picture:** Cybersecurity Maturity Model Certification (CMMC) 2.0 is the DoD's pass/fail enforcement mechanism to audit defense contractor networks. Without CMMC validation, contractors are legally barred from winning DoD bids.
+**The Big Picture:** CMMC 2.0 is the DoD's contractual pass/fail enforcement mechanism — without a valid certification, defense contractors are legally barred from handling CUI and winning DoD bids.
 
 ---
 

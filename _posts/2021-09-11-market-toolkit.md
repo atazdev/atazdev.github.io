@@ -13,7 +13,7 @@ resource-theme: market-toolkit-resource
 tags: [stocks, trading, investing, finance, tools]
 ---
 
-**The Big Picture:** Navigating the stock market requires a curated collection of research databases, charting platforms, API integrations, and educational guides. This toolkit centralizes high-signal tools for active traders and long-term investors.
+**The Big Picture:** Navigating the stock market requires institutional-grade tools for research, charting, and data access — this toolkit centralizes the highest-signal resources for active traders and long-term investors.
 
 ---
 

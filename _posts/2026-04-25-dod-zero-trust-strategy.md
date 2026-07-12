@@ -17,7 +17,7 @@ tags: [zero-trust, dod, defense, cybersecurity, policy, federal, compliance, dis
   <figcaption>ZT_STATUS: TARGET_LEVEL_IN_PROGRESS — FY2027_DEADLINE_ACTIVE</figcaption>
 </figure>
 
-**The Big Picture:** The Department of Defense (DoD) faces a hard **FY2027 deadline** to achieve "Target Level" Zero Trust Architecture (ZTA) across its entire enterprise—a mandate encompassing 152 activities across 7 security pillars.
+**The Big Picture:** The Department of Defense faces a hard FY2027 deadline to achieve Target Level Zero Trust Architecture across its entire enterprise — 152 activities across 7 security pillars.
 
 ---
 

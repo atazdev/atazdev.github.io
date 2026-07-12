@@ -15,7 +15,7 @@ resource-index: true
 tags: [system-design, architecture, engineering, interview-prep]
 ---
 
-**The Big Picture:** System design is the foundation of scalable, fault-tolerant software engineering. This resource index collects architectural guides and distributed patterns to help engineers prepare for technical interviews and build production-grade systems.
+**The Big Picture:** System design is the foundation of scalable, fault-tolerant engineering — this index collects the architectural patterns and distributed system concepts every engineer needs to build and interview at scale.
 
 ---
 

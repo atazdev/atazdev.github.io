@@ -14,7 +14,7 @@ tags: [zero-trust, cybersecurity, ai, devsecops, defense, policy, federal, compl
   <figcaption>PERIMETER_STATUS: ZERO_TRUST_ENFORCEMENT_ACTIVE</figcaption>
 </figure>
 
-**The Big Picture:** The 2026 National Cyber Strategy explicitly mandates extending **Zero Trust Architecture (ZTA)** to the AI stack. For federal contractors, AI models are no longer standalone apps; they represent the new enterprise perimeter.
+**The Big Picture:** The 2026 National Cyber Strategy mandates extending Zero Trust Architecture to the AI stack — for federal contractors, the AI model pipeline is now the enterprise security perimeter.
 
 ---
 
