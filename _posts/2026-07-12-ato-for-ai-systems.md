@@ -8,12 +8,12 @@ series: "AI Governance"
 summary: "How AI models actually get authorized in the DoD — the Assess Only construct, the coming NIST 800-53 AI overlays, and the re-authorization trigger problem nobody has solved."
 featured: true
 last-updated: 2026-07-12
-share-img: /assets/img/hero/hero-runtime-governance.png
+share-img: /assets/img/hero/hero-ato-ai-systems.png
 tags: [ai, ato, rmf, devsecops, compliance, dod, nist, cdao, authorization, governance]
 ---
 
 <figure class="post-figure">
-  <img src="/assets/img/hero/hero-runtime-governance.png" alt="AI model authorization pipeline with drift monitoring and evidence telemetry">
+  <img src="/assets/img/hero/hero-ato-ai-systems.png" alt="AI model authorization dashboard showing the Assess Only evidence pipeline, eval gates, and drift monitoring against a re-authorization threshold">
   <figcaption>MODEL_STATUS: ASSESS_ONLY_EVIDENCE_COLLECTED — DRIFT_THRESHOLD_UNDEFINED</figcaption>
 </figure>
 
