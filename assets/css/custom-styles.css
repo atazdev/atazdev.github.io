@@ -26,6 +26,21 @@
   /* --- Editorial Tokens --- */
   --profile-accent: var(--accent-green);
   --panel-bg: var(--bg-surface);
+
+  /* --- Surface alpha tokens (theme-aware) --- */
+  --surface-72: rgba(22, 27, 34, 0.72);
+  --surface-86: rgba(22, 27, 34, 0.86);
+  --surface-88: rgba(28, 33, 40, 0.88);
+  --surface-90: rgba(28, 33, 40, 0.9);
+  --surface-52: rgba(22, 27, 34, 0.52);
+  --surface-62: rgba(22, 27, 34, 0.62);
+  --surface-92: rgba(22, 27, 34, 0.92);
+  --surface-96: rgba(13, 17, 23, 0.96);
+  --surface-97: rgba(13, 17, 23, 0.97);
+  --scrollbar-track: rgba(13, 17, 23, 0.8);
+  --code-inline-bg: rgba(255, 255, 255, 0.05);
+  --tag-badge-bg: rgba(255, 255, 255, 0.03);
+  --code-copy-bg: rgba(255, 255, 255, 0.05);
 }
 
 :root.light-mode {
@@ -36,9 +51,26 @@
   --text-muted: #64748B;
   --accent-green: #059669;
   --accent-blue: #2563EB;
+  --accent-red: #DC2626;
   --border: #E2E8F0;
-  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.85);
   --glass-border: rgba(5, 150, 105, 0.2);
+  --neon-glow: 0 0 12px rgba(5, 150, 105, 0.08);
+
+  /* --- Surface alpha tokens (light overrides) --- */
+  --surface-72: rgba(241, 245, 249, 0.85);
+  --surface-86: rgba(255, 255, 255, 0.95);
+  --surface-88: rgba(248, 250, 252, 0.97);
+  --surface-90: rgba(241, 245, 249, 0.97);
+  --surface-52: rgba(241, 245, 249, 0.75);
+  --surface-62: rgba(241, 245, 249, 0.85);
+  --surface-92: rgba(255, 255, 255, 0.98);
+  --surface-96: rgba(248, 250, 252, 0.98);
+  --surface-97: rgba(255, 255, 255, 0.99);
+  --scrollbar-track: rgba(226, 232, 240, 0.8);
+  --code-inline-bg: rgba(0, 0, 0, 0.05);
+  --tag-badge-bg: rgba(0, 0, 0, 0.04);
+  --code-copy-bg: rgba(0, 0, 0, 0.05);
 }
 
 /* --- Subtle page texture --- */
@@ -123,7 +155,7 @@ input:focus-visible {
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 0.45rem 0.7rem;
-  background-color: rgba(22, 27, 34, 0.92);
+  background-color: var(--surface-92);
   color: var(--text-muted);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -158,7 +190,7 @@ input:focus-visible {
 
 /* --- Navbar style --- */
 .navbar-custom {
-  background-color: #0D1117 !important;
+  background-color: var(--bg-primary) !important;
   border-bottom: 1px solid var(--border) !important;
   font-family: var(--font-mono) !important;
 }
@@ -311,7 +343,7 @@ input:focus-visible {
     padding: 0.75rem;
     border: 1px solid var(--border);
     border-radius: 8px;
-    background-color: rgba(13, 17, 23, 0.96);
+    background-color: var(--surface-96);
   }
 
   .navbar-custom .navbar-nav {
@@ -918,7 +950,7 @@ input:focus-visible {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--tag-badge-bg);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
   border: 1px solid var(--border);
@@ -1062,7 +1094,7 @@ input:focus-visible {
   display: block;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: rgba(22, 27, 34, 0.72);
+  background-color: var(--surface-72);
   text-decoration: none !important;
   transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
 }
@@ -1077,7 +1109,7 @@ input:focus-visible {
 .topic-post:hover,
 .related-post-grid a:hover {
   border-color: rgba(56, 189, 248, 0.45);
-  background-color: rgba(28, 33, 40, 0.9);
+  background-color: var(--surface-90);
   transform: translateY(-2px);
 }
 
@@ -1120,14 +1152,14 @@ input:focus-visible {
   border-left: 2px solid var(--category-accent);
   border-radius: 8px;
   padding: 0.9rem;
-  background-color: rgba(22, 27, 34, 0.72);
+  background-color: var(--surface-72);
   text-decoration: none !important;
   transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .mini-card:hover {
   border-color: var(--category-accent);
-  background-color: rgba(28, 33, 40, 0.9);
+  background-color: var(--surface-90);
   transform: translateY(-2px);
 }
 
@@ -1156,7 +1188,7 @@ input:focus-visible {
   padding: 1rem;
   border: 1px solid var(--glass-border);
   border-radius: 8px;
-  background: rgba(22, 27, 34, 0.52);
+  background: var(--surface-52);
 }
 
 .topic-filter > span {
@@ -1227,7 +1259,7 @@ input:focus-visible {
   grid-template-columns: minmax(0, 1fr) minmax(9rem, 14rem);
   gap: 1.25rem;
   align-items: stretch;
-  background: rgba(22, 27, 34, 0.86) !important;
+  background: var(--surface-86) !important;
   backdrop-filter: var(--glass-blur) !important;
   -webkit-backdrop-filter: var(--glass-blur) !important;
   border: 1px solid var(--glass-border) !important;
@@ -1250,7 +1282,7 @@ input:focus-visible {
 }
 
 .post-preview:hover {
-  background: rgba(28, 33, 40, 0.88) !important;
+  background: var(--surface-88) !important;
   border-color: rgba(56, 189, 248, 0.34) !important;
   transform: translateY(-2px);
   box-shadow: 0 14px 34px rgba(2, 6, 23, 0.32);
@@ -1705,7 +1737,7 @@ pre {
   border-bottom: 1px solid var(--glass-border) !important;
   border-radius: 8px;
   padding: 1rem;
-  background-color: rgba(22, 27, 34, 0.72);
+  background-color: var(--surface-72);
   color: var(--text-primary) !important;
   text-decoration: none !important;
   transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
@@ -1715,7 +1747,7 @@ pre {
 .resource-featured-grid a:hover {
   border-color: rgba(56, 189, 248, 0.45);
   border-bottom-color: rgba(56, 189, 248, 0.45) !important;
-  background-color: rgba(28, 33, 40, 0.9);
+  background-color: var(--surface-90);
   transform: translateY(-2px);
 }
 
@@ -1749,7 +1781,7 @@ pre {
   border: 1px solid var(--glass-border);
   border-radius: 8px;
   padding: 1rem;
-  background-color: rgba(22, 27, 34, 0.52);
+  background-color: var(--surface-52);
 }
 
 .resource-filter > span {
@@ -1798,7 +1830,7 @@ pre {
   border: 1px solid var(--glass-border);
   border-radius: 8px;
   padding: 0;
-  background-color: rgba(22, 27, 34, 0.62);
+  background-color: var(--surface-62);
   color: var(--text-muted) !important;
   line-height: 1.6 !important;
   overflow: hidden;
@@ -1936,7 +1968,7 @@ pre {
   padding: 1rem;
   border: 1px solid var(--glass-border);
   border-radius: 8px;
-  background-color: rgba(22, 27, 34, 0.62);
+  background-color: var(--surface-62);
 }
 
 .article-toc-list {
@@ -2169,7 +2201,7 @@ footer a:hover {
 
 /* --- Search overlay --- */
 #beautifuljekyll-search-overlay {
-  background-color: rgba(13, 17, 23, 0.97) !important;
+  background-color: var(--surface-97) !important;
 }
 
 #nav-search-input {
@@ -2290,7 +2322,7 @@ footer a:hover {
 .not-found-panel {
   border: 1px solid var(--glass-border);
   border-radius: 8px;
-  background-color: rgba(22, 27, 34, 0.72);
+  background-color: var(--surface-72);
 }
 
 .concept-grid section {
@@ -2325,7 +2357,7 @@ footer a:hover {
 .project-card {
   border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: rgba(22, 27, 34, 0.72);
+  background-color: var(--surface-72);
 }
 
 .resource-card h3,
@@ -2723,7 +2755,7 @@ footer a:hover {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--tag-badge-bg);
   padding: 0.2rem 0.6rem;
   border-radius: 4px;
   border: 1px solid var(--border);
@@ -2895,7 +2927,7 @@ pre {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   color: var(--text-muted);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--code-copy-bg);
   border: 1px solid var(--border);
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
@@ -2916,7 +2948,7 @@ pre:hover .code-copy-btn {
 }
 
 code {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--code-inline-bg);
   padding: 0.1rem 0.4rem;
   border-radius: 4px;
   color: var(--accent-blue);
@@ -2965,7 +2997,7 @@ pre code {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(13, 17, 23, 0.8);
+  background: var(--scrollbar-track);
   backdrop-filter: blur(10px);
 }
 
@@ -2973,7 +3005,7 @@ pre code {
   background: var(--accent-green);
   border-radius: 4px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(13, 17, 23, 0.8);
+  border: 2px solid var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -2984,5 +3016,160 @@ pre code {
 /* Firefox Support */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--accent-green) rgba(13, 17, 23, 0.8);
+  scrollbar-color: var(--accent-green) var(--scrollbar-track);
 }
+
+/* ==============================================
+   Light Mode Overrides
+   Fixes for values that cannot be captured by
+   CSS variable substitution alone.
+   ============================================== */
+
+:root.light-mode body::before {
+  /* Reduce CRT scanline effect — looks wrong on white */
+  opacity: 0.1;
+}
+
+/* Tables — ensure odd rows have a visible light background */
+:root.light-mode .blog-post tr:nth-child(odd) td {
+  background-color: #FFFFFF !important;
+}
+
+:root.light-mode .blog-post tr:nth-child(even) td {
+  background-color: #F8FAFC !important;
+}
+
+:root.light-mode .blog-post th {
+  background-color: #F1F5F9 !important;
+  color: var(--accent-blue) !important;
+}
+
+/* Post preview cards — fix hover shadow (was dark RGBA) */
+:root.light-mode .post-preview:hover {
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.10) !important;
+  border-color: rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Post preview hover accent bar */
+:root.light-mode .post-preview:hover::before {
+  opacity: 0.7;
+}
+
+/* Resource / feature card hover */
+:root.light-mode .resource-card:hover,
+:root.light-mode .project-card:hover {
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Start-here grid cards */
+:root.light-mode .start-here {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(5, 150, 105, 0.03));
+}
+
+/* Mini-card category accent dots */
+:root.light-mode .timeline-list div::before {
+  box-shadow: 0 0 8px rgba(5, 150, 105, 0.3);
+}
+
+/* Code inline — ensure text is readable */
+:root.light-mode code {
+  color: var(--accent-blue) !important;
+  background: rgba(37, 99, 235, 0.07) !important;
+  border-color: rgba(37, 99, 235, 0.2) !important;
+}
+
+/* Code blocks */
+:root.light-mode .highlight {
+  border-left-color: var(--accent-blue) !important;
+}
+
+:root.light-mode pre {
+  background: #F8FAFC !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06) !important;
+}
+
+:root.light-mode .highlight > pre {
+  color: var(--text-primary) !important;
+}
+
+/* Reading progress bar — remove dark glow */
+:root.light-mode .reading-progress-bar {
+  box-shadow: none;
+}
+
+/* Code copy button */
+:root.light-mode .code-copy-btn:hover {
+  background: var(--accent-green);
+  color: #FFFFFF;
+  border-color: var(--accent-green);
+}
+
+/* Back to top button */
+:root.light-mode .back-to-top {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Search overlay backdrop */
+:root.light-mode #beautifuljekyll-search-overlay {
+  background-color: rgba(248, 250, 252, 0.99) !important;
+}
+
+/* Image shadow in posts */
+:root.light-mode .blog-post img {
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
+}
+
+/* Blockquote in light mode */
+:root.light-mode .blog-post blockquote {
+  background-color: #F8FAFC !important;
+  border-left-color: var(--accent-blue) !important;
+  color: var(--text-muted) !important;
+}
+
+/* Post hover glow accent border */
+:root.light-mode .post-preview:hover {
+  border-color: rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Featured preview */
+:root.light-mode .featured-preview {
+  border-color: rgba(5, 150, 105, 0.12);
+}
+
+/* Resource index list items */
+:root.light-mode .resource-index-post > ul > li {
+  background-color: #FFFFFF;
+  border-color: var(--border);
+}
+
+/* Article TOC */
+:root.light-mode .article-toc {
+  background-color: #F8FAFC;
+}
+
+/* Follow block gradient */
+:root.light-mode .follow-block {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(5, 150, 105, 0.03));
+}
+
+/* Series marker glow */
+:root.light-mode .series-item.active .series-marker {
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Pulse animation in light mode */
+:root.light-mode .status-bit {
+  background: var(--accent-green);
+}
+
+@keyframes pulse-green-light {
+  0%   { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0.5); }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 6px rgba(5, 150, 105, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(5, 150, 105, 0); }
+}
+
+:root.light-mode .pulse {
+  animation: pulse-green-light 2s infinite;
+}
+
