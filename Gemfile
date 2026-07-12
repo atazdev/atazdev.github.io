@@ -11,6 +11,7 @@ gem "webrick", "~> 1.8"
 # Plugins (also listed under `plugins:` in _config.yml)
 gem "jekyll-paginate", "~> 1.1"
 gem "jekyll-sitemap", "~> 1.4"
+gem "jekyll-seo-tag", "~> 2.8"
 
 # Markdown processor
 gem "kramdown", "~> 2.4"

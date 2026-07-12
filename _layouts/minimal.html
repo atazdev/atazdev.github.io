@@ -8,7 +8,7 @@
 
   <body>
 
-    <div role="main" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %} main-content">
+    <div id="main-content" role="main" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %} main-content">
       {% if page.before-content %}
         <div class="before-content">
           {% for file in page.before-content %}

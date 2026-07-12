@@ -1,5 +1,6 @@
 (function() {
   let searchData = null;
+  let activeIndex = -1;
   const modal = document.getElementById('search-modal');
   const input = document.getElementById('search-input');
   const resultsContainer = document.getElementById('search-results');
@@ -20,17 +21,20 @@
       modal.style.display = 'flex';
       input.focus();
       document.body.style.overflow = 'hidden';
+      activeIndex = -1;
       if (!searchData) initSearch();
     } else {
       modal.style.display = 'none';
       document.body.style.overflow = '';
       input.value = '';
+      activeIndex = -1;
       resultsContainer.innerHTML = '<div class="search-empty-state">TYPE_TO_INITIALIZE_SCAN...</div>';
     }
   }
 
   // 3. Perform Search
   function performSearch(query) {
+    activeIndex = -1;
     if (!searchData || !query) {
       resultsContainer.innerHTML = '<div class="search-empty-state">TYPE_TO_INITIALIZE_SCAN...</div>';
       return;
@@ -54,6 +58,15 @@
     `).join('');
   }
 
+  function highlightItem(items) {
+    items.forEach((item, index) => {
+      item.classList.toggle('active', index === activeIndex);
+      if (index === activeIndex) {
+        item.scrollIntoView({ block: 'nearest' });
+      }
+    });
+  }
+
   // 4. Event Listeners
   window.addEventListener('keydown', (e) => {
     // Ctrl+K to open
@@ -64,6 +77,26 @@
     // ESC to close
     if (e.key === 'Escape') {
       toggleModal(false);
+    }
+  });
+
+  input.addEventListener('keydown', (e) => {
+    const items = resultsContainer.querySelectorAll('.search-result-item');
+    if (!items.length) return;
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIndex = (activeIndex + 1) % items.length;
+      highlightItem(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIndex = (activeIndex - 1 + items.length) % items.length;
+      highlightItem(items);
+    } else if (e.key === 'Enter') {
+      if (activeIndex > -1) {
+        e.preventDefault();
+        items[activeIndex].click();
+      }
     }
   });
 
