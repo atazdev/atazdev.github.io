@@ -25,7 +25,7 @@ Using generic development tools slows down engineering velocity. Teams adopting 
 
 ## Go Deeper
 
-## The Primary Agentic Stack
+### The Primary Agentic Stack
 
 The best AI tools for vibe coding are those that amplify intuition without interrupting the flow. In 2026, the core stack has consolidated around three primary pillars:
 
@@ -33,7 +33,7 @@ The best AI tools for vibe coding are those that amplify intuition without inter
 *   **GitHub Copilot:** The industry standard for context-aware code completion. Its strength lies in reducing boilerplate and integrating directly into VSCode, JetBrains, and Vim.
 *   **Claude (Anthropic):** The preferred pair programmer for high-level architectural discussions, complex refactoring, and design reviews. Its long context window and reasoning capabilities make it the benchmark for technical discussion.
 
-## Specialized Technical Payloads
+### Specialized Technical Payloads
 
 Beyond the primary editor, specialized tools handle the heavy lifting for specific domains:
 
@@ -42,7 +42,7 @@ Beyond the primary editor, specialized tools handle the heavy lifting for specif
 *   **Eraser:** An AI-powered whiteboarding tool that converts system design prompts into professional architectural diagrams and flowcharts.
 *   **Codeium:** A high-performance, privacy-focused alternative to Copilot that offers a robust free tier for individual developers.
 
-## The Optimal Workflow
+### The Optimal Workflow
 
 To build a high-velocity vibe coding environment, consider this configuration:
 1.  **Primary Editor:** Cursor (for deep AI integration).

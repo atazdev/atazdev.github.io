@@ -33,13 +33,13 @@ Exploits in transitive dependencies (like Log4Shell) highlight the threat of opa
 
 ## Go Deeper
 
-## The Mandate That Changed Software Procurement
+### The Mandate That Changed Software Procurement
 
 **Executive Order 14028** — signed May 2021 — did something novel for federal IT policy: it made software transparency a contractual requirement, not a best practice. Section 4 directed NIST to define minimum elements for a Software Bill of Materials, and directed federal agencies to require SBOMs from software vendors. The order was triggered by SolarWinds and Kaseya, two incidents where attackers exploited the opacity of software supply chains to move laterally through government networks without detection.
 
 Three years later, NIST delivered **SP 800-218** (Secure Software Development Framework), **SP 800-161r1** (C-SCRM Practices), and CISA published its minimum SBOM element guidance. OMB followed with **M-23-16** requiring agencies to collect SBOMs for software used in federal environments. The regulatory scaffolding is complete. The procurement reality is more complicated.
 
-## What an SBOM Actually Is
+### What an SBOM Actually Is
 
 An SBOM is a machine-readable inventory of every software component in a given artifact — libraries, packages, operating system layers, and their transitive dependencies — along with version information, licensing data, and provenance metadata.
 
@@ -59,7 +59,7 @@ CISA's minimum elements define three data categories an SBOM must contain to be 
 
 These are minimum elements. A useful SBOM for CUI environments also includes license expressions, known vulnerabilities at time of generation, and integrity hashes for each component.
 
-## The Format Question: SPDX vs. CycloneDX
+### The Format Question: SPDX vs. CycloneDX
 
 Two formats dominate the SBOM ecosystem. The contracting officer's solicitation will typically specify one; understanding both is necessary for toolchain selection.
 
@@ -69,7 +69,7 @@ Two formats dominate the SBOM ecosystem. The contracting officer's solicitation 
 
 The practical answer for most DIB contractors: generate both. The toolchain overhead is minimal, and federal customers have not standardized on one format. [Syft](https://github.com/anchore/syft) generates both natively. The NTIA interoperability study confirmed that minimal-element SBOMs in either format are parseable by both communities.
 
-## The Toolchain
+### The Toolchain
 
 An SBOM pipeline has three stages: generation, enrichment, and distribution. Most organizations have only stage one.
 
@@ -84,13 +84,13 @@ An SBOM pipeline has three stages: generation, enrichment, and distribution. Mos
 
 **Distribution** — securely delivering SBOMs to customers alongside software releases — is operationally immature across most of the DIB. The emerging standard is embedding SBOMs as OCI artifacts attached to container image digests (using tools like **[cosign](https://github.com/sigstore/cosign)** and the [ORAS spec](https://oras.land)). For traditional software deliverables, contractual delivery alongside the release package is still common and acceptable.
 
-## The CMMC Connection
+### The CMMC Connection
 
 **NIST SP 800-171 Rev 3** — incorporated in the CMMC 2.0 final rule (December 2024) — added supply chain risk management controls that directly reference SBOM practices. Control **SR.1.001** requires identifying, assessing, and managing supply chain risks. **SR.2.002** requires establishing and managing a provenance record for the software, hardware, and services used in organizational systems.
 
 Assessors interpreting these controls look for evidence that the organization knows what software components are running in its CUI environment and has a mechanism to respond when vulnerabilities are identified in those components. A maintained SBOM pipeline, coupled with a vulnerability tracking system, satisfies this evidence requirement in a way that manual software inventories do not. Organizations that lack SBOMs will find SR controls among the hardest to demonstrate during a C3PAO assessment.
 
-## Where DIB Contractors Actually Fail
+### Where DIB Contractors Actually Fail
 
 **1. Transitive dependencies are invisible.**
 Most contractors generate SBOMs for their own code and direct dependencies but stop there. A Log4j-style vulnerability lives in a transitive dependency — a library pulled in by a library you explicitly depend on. SBOMs that only capture declared dependencies miss the attack surface that matters most. Tools must be configured for recursive dependency resolution, which requires more accurate build environment replication.
@@ -107,7 +107,7 @@ A complete SBOM often surfaces dozens of known CVEs in dependencies — many of 
 **5. SBOMs are treated as a deliverable, not a capability.**
 The most common failure: contractors produce an SBOM once, attach it to the initial contract deliverable, and stop. Software changes. Dependencies are updated. Vulnerabilities are disclosed. An SBOM that does not track the actual running software is not a supply chain risk management capability — it is a document artifact that satisfies a checkbox without providing the underlying value. SBOMs must be regenerated on every meaningful software change and continuously correlated against current vulnerability intelligence.
 
-## The Operational Model That Works
+### The Operational Model That Works
 
 Organizations that have solved SBOM operationally share a pipeline pattern:
 
@@ -119,7 +119,7 @@ Organizations that have solved SBOM operationally share a pipeline pattern:
 
 The key insight is that stage 4 — continuous monitoring — is what converts SBOM from a compliance artifact into an operational security capability. A new critical CVE disclosed against a library in production requires the same response speed regardless of when the software was released. Without monitoring, the SBOM is dead on arrival from a security standpoint.
 
-## Summary: Transparency as Infrastructure
+### The Bottom Line
 
 The EO 14028 SBOM mandate was not a documentation requirement — it was a transparency requirement. The underlying goal is an environment where a zero-day against a specific library version triggers an immediate, automated inventory query: which systems are affected, who is responsible for them, and what is the remediation path. The SBOM is the prerequisite for that query.
 

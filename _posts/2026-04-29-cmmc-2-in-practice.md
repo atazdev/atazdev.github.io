@@ -24,7 +24,7 @@ tags: [cmmc, compliance, defense, cybersecurity, nist, dod, dib, devsecops]
 ### Why It Matters
 For the majority of the Defense Industrial Base (DIB) handling Controlled Unclassified Information (CUI), CMMC Level 2 (aligned to NIST SP 800-171's 110 controls) is a contractual reality. Triennial C3PAO audits require documented, audited proof of compliance rather than self-attestations.
 
-### The Details: Core Compliance Levels
+### The Details
 - **Level 1 (FCI):** 15 basic security practices; evaluated via annual self-assessment.
 - **Level 2 (CUI):** 110 controls (NIST SP 800-171); audited triennially by certified third-party assessors (C3PAOs).
 - **Level 3 (High-Value CUI):** 110+ controls (NIST SP 800-172); audited directly by government agencies.
@@ -33,13 +33,13 @@ For the majority of the Defense Industrial Base (DIB) handling Controlled Unclas
 
 ## Go Deeper
 
-## What CMMC Actually Is
+### What CMMC Actually Is
 
 **Cybersecurity Maturity Model Certification (CMMC) 2.0** is the DoD's contractual enforcement mechanism for cybersecurity in the Defense Industrial Base (DIB). If your organization handles **Controlled Unclassified Information (CUI)** and wants to win DoD contracts, CMMC is the gate. It is not a best-practices framework — it is a pass/fail assessment tied directly to contract eligibility.
 
 CMMC 2.0 replaced the original five-level model in 2021, consolidating it into three levels aligned directly to existing NIST standards. The final rule took effect in December 2024, meaning assessments are now a contractual reality, not a future requirement.
 
-## The Three Levels
+### The Three Levels
 
 | Level | Who It Applies To | Standard | Assessment Type |
 |---|---|---|---|
@@ -49,7 +49,7 @@ CMMC 2.0 replaced the original five-level model in 2021, consolidating it into t
 
 Most defense contractors fall under **Level 2**. The operative document is **NIST SP 800-171**, and a third-party assessor organization (**C3PAO**) certified by the Cyber AB conducts the triennial audit. There is no partial credit on Level 2: deficiencies require a **Plan of Action & Milestones (POA&M)** with a credible remediation timeline to maintain contract eligibility during remediation.
 
-## The 14 Control Domains
+### The 14 Control Domains
 
 NIST SP 800-171 organizes its 110 controls into 14 domains. Organizations consistently underestimate three of them:
 
@@ -64,7 +64,7 @@ Deceptively short but operationally demanding. IR requires a tested, documented 
 
 **The remaining 11 domains** — Audit & Accountability, Awareness & Training, Identification & Authentication, Maintenance, Media Protection, Personnel Security, Physical Protection, Risk Assessment, Security Assessment, System & Communications Protection, System & Information Integrity — follow the same pattern: each control requires documented implementation and supporting evidence artifacts.
 
-## The System Security Plan
+### The System Security Plan
 
 The **System Security Plan (SSP)** is the central artifact of a CMMC assessment. It must describe:
 
@@ -75,7 +75,7 @@ The **System Security Plan (SSP)** is the central artifact of a CMMC assessment.
 
 The SSP is a living document. Assessors will cross-reference it against actual system configurations during the assessment. A well-written SSP with inaccurate technical claims fails faster than a sparse SSP that accurately reflects a partially implemented environment.
 
-## Where Organizations Actually Fail
+### Where Organizations Actually Fail
 
 **1. Scope creep on the authorization boundary.**
 Organizations try to shrink their CUI boundary to reduce assessment scope, but draw it too narrowly. When the assessor finds CUI flowing through a system excluded from the SSP, the entire assessment is at risk. Define the boundary conservatively, then work to reduce the actual CUI footprint.
@@ -89,7 +89,7 @@ Cloud providers (AWS GovCloud, Azure Government) satisfy many controls at the in
 **4. Software supply chain gaps.**
 SR controls (from NIST SP 800-171 Rev 3, added in the 2024 rulemaking) require supply chain risk management: SBOM documentation, vendor vetting, and controls against counterfeit components. Organizations that have not updated their SSP for Rev 3 additions enter assessments with unmitigated gaps.
 
-## Connecting CMMC to Zero Trust
+### Connecting CMMC to Zero Trust
 
 The DoD's ZT Strategy and CMMC are complementary frameworks targeting the same underlying controls from different directions. The ZT pillar requirements directly satisfy CMMC control families:
 
@@ -100,7 +100,7 @@ The DoD's ZT Strategy and CMMC are complementary frameworks targeting the same u
 
 Organizations implementing ZT architecture as a genuine operational model — not just for compliance — will find CMMC Level 2 assessments significantly easier. The controls are the same; ZT just implements them as automated, continuously enforced policy rather than documented procedures.
 
-## Summary: Assessment Is an Engineering Problem
+### The Bottom Line
 
 CMMC 2.0 assessments are won or lost on evidence quality, not intent. The C3PAO is not evaluating whether your organization cares about security — they are evaluating whether each of 110 controls is implemented and documented. That is an engineering and documentation problem as much as a security problem.
 

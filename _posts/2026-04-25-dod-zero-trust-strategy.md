@@ -24,7 +24,7 @@ tags: [zero-trust, dod, defense, cybersecurity, policy, federal, compliance, dis
 ### Why It Matters
 This is the most complex security migration in history, spanning millions of users and thousands of legacy/cloud networks. Success dictates whether the DoD can secure distributed networks in contested environments or if legacy IT continues to be an open vulnerability.
 
-### The Details: Seven Pillars of DoD Zero Trust
+### The Details
 The framework classifies security controls across 7 distinct fields:
 - **User:** Enforces phishing-resistant MFA (CAC/PIV) and continuous behavioral monitoring.
 - **Device:** Mandates real-time endpoint threat detection and device health attestation.
@@ -38,13 +38,13 @@ The framework classifies security controls across 7 distinct fields:
 
 ## Go Deeper
 
-## The Mandate
+### The Mandate
 
 In November 2022, the DoD released its **Zero Trust Strategy and Roadmap** — a directive requiring all DoD components to achieve department-wide Zero Trust Architecture by **FY2027**. The trigger was EO 14028 (May 2021), which ordered federal agencies to accelerate ZT adoption, followed by OMB M-22-09 setting hard timelines across the federal enterprise.
 
 The DoD's version goes further than most federal mandates. It defines **152 discrete ZT activities** across two maturity tiers, holds components accountable to a published roadmap, and has a dedicated program office tracking progress. For an organization of this scale — millions of users, tens of thousands of systems, a mix of cloud and legacy — it is the most ambitious ZT program ever attempted.
 
-## The Seven Pillars
+### The Seven Pillars
 
 The DoD ZT framework is organized around seven capability pillars. Each pillar has its own activity set and target maturity level.
 
@@ -60,7 +60,7 @@ The DoD ZT framework is organized around seven capability pillars. Each pillar h
 
 The **Data** and **Visibility** pillars are the hardest. Data tagging at scale in a multi-classification environment — where the same system may handle CUI, FOUO, and SCI — is an unsolved operational problem for most components. Visibility requires telemetry ingestion from systems that were never designed to emit it.
 
-## Two Levels: Target and Advanced
+### Two Levels: Target and Advanced
 
 The strategy defines two tiers of compliance:
 
@@ -70,7 +70,7 @@ The strategy defines two tiers of compliance:
 
 The distinction matters operationally: Target ZT is survivable for legacy-heavy organizations. Advanced ZT assumes modern infrastructure, robust telemetry, and policy-as-code enforcement — capabilities that require significant re-platforming for many DoD components.
 
-## What DISA Is Building
+### What DISA Is Building
 
 **DISA's Thunderdome** program is the reference implementation. Launched as a ZT pilot in 2022, Thunderdome provides:
 - **Secure Access Service Edge (SASE)** architecture replacing legacy VPN tunnels
@@ -79,7 +79,7 @@ The distinction matters operationally: Target ZT is survivable for legacy-heavy 
 
 Thunderdome is being extended to DoD enterprise endpoints and serves as the template for component-level ZT deployments. DISA also maintains the **ZT Reference Architecture (ZT RA) v2.0**, which provides the technical blueprint that program offices are expected to implement against.
 
-## Progress and Gaps
+### Progress and Gaps
 
 The ZT PMO — housed under the DoD CIO — publishes annual assessments. The picture as of early 2026 is mixed:
 
@@ -94,13 +94,13 @@ The ZT PMO — housed under the DoD CIO — publishes annual assessments. The pi
 - **Data tagging** at the pillar level is largely manual in practice. Automated classification pipelines exist in classified enclaves but are not uniformly deployed.
 - **OCONUS environments** — deployed tactical networks operating in denied or degraded conditions — have no clear ZT implementation path for several advanced controls.
 
-## The FY2027 Question
+### The FY2027 Question
 
 The FY2027 deadline for Target ZT is aggressive but achievable for the majority of DoD components — if procurement and integration timelines hold. The realistic risk is a two-speed outcome: modern, cloud-forward organizations clearing Target ZT, while legacy-heavy components receive waivers or partial credit on the 20–30 activities that require infrastructure modernization.
 
 **Advanced ZT by FY2027 is not the goal**, and conflating the two tiers creates false urgency in the wrong places. Organizations should focus resources on the 91 Target activities before optimizing toward the Advanced tier.
 
-## Summary: The Accountability Layer
+### The Bottom Line
 
 What separates the DoD ZT strategy from prior federal security mandates is the accountability structure. The ZT PMO has visibility into component progress, the roadmap is public, and waivers require documented justification. This is policy-as-code thinking applied at the organizational level: the intent is enforceable, measurable, and auditable.
 

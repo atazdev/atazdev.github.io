@@ -32,13 +32,13 @@ AI-generated commits occur at velocities and volumes that humans cannot manually
 
 ## Go Deeper
 
-## The End of Human-Only Assumptions
+### The End of Human-Only Assumptions
 
 Every CI/CD pipeline was designed around one implicit assumption: a human wrote the code with conscious intent. AI agents—like GitHub Copilot Workspace, Devin, and Claude Code—break this assumption. They are already writing features, fixing CI jobs, and modifying infrastructure at speed.
 
 When AI agents are in the loop, the **CI/CD pipeline stops being a quality gate and becomes a governance layer.** Traditional review ensures that human-reviewed code is consistent; AI-aware pipelines must catch emergent issues that only appear when agentic code interacts with a broader system.
 
-## Building an AI-Aware Pipeline
+### Building an AI-Aware Pipeline
 
 An AI-aware pipeline requires four fundamental additions to the standard DevOps workflow:
 
@@ -54,14 +54,14 @@ LLMs occasionally invent plausible but non-existent package names—a major risk
 ### 4. Intent-Oriented Human Review
 When agents write code, human review changes character. It is no longer about mechanical correctness (tests handle that). It is about **intent alignment**: Should this feature exist? Does this infrastructure change match our architectural direction? The reviewer moves from checking the implementation to checking the *decision*.
 
-## Risk Modeling for Agentic Development
+### Risk Modeling for Agentic Development
 
 Organizations must explicitly model three primary agentic risks:
 *   **The Compromised Agent:** An agent manipulated via prompt injection to introduce backdoors.
 *   **The Confident Hallucination:** An agent implementing a security algorithm incorrectly while providing readable but false documentation.
 *   **The Runaway Agent:** An agent with broad permissions making individually reasonable decisions that lead to a collectively catastrophic outcome (e.g., mass resource deletion).
 
-## Summary: The GitOps Connection
+### The Bottom Line
 
 GitOps is the governance structure that makes AI agents safe at scale. By making Git the single source of truth, every change an agent makes—from spinning up servers to updating manifests—becomes a versioned, reviewable pull request. 
 

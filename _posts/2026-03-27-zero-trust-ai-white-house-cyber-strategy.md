@@ -30,18 +30,18 @@ Traditional Zero Trust was designed for human users and static endpoints. AI sys
 
 ## Go Deeper
 
-## The Era of AI as a Perimeter
+### The Era of AI as a Perimeter
 
 In early 2026, the White House and Microsoft sent unambiguous signals: the era of treating AI as a standalone application is over. The 2026 National Cyber Strategy now mandates **Zero Trust Architecture (ZTA)** and AI security across federal networks. For defense contractors, the AI stack *is* the security perimeter, and it must be defended as rigorously as the network itself.
 
-## Why Traditional Zero Trust Fails AI
+### Why Traditional Zero Trust Fails AI
 
 Traditional Zero Trust was designed for human users and managed devices. AI systems break this model in three fundamental ways:
 1.  **The Identity Problem:** AI agents often inherit broad service account permissions rather than scoped, verifiable identities.
 2.  **The Data Problem:** Models "absorb" data during training. Weights become data artifacts that carry the classification of their source, yet traditional labels can't track floating-point weights.
 3.  **The Verification Problem:** Continuous verification built on behavioral baselines fails against non-deterministic AI agents whose outputs are variable by design.
 
-## A Framework for AI Zero Trust
+### A Framework for AI Zero Trust
 
 Extending ZTA to the AI stack requires four primary enforcement layers:
 
@@ -61,7 +61,7 @@ AI data governance requires four-part lineage tracking:
 *   **Output Filtering:** Applying DLP controls to inference outputs.
 *   **Post-Quantum Encryption:** Encrypting all model weights on the 2030 federal migration timeline.
 
-## Summary: The Compliance Reality
+### The Bottom Line
 
 If your AI system touches **Controlled Unclassified Information (CUI)**, it is in scope for your **CMMC 2.0** assessment. Organizations must add AI components to their System Security Plan (SSP), document model provenance as a configuration management (CM) control, and implement agent least privilege as an access control (AC) requirement.
 

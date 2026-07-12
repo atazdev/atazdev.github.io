@@ -28,20 +28,20 @@ When code changes deploy multiple times daily, manual reviews become security li
 
 ## Go Deeper
 
-## The Problem with Document-Based Policy
+### The Problem with Document-Based Policy
 
 Traditional security policies—Word documents, PDF checklists, and manual reviews—cannot scale with modern infrastructure. In a world where code deploys dozens of times per day, document-based policy is a liability. **Policy as Code (PaC)** solves this by expressing security rules as machine-readable, executable code version-controlled in Git.
 
 Instead of a document stating "No public S3 buckets," PaC uses logic (e.g., Rego) to automatically reject any infrastructure manifest that lacks encryption or blocks public access. This is testable, versionable, and automatically enforced in the CI/CD pipeline.
 
-## Why Policy as Code Matters
+### Why Policy as Code Matters
 
 *   **Automatic Enforcement:** PaC shifts security to the left, catching violations at the build gate rather than during a post-deployment audit.
 *   **Testability:** Policies can have unit tests, ensuring they correctly block risks while allowing legitimate traffic before they reach production.
 *   **Auditability:** Every policy change is a Pull Request in Git, providing a complete, tamper-evident record of who approved what rule and when.
 *   **Scalability:** A codified policy is enforced identically across 5 developers or 5,000, ensuring consistent governance across every team.
 
-## The Implementation Stack
+### The Implementation Stack
 
 Successful PaC implementation requires enforcement at four distinct layers:
 
@@ -50,7 +50,7 @@ Successful PaC implementation requires enforcement at four distinct layers:
 3.  **Admission Control:** Runtime enforcement in Kubernetes (via **Kyverno** or **OPA Gatekeeper**) to reject non-compliant resources that bypass CI.
 4.  **Continuous Monitoring:** Detecting "drift" in deployed infrastructure using cloud-native tools like **AWS Config** or **Azure Policy**.
 
-## Summary: Turning Gates into Guardrails
+### The Bottom Line
 
 Policy as Code turns security from a periodic gate into a continuous guardrail. By making Git the source of truth for both infrastructure (GitOps) and security rules, organizations can ship faster with higher confidence. 
 
