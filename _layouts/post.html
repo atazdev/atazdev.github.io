@@ -63,6 +63,11 @@ layout: base
       </div>
       {% endif %}
 
+      <div class="ai-image-disclaimer" role="note" aria-label="AI Image Disclaimer">
+        <span class="disclaimer-badge">AI VISUALS</span>
+        <span class="disclaimer-text">Hero graphics and illustrations featured across all notes are AI-generated for concept representation.</span>
+      </div>
+
       <article role="main" class="blog-post{% if page.resource-index %} resource-index-post{% endif %}{% if page.resource-theme %} {{ page.resource-theme }}{% endif %}">
         {% unless page.toc == false %}
         <nav class="article-toc" aria-label="Article contents">

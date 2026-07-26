@@ -1773,6 +1773,45 @@ pre {
   letter-spacing: 0.03em;
 }
 
+.post-figure figcaption::after {
+  content: " • [AI-Generated Visual]";
+  opacity: 0.65;
+  font-size: 0.75rem;
+  font-style: normal;
+}
+
+/* --- AI Image Disclaimer Banner --- */
+.ai-image-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1.25rem 0 2rem 0;
+  padding: 0.6rem 1rem;
+  background-color: var(--bg-surface, rgba(15, 23, 42, 0.6));
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-blue, #38bdf8);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.ai-image-disclaimer .disclaimer-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.5rem;
+  background: rgba(56, 189, 248, 0.12);
+  color: var(--accent-blue, #38bdf8);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.ai-image-disclaimer .disclaimer-text {
+  line-height: 1.4;
+}
+
 /* --- Pagination --- */
 .pagination .page-link {
   background-color: var(--bg-surface) !important;
