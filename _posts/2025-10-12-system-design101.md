@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "System Design 101"
 subtitle: "The system design concepts and patterns worth knowing cold"
@@ -523,4 +523,11 @@ Explain complex systems using visuals and simple terms. Whether you're preparing
 ## License
 
 This work is licensed under [CC BY-NC-ND 4.0](http://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1).
+
+---
+
+### The Bottom Line
+
+System design is the art of trade-offs made explicit under real-world constraints. By mastering foundational building blocks — load balancing, caching, database replication, and fault tolerance — engineers can design resilient systems that scale reliably under production demand.
+
 

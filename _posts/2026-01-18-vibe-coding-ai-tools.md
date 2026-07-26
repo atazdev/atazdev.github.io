@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Essential AI Tools for Vibe Coding"
 subtitle: "The tools and platforms that actually earn a place in an agentic development workflow"
@@ -49,5 +49,6 @@ If I were configuring a machine from scratch today:
 2.  **Architecture partner:** Claude, for design and logic review.
 3.  **Frontend:** v0, for fast UI iteration.
 
-### Final Guidance
+### The Bottom Line
+
 These tools are multipliers, not replacements. Treat suggestions as good starting points and still review everything for security and architectural intent. Let the AI handle syntax; your job is the system's "vibe" — the logic, the user experience, and whether anyone can maintain it in two years.
