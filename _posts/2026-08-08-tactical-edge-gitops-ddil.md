@@ -28,8 +28,8 @@ When communication links are jammed or intentionally severed, tactical platforms
 ### The Details
 
 - **Cloud-dependent reconciliation breaks at the edge:** Standard continuous delivery loops that expect continuous access to centralized Git servers fail immediately during network degradation.
-- **Packages must be self-contained OCI artifacts:** Packaging container images, Helm charts, and cryptographic signatures into standard OCI bundles (using tools like Defense Unicorns' Zarf) allows zero-dependency deployment over constrained radios or physical media.
-- **Local controllers handle drift without remote consensus:** In-cluster GitOps engines (such as Flux or Argo CD edge configurations) must reconcile against local embedded repositories and cached state.
+- **Packages must be self-contained OCI artifacts:** Packaging container images, Helm charts, and cryptographic signatures into standard [Open Container Initiative (OCI)](https://opencontainers.org/) bundles (using tools like Defense Unicorns' [Zarf](https://zarf.dev/)) allows zero-dependency deployment over constrained radios or physical media.
+- **Local controllers handle drift without remote consensus:** In-cluster GitOps engines (such as [Flux](https://fluxcd.io/) or [Argo CD](https://argo-cd.readthedocs.io/) edge configurations) must reconcile against local embedded repositories and cached state.
 - **Audit evidence must buffer locally:** Telemetry and compliance proofs generated during disconnected operations must queue securely for asynchronous sync to feed [Continuous ATO (cATO)](/2026-07-12-continuous-ato-in-practice/) pipelines once connectivity restores.
 
 ---
@@ -51,25 +51,25 @@ Attempting to run a standard `git pull` or pulling multiple gigabytes of contain
 
 To deploy reliably in DDIL conditions, the distribution artifact must bundle code, configuration, images, and validation metadata into a single immutable payload:
 
-*   **Self-Contained OCI Packages:** Open Container Initiative (OCI) registries are not just for container layers. Packaging declarative manifests, Helm charts, and container tarballs into unified OCI bundles guarantees that every dependency needed to boot an edge capability arrives in a single transaction.
-*   **Embedded Local Registries:** Edge nodes run lightweight, embedded container registries (such as Distribution or Zarf's internal registry) directly on the local cluster control plane. Workloads pull images from `127.0.0.1:5000` rather than reaching out to enterprise registries like Iron Bank or Harbor.
+*   **Self-Contained OCI Packages:** [OCI Registries](https://github.com/opencontainers/distribution-spec) are not just for container layers. Packaging declarative manifests, Helm charts, and container tarballs into unified OCI bundles guarantees that every dependency needed to boot an edge capability arrives in a single transaction.
+*   **Embedded Local Registries:** Edge nodes run lightweight, embedded container registries (such as CNCF [Distribution](https://distribution.github.io/distribution/) or [Zarf's](https://zarf.dev/) internal registry) directly on the local cluster control plane. Workloads pull images from `127.0.0.1:5000` rather than reaching out to enterprise registries like [DoD Iron Bank](https://p1.dso.mil/services/iron-bank) or [Harbor](https://goharbor.io/).
 *   **Peer-to-Peer & Tactical Transport Sync:** When bandwidth is available, delta-synchronization tools (e.g., rsync-over-TACSAT or mesh replication) push only the binary diffs of changed layers rather than whole images.
 
 ### Local Reconcilers and Policy Engines
 
 Standard enterprise GitOps treats the central Git repository as the active controller. At the edge, the local cluster must treat the embedded local mirror as its source of truth:
 
-1.  **Local Git / OCI Sources:** GitOps operators (like Flux) are configured to watch local OCI repositories or on-node bare Git repos.
+1.  **Local Git / OCI Sources:** GitOps operators (like [Flux](https://fluxcd.io/)) are configured to watch local OCI repositories or on-node bare Git repos.
 2.  **Autonomous Drift Correction:** If an edge pod crashes or a local operator alters a configuration during a contingency, the local reconciliation loop restores the desired state without remote intervention.
-3.  **Disconnected Policy Enforcement:** Security policies written in [Policy-as-Code](/2026-02-05-policy-as-code-devsecops/) engines (such as Open Policy Agent or Kyverno) execute against local Admission Controllers, verifying digital signatures (Cosign) using embedded public keys before any container runs.
+3.  **Disconnected Policy Enforcement:** Security policies written in [Policy-as-Code](/2026-02-05-policy-as-code-devsecops/) engines (such as [Open Policy Agent](https://www.openpolicyagent.org/) or [Kyverno](https://kyverno.io/)) execute against local Admission Controllers, verifying digital signatures using [Cosign](https://docs.sigstore.dev/cosign/overview/) with embedded public keys before any container runs.
 
 ### Bridging Compliance: The Store-and-Forward Telemetry Loop
 
-The challenge of deploying software in defense environments is that every update must generate compliance artifacts under NIST SP 800-53 and DoD cATO requirements.
+The challenge of deploying software in defense environments is that every update must generate compliance artifacts under [NIST SP 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) and DoD cATO requirements.
 
 When an edge cluster operates in offline mode:
 *   Audit logs, vulnerability scans from local engines, and mutation records are written to a cryptographically tamper-evident local log store.
-*   Workload identities verified through [SPIFFE/SPIRE](/2026-07-26-tactical-data-sharing-coalition-icam/) sign local audit records.
+*   Workload identities verified through [SPIFFE/SPIRE](https://spiffe.io/) (explored in our [Tactical Data Sharing](/2026-07-26-tactical-data-sharing-coalition-icam/) guide) sign local audit records.
 *   When a data link is re-established, an asynchronous store-and-forward proxy drains the queued telemetry upstream, closing the loop with the enterprise security operations center without blocking real-time mission execution.
 
 ### The Bottom Line

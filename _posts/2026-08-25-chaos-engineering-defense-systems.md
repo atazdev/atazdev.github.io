@@ -17,20 +17,20 @@ tags: [defense, devsecops, chaos-engineering, reliability, kubernetes, cato, zer
   <figcaption>CHAOS_SCENARIO: EW_JAMMING_SIMULATION — PARTITION_STATE: ACTIVE — FAILOVER_LATENCY: 420ms — SYSTEM_STATE: RECOVERED</figcaption>
 </figure>
 
-**The Big Picture:** In commercial tech, an unexpected server outage causes dropped shopping carts or delayed notifications. In defense mission systems, an unhandled network partition or failover crash during a multi-domain operation can result in mission failure or loss of life. Yet traditional defense testing still relies on scheduled, manual "smoke tests" conducted in pristine lab environments. Chaos engineering brings continuous, automated fault injection directly into defense CI/CD pipelines to mathematically prove system survivability before code ever deploys to the field.
+**The Big Picture:** In commercial tech, an unexpected server outage causes dropped shopping carts or delayed notifications. In defense mission systems, an unhandled network partition or failover crash during a multi-domain operation can result in mission failure or loss of life. Yet traditional defense testing still relies on scheduled, manual "smoke tests" conducted in pristine lab environments. [Chaos engineering](https://principlesofchaos.org/) brings continuous, automated fault injection directly into defense CI/CD pipelines to mathematically prove system survivability before code ever deploys to the field.
 
 ---
 
 ### Why It Matters
 
-High-assurance defense systems must be anti-fragile: they must not only withstand unexpected failures, but thrive and adapt when underlying infrastructure collapses. If your Kubernetes cluster at the tactical edge has never experienced an unexpected radio jam, power loss, or packet corruption during automated testing, you do not have a resilient architecture—you have an untested assumption.
+High-assurance defense systems must be anti-fragile: they must not only withstand unexpected failures, but thrive and adapt when underlying infrastructure collapses. If your [Kubernetes](https://kubernetes.io/) cluster at the tactical edge has never experienced an unexpected radio jam, power loss, or packet corruption during automated testing, you do not have a resilient architecture—you have an untested assumption.
 
 ### The Details
 
 - **Hope is not a reliability strategy:** Relying on standard unit and integration tests verifies that code works under ideal conditions; chaos engineering verifies that systems survive real-world chaos.
-- **Simulating tactical degradation in software:** Tools like Chaos Mesh and LitmusChaos inject synthetic packet loss, high latency, DNS failures, and node panics into staging environments to replicate electronic warfare (EW) conditions.
+- **Simulating tactical degradation in software:** Cloud-native tools like CNCF [Chaos Mesh](https://chaos-mesh.org/) and [LitmusChaos](https://litmuschaos.io/) inject synthetic packet loss, high latency, DNS failures, and node panics into staging environments to replicate electronic warfare (EW) conditions.
 - **Failover must be verified against strict SLAs:** Target-tracking and C2 services must fail over to redundant replicas within sub-second recovery thresholds without losing in-flight state.
-- **Chaos experiments produce quantifiable cATO evidence:** Automated chaos experiment runs generate auditable proof of fault tolerance, satisfying key NIST SP 800-53 contingency and reliability controls for [Continuous ATO (cATO)](/2026-07-12-continuous-ato-in-practice/).
+- **Chaos experiments produce quantifiable cATO evidence:** Automated chaos experiment runs generate auditable proof of fault tolerance, satisfying key [NIST SP 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) contingency and reliability controls for [Continuous ATO (cATO)](/2026-07-12-continuous-ato-in-practice/).
 
 ---
 
@@ -57,7 +57,7 @@ In the real world, tactical environments are defined by [DDIL conditions](/2026-
 |                                                   v                     |
 |                                +-------------------------------------+  |
 |                                | Automated Chaos Controller          |  |
-|                                | (Chaos Mesh / Litmus)               |  |
+|                                | (Chaos Mesh / LitmusChaos)          |  |
 |                                +------------------+------------------+  |
 |                                                   |                     |
 |                   +-------------------------------+------------------+  |
@@ -101,7 +101,7 @@ To build a meaningful defense chaos suite, engineering teams design experiments 
 
 ### Wiring Chaos Evidence into Continuous ATO
 
-Under NIST SP 800-53 Rev 5, defense systems must demonstrate compliance across several contingency and integrity families:
+Under [NIST SP 800-53 Rev 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final), defense systems must demonstrate compliance across several contingency and integrity families aligned with the [DoD Enterprise DevSecOps Reference Design](https://dodcio.defense.gov/Portals/0/Documents/Library/DoD-Enterprise-DevSecOps-Ref-Design-v2.0.pdf):
 * **CP-10 (Information System Recovery & Reconstitution):** Verifying that backup components restore mission capabilities within defined recovery time objectives (RTO).
 * **SC-5 (Denial-of-Service Protection):** Ensuring that resource exhaustion in one microservice does not cascade to the entire enclave.
 * **SI-13 (Predictable Failure States):** Proving that software fails safely without exposing sensitive memory or credentials in unhandled exception dumps.
