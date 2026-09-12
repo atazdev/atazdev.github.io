@@ -11,6 +11,7 @@ toc: false
 resource-index: true
 resource-theme: market-toolkit-resource
 tags: [stocks, trading, investing, finance, tools]
+last-updated: 2026-09-12
 ---
 
 **The Big Picture:** Retail traders lose to professionals on data before they lose on judgment. This toolkit collects the institutional-grade research, charting, and data tools that close that gap.
@@ -75,7 +76,7 @@ Over the years I've amassed a large collection of links, resources, tools and so
     <a href="https://www.investopedia.com/investing-essentials-4689754"><span>Education</span><strong>Investopedia Investing Essentials</strong></a>
     <a href="https://www.finviz.com"><span>Research</span><strong>Finviz</strong></a>
     <a href="https://www.tradingview.com"><span>Charts</span><strong>TradingView</strong></a>
-    <a href="https://www.sec.gov/edgar/searchedgar/companysearch"><span>Filings</span><strong>SEC EDGAR</strong></a>
+    <a href="https://www.sec.gov/edgar/searchedgar/companysearch"><span>Filings</span><strong>[SEC EDGAR API](https://www.sec.gov/edgar/sec-api-documentation)</strong></a>
     <a href="https://www.earningswhispers.com/"><span>Calendar</span><strong>Earnings Whispers</strong></a>
     <a href="https://api.tiingo.com/"><span>API</span><strong>Tiingo Market Data API</strong></a>
   </div>

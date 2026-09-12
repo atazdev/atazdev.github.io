@@ -7,7 +7,7 @@ category: ai
 series: "AI Governance"
 summary: "How AI models actually get authorized in the DoD — the Assess Only construct, the coming NIST 800-53 AI overlays, and the re-authorization trigger problem nobody has solved."
 featured: true
-last-updated: 2026-07-12
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-ato-ai-systems.png
 tags: [ai, ato, rmf, devsecops, compliance, dod, nist, cdao, authorization, governance]
 ---
@@ -39,7 +39,7 @@ The RMF, as laid out in NIST SP 800-37, rests on an assumption so basic it's nev
 
 **1. Behavior changes without a deployment.** A fraud detection model scoring live traffic degrades as the traffic distribution shifts under it. Nothing was deployed. No commit exists to review. The system's operational behavior on Tuesday is measurably different from Monday's, and no traditional change control process fired.
 
-**2. The training data is attack surface.** NIST's adversarial ML taxonomy (AI 100-2) catalogs poisoning, evasion, extraction, and inference attacks — none of which map cleanly onto a control catalog written for software vulnerabilities. A poisoned dataset passes every SAST scan you point at it. Your Trivy output is green while the model learns a backdoor.
+**2. The training data is attack surface.** NIST's adversarial ML taxonomy (AI 100-2) catalogs poisoning, evasion, extraction, and inference attacks — none of which map cleanly onto a control catalog written for software vulnerabilities. A poisoned dataset passes every SAST scan you point at it. Your [Trivy](https://trivy.dev/) output is green while the model learns a backdoor.
 
 **3. Retraining is redeployment with worse visibility.** When a model retrains on fresh data, you've shipped a new system component. But unlike a code deployment, the diff is millions of weight changes no human can review. The artifact changed; the reviewable surface didn't.
 
@@ -57,7 +57,7 @@ Assess Only is an existing RMF construct for components that operate inside an a
 
 The elegance is that it reuses machinery that already exists. The weakness is the same thing: Assess Only was designed for components that don't change much. A model retrained monthly generates a new body of evidence twelve times a year, and the guide leans on programs working out control gates with their AO — consistent with the DevSecOps Playbook — rather than prescribing what those gates are.
 
-The guide also doesn't stand alone. It points programs at the DoD Cybersecurity Knowledge Service, the DevSecOps Playbook, and CDAO's Responsible AI Toolkit — which means the actual authorization workflow for an AI program is assembled from at least four documents, none of which is authoritative over the others.
+The guide also doesn't stand alone. It points programs at the DoD Cybersecurity Knowledge Service, the DevSecOps Playbook, and [CDAO Swarms](/2026-07-01-cdao-swarms-kill-chain-microservices/)'s Responsible AI Toolkit — which means the actual authorization workflow for an AI program is assembled from at least four documents, none of which is authoritative over the others.
 
 ### The NIST Layer: AI RMF and the 800-53 Overlays
 
@@ -111,7 +111,7 @@ In practice, programs are solving this contractually with their AO: negotiate dr
 
 The FY2026 NDAA directs the DoD to develop an AI/ML cybersecurity and physical security framework and — the consequential part — to incorporate it into **DFARS and the CMMC program**. Analysts are already calling it "CMMC for AI," and the shape is familiar: contractors developing, deploying, storing, or hosting AI/ML for the Department will have to demonstrate framework compliance as a condition of contract.
 
-If you watched the CMMC 2.0 rulemaking cycle, you know how this plays out. The framework gets defined, the DFARS clause appears, primes flow the requirement down, and the DIB spends two years retrofitting evidence infrastructure it could have built incrementally. The organizations that extended their cATO pipelines to model artifacts early will treat the new clause as a reporting format change. Everyone else gets an unfunded compliance program.
+If you watched the [CMMC 2.0](/2026-04-29-cmmc-2-in-practice/) rulemaking cycle, you know how this plays out. The framework gets defined, the DFARS clause appears, primes flow the requirement down, and the DIB spends two years retrofitting evidence infrastructure it could have built incrementally. The organizations that extended their cATO pipelines to model artifacts early will treat the new clause as a reporting format change. Everyone else gets an unfunded compliance program.
 
 ### Where AI Programs Will Fail
 
@@ -119,7 +119,7 @@ If you watched the CMMC 2.0 rulemaking cycle, you know how this plays out. The f
 
 **2. Evidence without thresholds.** Logging eval metrics isn't a control. Evidence becomes admissible when it's compared against a threshold the AO accepted. Dashboards full of unjudged metrics give the AO data and no decision.
 
-**3. Skipping data provenance.** The training pipeline is part of the authorization boundary. Programs that document the serving infrastructure but not data lineage have an unassessed supply chain sitting upstream of every prediction — the AI equivalent of shipping without an SBOM.
+**3. Skipping data provenance.** The training pipeline is part of the authorization boundary. Programs that document the serving infrastructure but not data lineage have an unassessed supply chain sitting upstream of every prediction — the AI equivalent of shipping without an [SBOM](/2026-06-20-sbom-dib-supply-chain/).
 
 **4. Waiting for COSAIS.** The overlays land in draft in Q3 2026 and finalize into 2027. Programs deferring their control tailoring until then lose a year they could have spent building the evidence pipeline the overlays will demand anyway. The overlay changes the mapping, not the machinery.
 

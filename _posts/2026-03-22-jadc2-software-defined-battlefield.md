@@ -1,12 +1,13 @@
-﻿---
+---
 layout: post
-title: "JADC2 and the Software-Defined Battlefield"
+title: "[JADC2](https://defensescoop.com/tag/jadc2/) and the Software-Defined Battlefield"
 subtitle: "Joint All-Domain Command & Control isn't a weapons program — it's a distributed systems problem"
 date: 2026-03-22
 category: architecture
 series: "Software-Defined Operations"
 share-img: /assets/img/hero/hero-jadc2.png
 tags: [jadc2, defense, software-defined-warfare, devops, architecture, ai, military]
+last-updated: 2026-09-12
 ---
 
 <figure class="post-figure">
@@ -34,7 +35,7 @@ Wars are won on decision latency. Turning fragile, linear kill chains into self-
 
 The deciding variable in modern warfare isn't radar range or missile speed — it's decision latency. The 1990s built networked warfare; adversaries responded by building capabilities specifically to blind and isolate those networks. **Joint All-Domain Command and Control (JADC2)** is the answer: a framework for connecting sensors and shooters across land, sea, air, space, and cyber into a single coherent operational picture.
 
-JADC2 is fundamentally a **software architecture problem**. It requires a "Data Fabric" that normalizes information across service-specific silos using modern cloud principles: event-driven architecture, API-first interoperability, and Zero Trust security.
+JADC2 is fundamentally a **software architecture problem**. It requires a "Data Fabric" that normalizes information across service-specific silos using modern cloud principles: event-driven architecture, API-first interoperability, and [Zero Trust Architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) security.
 
 ### From Kill Chains to Kill Webs
 
@@ -46,9 +47,9 @@ Experiments in programs like the Air Force’s **ABMS** and the Army’s **Proje
 
 Engineers building JADC2-aligned systems are utilizing the same toolkit as commercial cloud architects, adapted for physically hostile and electronically contested environments:
 *   **Platform One / Iron Bank:** Providing hardened, K8s-based DevSecOps foundations.
-*   **Policy as Code (OPA):** Enforcing security rules on disconnected edge nodes where manual review is impossible.
-*   **GitOps (Flux/ArgoCD):** Ensuring declarative state convergence for systems with intermittent connectivity.
-*   **Zero Trust (NIST SP 800-207):** Replacing perimeter security with continuous, identity-based authorization.
+*   **[Policy-as-Code](/2026-02-05-policy-as-code-devsecops/) ([Open Policy Agent](https://www.openpolicyagent.org/)):** Enforcing security rules on disconnected edge nodes where manual review is impossible.
+*   **GitOps ([Flux CD](https://fluxcd.io/)/ArgoCD):** Ensuring declarative state convergence for systems with intermittent connectivity.
+*   **Zero Trust ([NIST SP 800-207](https://csrc.nist.gov/publications/detail/sp/800-207/final)):** Replacing perimeter security with continuous, identity-based authorization.
 
 ### The Hard Problems Ahead
 

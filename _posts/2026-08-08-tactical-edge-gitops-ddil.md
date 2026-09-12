@@ -7,7 +7,7 @@ category: architecture
 series: "Software-Defined Operations"
 summary: "Operating Kubernetes at the tactical edge requires surviving Disconnected, Intermittent, and Low-Bandwidth (DDIL) conditions. Here is how edge GitOps controllers, local OCI artifact caches, and offline policy reconciliation replace fragile cloud-dependent pipelines."
 featured: true
-last-updated: 2026-08-08
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-tactical-edge-gitops.png
 tags: [defense, gitops, tactical-edge, ddil, kubernetes, flux, zarf, devsecops, zero-trust, cato]
 ---

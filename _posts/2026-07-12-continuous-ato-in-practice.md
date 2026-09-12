@@ -5,9 +5,9 @@ subtitle: "The traditional Authority to Operate process is a compliance bottlene
 date: 2026-07-12
 category: devsecops
 series: "Secure Delivery"
-summary: "A technical breakdown of Continuous ATO — what it actually requires, how OSCAL enables machine-readable evidence, and where most DoD programs fail to sustain it."
+summary: "A technical breakdown of Continuous ATO — what it actually requires, how [NIST OSCAL Standard](https://pages.nist.gov/OSCAL/) enables machine-readable evidence, and where most DoD programs fail to sustain it."
 featured: true
-last-updated: 2026-07-12
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-continuous-ato.png
 tags: [ato, devsecops, compliance, security, dod, nist, oscal, platform-one, cmmc, authorization]
 ---
@@ -68,7 +68,7 @@ Platform One — the DoD's DevSecOps platform — operationalized this framework
 
 The practical implication: instead of a security engineer manually updating a 400-page Word document after every infrastructure change, the SSP is generated from Infrastructure-as-Code annotations and pipeline metadata. A Terraform module that provisions an S3 bucket with encryption-at-rest can assert — in machine-readable OSCAL — that it satisfies SC-28 (Protection of Information at Rest). The assessment tool reads the assertion and validates it against the actual deployed configuration.
 
-Tools supporting OSCAL include **Trestle** (IBM's open-source OSCAL SDK), **Lula** (DoD's compliance validation tool that evaluates Kubernetes configurations against OSCAL-defined controls), and **eMASS** (the DoD's enterprise OSCAL consumer that ingests assessment results for AO review).
+Tools supporting OSCAL include **Trestle** (IBM's open-source OSCAL SDK), **Lula** (DoD's compliance validation tool that evaluates [Kubernetes](https://kubernetes.io/) configurations against OSCAL-defined controls), and **eMASS** (the DoD's enterprise OSCAL consumer that ingests assessment results for AO review).
 
 ### The Four Technical Layers
 
@@ -86,7 +86,7 @@ The critical design principle: every pipeline gate must produce a structured evi
 
 #### 2. Evidence Collection and Control Mapping
 
-The output of every automated control check must be mapped to a specific NIST SP 800-53 or SP 800-171 control. This mapping — connecting a technical test result to a compliance control objective — is what makes automated evidence admissible for AO review.
+The output of every automated control check must be mapped to a specific [NIST SP 800-53 Rev 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) or SP 800-171 control. This mapping — connecting a technical test result to a compliance control objective — is what makes automated evidence admissible for AO review.
 
 Lula operationalizes this in Kubernetes environments by defining **LulaValidations**: YAML-configured checks that query the cluster state and evaluate whether a specific control is satisfied. A LulaValidation for AC-3 (Access Enforcement) might query all ClusterRoleBindings, verify that no wildcards are present in production namespaces, and emit an OSCAL-formatted finding.
 

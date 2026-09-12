@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "SBOM in the Defense Industrial Base"
 subtitle: "EO 14028 mandated it. CISA defined it. Contractors are still figuring out how to actually deliver it."
@@ -7,7 +7,7 @@ category: cybersecurity
 series: "Secure Delivery"
 summary: "A practical breakdown of SBOM requirements, format standards, toolchain options, and where DIB contractors consistently fall short when the contracting officer asks for one."
 featured: true
-last-updated: 2026-06-20
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-runtime-governance.png
 tags: [sbom, supply-chain, defense, cybersecurity, nist, dod, dib, devsecops, cmmc]
 ---
@@ -17,7 +17,7 @@ tags: [sbom, supply-chain, defense, cybersecurity, nist, dod, dib, devsecops, cm
   <figcaption>SBOM_STATUS: DEPENDENCY_GRAPH_INCOMPLETE — PROVENANCE_CHAIN_UNVERIFIED</figcaption>
 </figure>
 
-**The Big Picture:** Executive Order 14028 turned Software Bills of Materials into a mandatory federal procurement requirement — contractors must deliver a machine-readable inventory of their entire software supply chain.
+**The Big Picture:** [Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/) turned Software Bills of Materials into a mandatory federal procurement requirement — contractors must deliver a machine-readable inventory of their entire software supply chain.
 
 ---
 
@@ -27,7 +27,7 @@ Log4Shell proved the threat lives in dependencies you didn't know you had. Progr
 ### The Details
 - **Required Telemetry:** CISA requires SBOMs to document supplier names, component names, exact version strings, dependencies, and SHA-based hashes.
 - **Industry Formats:** SPDX (Linux Foundation standard, ISO-certified) and CycloneDX (OWASP standard, security-first, supports VEX documents) are the primary format specifications.
-- **Tooling Stack:** Syft scans build directories to output raw lists; Grype correlates lists against current CVE databases; Cosign signs and distributes outputs.
+- **Tooling Stack:** [Anchore Syft](https://github.com/anchore/syft) scans build directories to output raw lists; Grype correlates lists against current CVE databases; [Sigstore Cosign](https://edu.chainguard.dev/open-source/sigstore/cosign/) signs and distributes outputs.
 
 ---
 
@@ -80,13 +80,13 @@ An SBOM pipeline has three stages: generation, enrichment, and distribution. Mos
 - **[cdxgen](https://github.com/CycloneDX/cdxgen)** — open source, CycloneDX-native, strong support for polyglot repos and language-specific package managers that Syft sometimes misses.
 - **[FOSSA](https://fossa.com)** and **[Snyk](https://snyk.io)** — commercial, add license compliance workflows and continuous monitoring. Common in enterprises with legal requirements around open source licensing.
 
-**Enrichment** is where most pipelines stop prematurely. A raw SBOM from Syft is a snapshot of components with version strings. An actionable SBOM correlates those versions against known vulnerability databases — [NVD](https://nvd.nist.gov), [OSV](https://osv.dev), [GitHub Advisory](https://github.com/advisories) — and produces either a scored vulnerability list or a VEX document asserting which known vulnerabilities are not exploitable in this context. **[Grype](https://github.com/anchore/grype)** (Anchore), **[OWASP Dependency-Track](https://dependencytrack.org)**, and **Trivy** all perform this enrichment step.
+**Enrichment** is where most pipelines stop prematurely. A raw SBOM from Syft is a snapshot of components with version strings. An actionable SBOM correlates those versions against known vulnerability databases — [NVD](https://nvd.nist.gov), [OSV](https://osv.dev), [GitHub Advisory](https://github.com/advisories) — and produces either a scored vulnerability list or a VEX document asserting which known vulnerabilities are not exploitable in this context. **[Grype](https://github.com/anchore/grype)** (Anchore), **[OWASP Dependency-Track](https://dependencytrack.org)**, and **[Aqua Trivy](https://trivy.dev/)** all perform this enrichment step.
 
 **Distribution** — securely delivering SBOMs to customers alongside software releases — is operationally immature across most of the DIB. The emerging standard is embedding SBOMs as OCI artifacts attached to container image digests (using tools like **[cosign](https://github.com/sigstore/cosign)** and the [ORAS spec](https://oras.land)). For traditional software deliverables, contractual delivery alongside the release package is still common and acceptable.
 
 ### The CMMC Connection
 
-**NIST SP 800-171 Rev 3** — incorporated in the CMMC 2.0 final rule (December 2024) — added supply chain risk management controls that directly reference SBOM practices. Control **SR.1.001** requires identifying, assessing, and managing supply chain risks. **SR.2.002** requires establishing and managing a provenance record for the software, hardware, and services used in organizational systems.
+**NIST SP 800-171 Rev 3** — incorporated in the [CMMC 2.0](/2026-04-29-cmmc-2-in-practice/) final rule (December 2024) — added supply chain risk management controls that directly reference SBOM practices. Control **SR.1.001** requires identifying, assessing, and managing supply chain risks. **SR.2.002** requires establishing and managing a provenance record for the software, hardware, and services used in organizational systems.
 
 Assessors interpreting these controls look for evidence that the organization knows what software components are running in its CUI environment and has a mechanism to respond when vulnerabilities are identified in those components. A maintained SBOM pipeline, coupled with a vulnerability tracking system, satisfies this evidence requirement in a way that manual software inventories do not. Organizations that lack SBOMs will find SR controls among the hardest to demonstrate during a C3PAO assessment.
 

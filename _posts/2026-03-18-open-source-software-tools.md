@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "The Power of Open Source Software Tools"
 subtitle: "Why modern development relies on the open source ecosystem and how to get the most out of it"
@@ -7,6 +7,7 @@ category: development
 series: "Resource Guides"
 summary: "How open source tools shape modern development workflows and technical capability."
 tags: [open-source, software-development, programming, tools, community]
+last-updated: 2026-09-12
 ---
 
 **The Big Picture:** Open source software is the foundational infrastructure of modern engineering — from container orchestration to telemetry, the tools the industry standardizes on are built in the open.
@@ -14,7 +15,7 @@ tags: [open-source, software-development, programming, tools, community]
 ---
 
 ### Why It Matters
-Building entirely on closed stacks means vendor lock-in, slower feedback loops, and a smaller hiring pool — every candidate knows Kubernetes, few know your vendor's orchestrator. Community-vetted OSS tooling is tested at a scale no single company can replicate internally.
+Building entirely on closed stacks means vendor lock-in, slower feedback loops, and a smaller hiring pool — every candidate knows [Kubernetes](https://kubernetes.io/), few know your vendor's orchestrator. Community-vetted OSS tooling is tested at a scale no single company can replicate internally.
 
 ### The Details
 - **Git & Containers:** Git handles version control and declarative intent; Docker and Kubernetes represent the standards for container orchestration.

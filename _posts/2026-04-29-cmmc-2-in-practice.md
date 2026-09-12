@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
 title: "CMMC 2.0 in Practice"
 subtitle: "The assessment framework that determines whether defense contractors win or lose DoD contracts — and what it actually requires"
 date: 2026-04-29
 category: cybersecurity
 series: "Secure Delivery"
-summary: "A practical breakdown of CMMC 2.0 levels, NIST SP 800-171 control domains, and what contractors must demonstrate to pass a C3PAO assessment."
+summary: "A practical breakdown of CMMC 2.0 levels, [NIST SP 800-171 Rev 3](https://csrc.nist.gov/publications/detail/sp/800-171/rev-3/final) control domains, and what contractors must demonstrate to pass a C3PAO assessment."
 featured: true
-last-updated: 2026-04-29
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-zero-trust-ai.png
 tags: [cmmc, compliance, defense, cybersecurity, nist, dod, dib, devsecops]
 ---
@@ -47,7 +47,7 @@ CMMC 2.0 replaced the original five-level model in 2021, consolidating it into t
 | **Level 2** | CUI handlers — the majority of the DIB | NIST SP 800-171 (110 controls) | Triennial C3PAO assessment or self-assessment |
 | **Level 3** | High-priority CUI, critical programs | NIST SP 800-172 (110 + 24 enhanced controls) | Government-led assessment |
 
-Most defense contractors fall under **Level 2**. The operative document is **NIST SP 800-171**, and a third-party assessor organization (**C3PAO**) certified by the Cyber AB conducts the triennial audit. There is no partial credit on Level 2: deficiencies require a **Plan of Action & Milestones (POA&M)** with a credible remediation timeline to maintain contract eligibility during remediation.
+Most defense contractors fall under **Level 2**. The operative document is **NIST SP 800-171**, and a third-party assessor organization (**C3PAO**) certified by the [Cyber AB](https://cyberab.org/) conducts the triennial audit. There is no partial credit on Level 2: deficiencies require a **Plan of Action & Milestones (POA&M)** with a credible remediation timeline to maintain contract eligibility during remediation.
 
 ### The 14 Control Domains
 
@@ -87,7 +87,7 @@ AU controls require logging of user activity, privileged commands, and CUI acces
 Cloud providers (AWS GovCloud, Azure Government) satisfy many controls at the infrastructure layer. But CMMC requires the organization to document which controls are inherited, from which provider, and under what shared responsibility model. "We use GovCloud" is not sufficient — the SSP must map inherited controls explicitly.
 
 **4. Software supply chain gaps.**
-SR controls (from NIST SP 800-171 Rev 3, added in the 2024 rulemaking) require supply chain risk management: SBOM documentation, vendor vetting, and controls against counterfeit components. Organizations that have not updated their SSP for Rev 3 additions enter assessments with unmitigated gaps.
+SR controls (from NIST SP 800-171 Rev 3, added in the 2024 rulemaking) require supply chain risk management: [SBOM in the DIB](/2026-06-20-sbom-dib-supply-chain/) documentation, vendor vetting, and controls against counterfeit components. Organizations that have not updated their SSP for Rev 3 additions enter assessments with unmitigated gaps.
 
 ### Connecting CMMC to Zero Trust
 

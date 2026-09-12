@@ -7,7 +7,7 @@ category: devsecops
 series: "Secure Delivery"
 summary: "Defense architectures cannot discover failover bugs during an active mission. Here is how automated chaos experiments, simulated electronic warfare partitions, and continuous fault injection in CI/CD staging pipelines validate mission-critical resilience."
 featured: true
-last-updated: 2026-08-25
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-chaos-engineering-defense.png
 tags: [defense, devsecops, chaos-engineering, reliability, kubernetes, cato, zero-trust, ddil, resiliency, testing]
 ---
@@ -30,7 +30,7 @@ High-assurance defense systems must be anti-fragile: they must not only withstan
 - **Hope is not a reliability strategy:** Relying on standard unit and integration tests verifies that code works under ideal conditions; chaos engineering verifies that systems survive real-world chaos.
 - **Simulating tactical degradation in software:** Cloud-native tools like CNCF [Chaos Mesh](https://chaos-mesh.org/) and [LitmusChaos](https://litmuschaos.io/) inject synthetic packet loss, high latency, DNS failures, and node panics into staging environments to replicate electronic warfare (EW) conditions.
 - **Failover must be verified against strict SLAs:** Target-tracking and C2 services must fail over to redundant replicas within sub-second recovery thresholds without losing in-flight state.
-- **Chaos experiments produce quantifiable cATO evidence:** Automated chaos experiment runs generate auditable proof of fault tolerance, satisfying key [NIST SP 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) contingency and reliability controls for [Continuous ATO (cATO)](/2026-07-12-continuous-ato-in-practice/).
+- **Chaos experiments produce quantifiable [Continuous ATO (cATO)](/2026-07-12-continuous-ato-in-practice/) evidence:** Automated chaos experiment runs generate auditable proof of fault tolerance, satisfying key [NIST SP 800-53](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) contingency and reliability controls for [Continuous ATO (cATO)](/2026-07-12-continuous-ato-in-practice/).
 
 ---
 

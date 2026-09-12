@@ -1,12 +1,13 @@
-﻿---
+---
 layout: post
-title: "Zero Trust Meets the AI Stack"
+title: "[DoD Zero Trust Strategy](/2026-04-25-dod-zero-trust-strategy/) Meets the AI Stack"
 subtitle: "Why your ZT architecture must now account for AI systems, model workflows, and the 2026 National Cyber Strategy"
 date: 2026-03-27
 category: cybersecurity
 series: "AI Governance"
 share-img: /assets/img/hero/hero-zero-trust-ai.png
 tags: [zero-trust, cybersecurity, ai, devsecops, defense, policy, federal, compliance]
+last-updated: 2026-09-12
 ---
 
 <figure class="post-figure">
@@ -52,7 +53,7 @@ Every model version must be cryptographically signed, traceable to a known train
 AI agents must operate under the strictest application of least privilege. Permissions should be scoped to specific repositories or tasks and automatically revoked upon completion. This is a technical implementation of **AC-6 (Least Privilege)** for automated systems.
 
 ### 3. Pipeline Integrity Gates
-The CI/CD pipeline is the last line of defense. Organizations should implement AI-specific **Policy as Code (OPA)** gates that require human approval for any AI-authored changes to security controls or infrastructure manifests.
+The CI/CD pipeline is the last line of defense. Organizations should implement AI-specific **[Policy as Code](https://www.openpolicyagent.org/) (OPA)** gates that require human approval for any AI-authored changes to security controls or infrastructure manifests.
 
 ### 4. Technical Data Governance
 AI data governance requires four-part lineage tracking:
@@ -63,6 +64,6 @@ AI data governance requires four-part lineage tracking:
 
 ### The Bottom Line
 
-If your AI system touches **Controlled Unclassified Information (CUI)**, it is in scope for your **CMMC 2.0** assessment. Organizations must add AI components to their System Security Plan (SSP), document model provenance as a configuration management (CM) control, and implement agent least privilege as an access control (AC) requirement.
+If your AI system touches **Controlled Unclassified Information (CUI)**, it is in scope for your **[CMMC 2.0](/2026-04-29-cmmc-2-in-practice/) 2.0** assessment. Organizations must add AI components to their System Security Plan (SSP), document model provenance as a configuration management (CM) control, and implement agent least privilege as an access control (AC) requirement.
 
 The framework is clear and the tooling (SLSA, OPA, MLflow) is mature. The choice is whether to build this compliance in now or respond to an audit finding later.

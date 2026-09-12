@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
-title: "GitOps in the Age of AI and Modern Warfare"
+title: "[GitOps](https://open-gitops.dev/) in the Age of AI and Modern Warfare"
 subtitle: "Why declarative infrastructure management is critical for autonomous systems and rapid deployment"
 date: 2026-01-27
 category: gitops
 series: "Secure Delivery"
 summary: "Why GitOps matters for reproducible infrastructure, automation, and accountable software delivery."
 featured: true
-last-updated: 2026-04-25
+last-updated: 2026-09-12
 share-img: /assets/img/social-secure-delivery.svg
 tags: [gitops, devops, ai, infrastructure, defense, automation]
 ---
@@ -21,7 +21,7 @@ You cannot keep humans accountable for thousands of distributed devices by hand.
 
 ### The Details
 - **Declarative Operations:** Defines *what* the system should look like rather than writing manual deployment scripts.
-- **Automated Reconciliation:** Tools like ArgoCD or Flux continually pull the actual system state back toward the Git config, so drift gets corrected instead of accumulating.
+- **Automated Reconciliation:** Tools like ArgoCD or [Flux CD](https://fluxcd.io/) continually pull the actual system state back toward the Git config, so drift gets corrected instead of accumulating.
 - **Cryptographic Provenance:** Enforces signed Git commits to verify identity and auth before changes sync to air-gapped networks.
 
 ---

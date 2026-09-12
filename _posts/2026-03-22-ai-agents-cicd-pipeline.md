@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "AI Agents in the CI/CD Pipeline"
 subtitle: "When the developer committing code is an AI, your pipeline stops being a convenience and becomes a governance layer"
@@ -9,6 +9,7 @@ summary: "How AI agents change the assumptions behind CI/CD pipelines, review ga
 featured: true
 share-img: /assets/img/hero/hero-ai-agents-cicd.png
 tags: [ai, cicd, devops, automation, gitops, devsecops, agents, security]
+last-updated: 2026-09-12
 ---
 
 <figure class="post-figure">
@@ -46,7 +47,7 @@ An AI-aware pipeline requires four fundamental additions to the standard DevOps 
 Every AI-generated change must be tagged at commit time with metadata: which model produced it, what prompt triggered it, and which human authorized it. Frameworks like **SLSA** and tools like **Sigstore/Gitsign** provide the necessary cryptographic chain of custody.
 
 ### 2. AI-Specific Static Analysis
-Standard SAST tools catch known vulnerabilities, but AI can produce novel, semantically incorrect patterns. Pipelines need **Semgrep** rules tuned for LLM failure modes (hallucinated APIs, incorrect error propagation) and **OPA/Conftest** to enforce architectural invariants.
+Standard SAST tools catch known vulnerabilities, but AI can produce novel, semantically incorrect patterns. Pipelines need **Semgrep** rules tuned for LLM failure modes (hallucinated APIs, incorrect error propagation) and **[Open Policy Agent (OPA)](https://www.openpolicyagent.org/)/Conftest** to enforce architectural invariants.
 
 ### 3. Hallucinated Dependency Detection
 LLMs occasionally invent plausible but non-existent package names—a major risk for *dependency confusion* attacks. Mitigation requires strict lockfile enforcement and treating any unrecognized dependency in an AI PR as a high-priority human review item.
@@ -63,6 +64,6 @@ Organizations must explicitly model three primary agentic risks:
 
 ### The Bottom Line
 
-GitOps is the governance structure that makes AI agents safe at scale. By making Git the single source of truth, every change an agent makes—from spinning up servers to updating manifests—becomes a versioned, reviewable pull request. 
+[GitOps](/2026-01-27-gitops-modern-age/) is the governance structure that makes AI agents safe at scale. By making Git the single source of truth, every change an agent makes—from spinning up servers to updating manifests—becomes a versioned, reviewable pull request. 
 
 The pipelines we built for humans aren't wrong; they are incomplete. The transition to AI-aware CI/CD is the organizational decision to treat agent governance as a first-class engineering concern before something goes wrong.

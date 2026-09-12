@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Runtime Governance for Mission AI"
 subtitle: "When autonomous systems move to the tactical edge, policy has to follow them in real time"
@@ -7,7 +7,7 @@ category: ai
 series: "AI Governance"
 summary: "A runtime governance model for autonomous systems operating beyond traditional approval gates."
 featured: true
-last-updated: 2026-04-25
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-runtime-governance.png
 tags: [ai, defense, zero-trust, policy-as-code, devsecops, edge-computing, governance, autonomy]
 ---
@@ -26,7 +26,7 @@ At the tactical edge, connectivity is intermittent and consequences are high. Au
 
 ### The Details
 - **Context-Aware Scopes:** Permission scopes shift with live mission parameters, data freshness, and confidence levels — authority tracks context, not a static role.
-- **Local Edge Policies:** Policy-as-code bundles (e.g. Open Policy Agent) run locally at the edge, ensuring safety even in degraded/disconnected environments.
+- **Local Edge Policies:** Policy-as-code bundles (e.g. [Open Policy Agent (OPA)](https://www.openpolicyagent.org/)) run locally at the edge, ensuring safety even in degraded/disconnected environments.
 - **Human-in-the-Loop Thresholds:** Programmatically separates recommendation logic from execution permissions, forcing human overrides for high-impact actions.
 
 ---
@@ -46,7 +46,7 @@ A runtime control plane for autonomous behavior is required to manage speed, tru
 ### 1. Context-Aware Authorization
 Authority should belong to the mission context, not just a service account. An agent's permissions should be scoped in real time by mission role, data sensitivity, operational phase, and confidence thresholds.
 
-### 2. Policy-as-Code at the Edge
+### 2. [Policy as Code](/2026-02-05-policy-as-code-devsecops/) at the Edge
 Mission AI needs executable policy bundles that run locally. This "hybrid" model ensures that even when disconnected from a central control plane, the system continues to enforce approved boundaries.
 
 ### 3. Data Provenance and Freshness

@@ -7,7 +7,7 @@ category: architecture
 series: "System Design"
 summary: "A practical index of system design concepts, patterns, and real-world architecture references."
 featured: true
-last-updated: 2026-04-25
+last-updated: 2026-09-12
 share-img: /assets/img/social-architecture.svg
 full-width: true
 toc: false

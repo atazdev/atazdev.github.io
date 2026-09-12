@@ -1,13 +1,13 @@
-﻿---
+---
 layout: post
-title: "The DoD Zero Trust Strategy: Where It Stands"
+title: "The [DoD Zero Trust Strategy](https://dodcio.defense.gov/Zero-Trust/): Where It Stands"
 subtitle: "The Department committed to enterprise Zero Trust by FY2027 — here's what that actually requires and how far it's gotten"
 date: 2026-04-25
 category: cybersecurity
 series: "Secure Delivery"
 summary: "A breakdown of the DoD Zero Trust Strategy's seven pillars, FY2027 targets, and the implementation gaps that still threaten the timeline."
 featured: true
-last-updated: 2026-04-25
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-zero-trust-ai.png
 tags: [zero-trust, dod, defense, cybersecurity, policy, federal, compliance, disa]
 ---
@@ -28,7 +28,7 @@ Nobody has attempted a security migration at this scale — millions of users, t
 The framework classifies security controls across 7 distinct fields:
 - **User:** Enforces phishing-resistant MFA (CAC/PIV) and continuous behavioral monitoring.
 - **Device:** Mandates real-time endpoint threat detection and device health attestation.
-- **Applications & Workloads:** Scopes access to micro-perimeters and requires Software Bills of Materials (SBOM).
+- **Applications & Workloads:** Scopes access to micro-perimeters and requires Software Bills of Materials ([SBOM](/2026-06-20-sbom-dib-supply-chain/)).
 - **Data:** Tagging, labeling, and data loss prevention (DLP) to track Controlled Unclassified Information (CUI).
 - **Network:** Enforces network microsegmentation and encrypted transit (SASE/ZTNA).
 - **Automation & Orchestration:** Integrates security playbooks (SOAR) for automated response.

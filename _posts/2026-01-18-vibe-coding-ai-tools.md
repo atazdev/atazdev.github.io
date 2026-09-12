@@ -1,12 +1,13 @@
 ---
 layout: post
-title: "Essential AI Tools for Vibe Coding"
+title: "Essential AI Tools for [Vibe Coding](/2026-01-18-vibe-coding-explained/)"
 subtitle: "The tools and platforms that actually earn a place in an agentic development workflow"
 date: 2026-01-18
 category: ai
 series: "AI Development"
 summary: "A practical guide to AI-assisted development tools for faster, more fluid software work."
 tags: [ai, tools, development, productivity, coding]
+last-updated: 2026-09-12
 ---
 
 **The Big Picture:** The AI development stack has settled around a small set of agentic IDEs and planning tools. Most of the boilerplate work that used to eat afternoons is now a tab-complete away.
@@ -17,9 +18,9 @@ tags: [ai, tools, development, productivity, coding]
 Teams still hand-writing boilerplate are spending engineering hours on work a model does in seconds. An agentic-first stack moves that time to the parts that need a human: system architecture and user experience.
 
 ### The Details
-- **Cursor (IDE):** The benchmark for AI-first editors right now. Claude and O1 sit directly in the edit loop for tab-completion and inline refactoring.
+- **[Cursor](https://www.cursor.com/) (IDE):** The benchmark for AI-first editors right now. [Claude](https://www.anthropic.com/claude) and O1 sit directly in the edit loop for tab-completion and inline refactoring.
 - **Claude (Anthropic):** My default pair programmer for architectural reviews, long-context refactoring, and checking my logic before I commit to a design.
-- **GitHub Copilot:** The industry-standard autocomplete. Best used to kill boilerplate in whatever editor you already live in.
+- **[GitHub Copilot](https://github.com/features/copilot):** The industry-standard autocomplete. Best used to kill boilerplate in whatever editor you already live in.
 
 ---
 
@@ -37,7 +38,7 @@ The tools worth keeping are the ones that don't interrupt you. By 2026 the stack
 
 Past the editor, a few tools handle specific domains better than the generalists:
 
-*   **v0 (Vercel):** Generative UI for React. Text description or sketch in, working accessible component out.
+*   **[v0.dev](https://v0.dev/) (Vercel):** Generative UI for React. Text description or sketch in, working accessible component out.
 *   **Vercel AI SDK:** The standard framework for building AI features into applications — one API for streaming across multiple models.
 *   **Eraser:** Turns a system design prompt into an architecture diagram you'd actually put in a doc.
 *   **Codeium:** A privacy-focused Copilot alternative with a genuinely usable free tier. Good default for individual developers.

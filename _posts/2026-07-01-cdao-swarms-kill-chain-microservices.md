@@ -7,7 +7,7 @@ category: architecture
 series: "Software-Defined Operations"
 summary: "Why the kill chain is decomposing into services on a data fabric — what Replicator's dissolution into DAWG reveals, how Open DAGIR works as an API contract, and where the microservices metaphor breaks."
 featured: true
-last-updated: 2026-07-01
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-swarm-kill-web.png
 tags: [cdao, jadc2, defense, swarms, autonomy, architecture, microservices, software-defined-warfare, military, ai]
 ---

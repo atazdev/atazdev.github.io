@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Agile in Defense: Modern Software for Enterprise Security"
 subtitle: "Why traditional Agile falls short in defense organizations and how to bridge the gap between speed and governance"
@@ -7,6 +7,7 @@ category: delivery
 series: "Secure Delivery"
 share-img: /assets/img/hero/hero-agile-defense.png
 tags: [agile, defense, enterprise, software-development, project-management, security]
+last-updated: 2026-09-12
 ---
 
 <figure class="post-figure">
@@ -22,7 +23,7 @@ tags: [agile, defense, enterprise, software-development, project-management, sec
 Threats change weekly. Waterfall delivers in 18–36 months. Defense teams must ship secure capability incrementally — without dropping safety or compliance to do it.
 
 ### The Details
-- **Continuous ATO (DevSecOps):** Automates security validation checks (SAST, container scans) directly within the code pipeline, shifting security from a final bottleneck to continuous verification.
+- **[Continuous ATO (cATO)](/2026-07-12-continuous-ato-in-practice/) ([Defense DevSecOps](/2026-07-13-defense-devsecops-toolkit/)):** Automates security validation checks (SAST, container scans) directly within the code pipeline, shifting security from a final bottleneck to continuous verification.
 - **Hardware-Software Decoupling:** Uses digital twins and Hardware Abstraction Layers (HAL) to develop software independently of long-lead physical hardware cycles.
 - **Automated Documentation:** Replaces manual reports with automated API and architecture docs generated directly from source code and Infrastructure-as-Code (IaC).
 

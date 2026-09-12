@@ -7,7 +7,7 @@ category: devsecops
 series: "Secure Delivery"
 summary: "How defense CI/CD pipelines handle secrets without embedding credentials in code — covering dynamic brokers, secrets-as-code, operator patterns, and wiring rotation into continuous authorization evidence."
 featured: true
-last-updated: 2026-07-26
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-secrets-management.png
 tags: [devsecops, security, secrets, vault, sops, platform-one, dod, nist, cicd, zero-trust, compliance]
 ---
@@ -23,12 +23,12 @@ tags: [devsecops, security, secrets, vault, sops, platform-one, dod, nist, cicd,
 
 ### Why It Matters
 
-A secret in a local config file is an authenticator management finding. A secret in git history — even after a force-push — is a finding that may have already been exfiltrated. A secret that never rotates is a finding that compounds daily. Defense pipelines running Continuous ATO (cATO) need secrets management wired directly into their compliance evidence stream.
+A secret in a local config file is an authenticator management finding. A secret in git history — even after a force-push — is a finding that may have already been exfiltrated. A secret that never rotates is a finding that compounds daily. Defense pipelines running Continuous ATO ([Continuous ATO](/2026-07-12-continuous-ato-in-practice/)) need secrets management wired directly into their compliance evidence stream.
 
 ### The Details
 
 - **Static credentials are a structural problem:** The only reliable fix is making dynamic, short-lived credentials the path of least resistance for developers.
-- **Tools solve different layers of the problem:** Secrets brokers (Vault) handle runtime injection; SOPS handles encrypted secrets-as-code; External Secrets Operator (ESO) bridges the two for Kubernetes.
+- **Tools solve different layers of the problem:** Secrets brokers (Vault) handle runtime injection; SOPS handles encrypted secrets-as-code; External Secrets Operator (ESO) bridges the two for [Kubernetes](https://kubernetes.io/).
 - **Enterprise platforms provide the reference architecture:** Hardened baseline platforms handle identity and secrets plumbing so application teams can focus on least-privilege policies.
 - **Rotation events must feed compliance evidence:** A secret that rotates without producing machine-readable evidence does not satisfy Continuous ATO requirements.
 

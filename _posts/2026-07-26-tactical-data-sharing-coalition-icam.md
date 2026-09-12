@@ -7,7 +7,7 @@ category: architecture
 series: "Software-Defined Operations"
 summary: "Why joint and coalition operations fail at the identity boundary — how federated ICAM, dynamic Attribute-Based Access Control (ABAC), and commercial zero trust proxy patterns replace static hardware air-gaps with real-time, policy-enforced data sharing."
 featured: true
-last-updated: 2026-07-26
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-tactical-data-sharing.png
 tags: [defense, zero-trust, icam, interoperability, jadc2, architecture, coalition, security, cots, abac, devsecops]
 ---
@@ -28,7 +28,7 @@ Static network enclaves do not protect sensitive intelligence — they paralyze 
 ### The Details
 
 - **Perimeters create operational friction:** Physical and cryptographic air-gaps build rigid silos. Secure data sharing requires protecting data at the object and API level, not isolating entire networks.
-- **Federated ICAM is essential for combined operations:** Open standard federation (OIDC/SAML2) and workload identity protocols (SPIFFE/SPIRE) allow partner organizations to authenticate using native identity providers while host applications enforce zero-trust authorization locally.
+- **Federated ICAM is essential for combined operations:** Open standard federation (OIDC/SAML2) and workload identity protocols ([SPIFFE](https://spiffe.io/)/[SPIRE](https://spiffe.io/docs/latest/spire-about/)) allow partner organizations to authenticate using native identity providers while host applications enforce zero-trust authorization locally.
 - **Attribute-Based Access Control (ABAC) enables dynamic policy:** Role-Based Access Control breaks down across multi-national agreements. ABAC evaluates user attributes, sensitivity levels, organizational affiliation, and environmental context in real time.
 - **Commercial Off-The-Shelf (COTS) software proxies streamline integration:** Replacing custom hardware cross-domain devices with containerized, software-defined API gateways dramatically reduces latency, simplifies updates, and enables continuous security auditing.
 

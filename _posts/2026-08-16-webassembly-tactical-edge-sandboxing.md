@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "WebAssembly at the Tactical Edge: Ultra-Lightweight Sandboxing Beyond Containers"
-subtitle: "How WASI runtimes, sub-millisecond cold starts, and memory-safe bytecode deliver high-speed plugin extensibility to SWaP-constrained defense systems"
+title: "[WebAssembly (Wasm)](https://webassembly.org/) at the Tactical Edge: Ultra-Lightweight Sandboxing Beyond Containers"
+subtitle: "How [WebAssembly System Interface (WASI)](https://wasi.dev/) runtimes, sub-millisecond cold starts, and memory-safe bytecode deliver high-speed plugin extensibility to SWaP-constrained defense systems"
 date: 2026-08-16
 category: architecture
 series: "Software-Defined Operations"
 summary: "When tactical micro-drones, soldier sensor kits, and smart munitions lack the memory to run container engines, WebAssembly (Wasm) delivers a lightweight alternative. Here is how WASI sandboxing and OCI-distributed bytecode enable dynamic, real-time edge processing."
 featured: true
-last-updated: 2026-08-16
+last-updated: 2026-09-12
 share-img: /assets/img/hero/hero-wasm-tactical-edge.png
 tags: [defense, wasm, webassembly, tactical-edge, embedded, rust, oci, architecture, swap, edge-computing]
 ---

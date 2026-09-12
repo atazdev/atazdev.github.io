@@ -1,15 +1,16 @@
-﻿---
+---
 layout: post
-title: "What is Vibe Coding? A Guide to Intuitive Development"
+title: "What is [Vibe Coding](/2026-01-18-vibe-coding-ai-tools/)? A Guide to Intuitive Development"
 subtitle: "Understanding the flow-based approach to modern, agentic programming"
 date: 2026-01-18
 category: development
 series: "AI Development"
 summary: "An introduction to vibe coding and the shift toward flow-based development."
 tags: [coding, development, ai, workflow]
+last-updated: 2026-09-12
 ---
 
-**The Big Picture:** Developer focus has shifted from writing syntax to directing AI agents. The job now is defining intent — the implementation increasingly writes itself.
+**The Big Picture:** Developer focus has shifted from writing syntax to directing [AI Agents](/2026-03-22-ai-agents-cicd-pipeline/). The job now is defining intent — the implementation increasingly writes itself.
 
 ---
 

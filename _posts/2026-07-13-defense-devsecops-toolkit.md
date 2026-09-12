@@ -7,7 +7,7 @@ category: devsecops
 series: "Resource Guides"
 summary: "A curated index of the policy documents, NIST publications, Platform One services, pipeline tools, and compliance resources that defense software teams actually use."
 featured: true
-last-updated: 2026-07-13
+last-updated: 2026-09-12
 full-width: true
 toc: false
 resource-index: true
